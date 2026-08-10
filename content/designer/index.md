@@ -27,7 +27,7 @@ The design of the <GlossaryLink display="LDaCA" id="ldaca" /> logo came from my 
 
 The colours utilised in this design draw from those that are seen in my peoples land of Boodjamulla, in the Gulf of Carpentaria (see below). They reflect the connections between the Sky, the People and the Land in the hope that these connections continue to strengthen indefinitely.
 
-<div class="grid">
+<div class="designer-grid">
     <div class="item left">
         <img src="./boodjamulla1.jpg" alt="Cliffs at Boodjamulla National Park">
     </div>

@@ -29,7 +29,7 @@ Alex also discussed data governance in Milingimbi (a remote Yolŋu island commun
 <br>
 
 <figure>
-<div class="grid" style="width:900px; margin: auto; !important;">
+<div class="designer-grid" style="width:900px; margin: auto; !important;">
     <div class="item left">
         <img src="./AIATSIS-Summit-MC.jpg" alt="Presenter at AIATSIS Summit 2026">
     </div>

@@ -70,7 +70,7 @@ description = "The Language Data Commons of Australia brings together digital in
     {
       title: 'Analyse language at scale',
       image: '/images/how-we-can-help/Analyse.png',
-      description: 'Step-by-step guides and tools for analysing large amounts of language data. Find text analytics tools produced by the Language Technology and Data Analysis Laboratory (LADAL) and more tools such as the ATAP Quotation Tool.',
+      description: 'Step-by-step guides and tools for analysing large amounts of language data. Find text analytics tools produced by the Language Technology and Data Analysis Laboratory (LADAL) and other tools, such as the ATAP Quotation Tool.',
       link: '/working-with-data/process-analyse/'
     }
   ]"

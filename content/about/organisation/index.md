@@ -3,11 +3,11 @@ title: "Organisation"
 layout: home
 ---
 
-<SimpleHero breadcrumb="About > Organisation" title="Organisation" description="Learn more about what LDaCA is, our execution strategy, who we work with and more."/>
+<SimpleHero breadcrumb="About > Organisation" title="Organisation" description="Learn more about what we do, our aims and strategy, and who we work with."/>
 
 <SimpleNavigation
   title="Practical support for working with language data"
-  description="LDaCA is connecting people with language data through infrastructure that makes language collections sustainable and accessible in culturally appropriate ways.<br><br>Whether it involves collecting, caring for,  finding, accessing, analysing or reusing language data, LDaCA has resources to help support language work.<br><br>By connecting Australia's language collections, communities and researchers, the project is looking to contribute to a strong foundation for language research and community-led outcomes."
+  description="The Language Data Commons of Australia (LDaCA) is connecting people with language data through infrastructure that makes language collections sustainable and accessible in culturally appropriate ways. <br> <br>Our resources support language work at all stages of the data lifecycle, from collecting and caring for language data to finding, accessing, analysing and reusing it. <br> <br> By connecting Australia's language collections, communities and researchers, the project aims to contribute to a strong foundation for language research and community-led outcomes."
   :contents="[
     { label: 'What is LDaCA?', href: '#what-is-ldaca' },
     { label: 'Our strategy', href: '#our-strategy' },
@@ -24,17 +24,17 @@ layout: home
     tileView="true"
     :items="[
     {
-        description: '<b>Australia is one of the world’s most linguistically diverse nations, yet many language collections remain fragmented, difficult to discover or at risk of being lost.</b>\n\nLDaCA is bringing these collections together within a nationally coordinated infrastructure, making them easier to find, access and analyse while ensuring they are managed in culturally, ethically and legally appropriate ways.\n\nBy connecting collections, tools and expertise across institutions and communities, LDaCA is helping unlock new opportunities for research, analysis and other language work.',
+        description: 'Australia is a massively multilingual country in one of the world’s most linguistically diverse regions. It holds significant collections that document this rich intangible cultural heritage including materials relating to Aboriginal and Torres Strait Islander languages, Australian Englishes and other migrant languages, sign languages and languages of the Pacific region. Yet many of these collections remain fragmented and difficult to discover or are at risk of being lost. <br> <br> LDaCA is bringing these collections together within a nationally coordinated infrastructure, making them easier to find, access and analyse, while ensuring they are managed in culturally, ethically and legally appropriate ways. <br> <br> By connecting collections, tools and expertise across institutions and communities, LDaCA is helping unlock new opportunities for research, analysis and other language work.',
         image: '/images/how-we-can-help/Share.png', 
     },
     {
         title: 'What we do',
-        description: '\n<details><summary><b>Build shared technical infrastructure and standards for sustainable data management</b></summary><p>TODO</p></details>\n<details><summary><b>Develop portals that improve the discovery and access of language data</b></summary><p>TODO</p></details>\n<details><summary><b>Create governance frameworks guided by FAIR and CARE principles</b></summary><p>TODO</p></details>\n<details><summary><b>Provide access to language research analytic tools</b></summary><p>TODO</p></details>\n<details><summary><b>Deliver training that supports digital research skills and best-practice data stewardship</b></summary><p>TODO</p></details>',
+        description: '\n<details><summary><b>Build shared technical infrastructure and standards for sustainable data management</b></summary><p>LDaCA is building technical capabilities based on best-practice international standards for sustainable data management. High-quality description of data is a foundation of this approach, as it enables reuse of data in the future.</p></details>\n<details><summary><b>Develop portals that improve the discovery and access of language data</b></summary><p>The online interfaces provided by LDaCA make it easier for researchers and other users of language data to find the materials they need to support their work. Different portals are being built to fit the needs of different users.</p></details>\n<details><summary><b>Create governance frameworks guided by FAIR and CARE principles</b></summary><p>In creating and building on best-practice standards and approaches to working with data, LDaCA provides a model for the future. Our shared frameworks include the Protocols for Implementing Long-term Archival Repository Services (PILARS) and the Indigenous Data Governance Framework.</p></details>\n<details><summary><b>Provide access to language research analytic tools</b></summary><p>Through the Language Technology and Data Analysis Laboratory (LADAL) and our collaboration with Sydney Informatics Hub and Sydney Corpus Lab, LDaCA is making tools for analysing text available to researchers across various disciplines and various skill levels.</p></details>\n<details><summary><b>Deliver training that supports digital research skills and best-practice data stewardship</b></summary><p>As well as making data accessible and providing tools for working with that data, LDaCA assists researchers and communities by offering training in digital research practices. Our training supports improved accountability, reproducibility and a strengthened research culture.</p></details>',
         image: '/images/how-we-can-help/Process.png',
     },
     {
         title: 'Who we support',
-        description: '\n<details><summary><b>Communities and Language Custodians</b></summary><p>TODO</p></details>\n<details><summary><b>Researchers and Research Organisations</b></summary><p>TODO</p></details>\n<details><summary><b>Collecting Institutions</b></summary><p>TODO</p></details>',
+        description: '\n<details><summary><b>Communities and Language Custodians</b></summary><p>Our work supports communities to find, access and use data about their languages. We also provide resources to support collections maintained by individual language custodians and community organisations.</p></details>\n<details><summary><b>Researchers and Research Organisations</b></summary><p>We are building infrastructure for researchers, research support staff and research librarians to open up the research possibilities of Australian language data. Our work supports not only research institutions, consortiums and programs, but also independent and citizen researchers.</p></details>\n<details><summary><b>Collecting Institutions</b></summary><p>We provide infrastructure and best-practice standards for collecting institutions, including GLAM (galleries, libraries, archives and museums) institutions, higher education providers and Aboriginal and Torres Strait Islander community-controlled organisations.</p></details>',
         image: '/images/subheadings/Organisation.png',
     }
     ]"
@@ -94,13 +94,13 @@ layout: home
     :items="[
     {
         title: 'FAIR Principles',
-        description: '<b>Findable, Accessible, Interoperable, Reusable</b>\n\nTODO',
+        description: '<b>Findable, Accessible, Interoperable, Reusable</b>\n\nThe FAIR principles aim to address issues in data management and stewardship. <br> <br> Data and metadata should be easily findable for both humans and computers. Once found, data needs to be accessible. Users need to know how they can access the data, including any authentication and authorisation requirements. The data should be interoperable with other data and with applications or workflows for analysis, storage and processing. The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings. <br> <br> LDaCA supports data practices and initiatives that make data and related research outputs FAIR. The implementation will vary across disciplines and will need discipline-specific approaches and standards.',
         image: '/about/organisation/FAIR.png', 
         link: '/about/principles/#fair-principles',
     },
     {
         title: 'CARE Principles',
-        description: '<b>Collective benefit, Authorirty to control, Responsibility, Ethics</b>\n\nTODO',
+        description: '<b>Collective benefit, Authorirty to control, Responsibility, Ethics</b>\n\nThe CARE Principles for Indigenous Data Governance, developed by the Global Indigenous Data Alliance (GIDA), aim to complement the FAIR principles. <br> <br> Data ecosystems should be designed and function in ways that enable Indigenous Peoples to derive collective benefit from the data. Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data should be empowered. Those working with Indigenous data have a responsibility to share how that data is used to support Indigenous Peoples’ self-determination and collective benefit. With respect to ethics, Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem. <br> <br> LDaCA supports the CARE principles to further extend data management principles, ensuring that Indigenous communities benefit from the data.',
         image: '/about/organisation/CARE.png', 
         link: '/about/principles/#care-principles',
     },
@@ -115,7 +115,7 @@ layout: home
     :items="[
     {
         title: 'About the steering committee',
-        description: 'LDaCA is guided by a Steering Committee that provides direction on project issues, advocates for the project, and ensures clear communication with stakeholders.\n\nIt oversees project outcomes, approves major changes, and facilitates access to subject matter experts when needed.\n\nMembers bring expertise in governance, leadership, partnerships, data,  technology, research, global skills, and community engagement, ensuring  effective project oversight.\n\nRead more about LDaCA’s Steering committee including members, Terms of Reference and meeting communiques.',
+        description: 'LDaCA is guided by a Steering Committee that provides direction on project issues, advocates for the project and ensures clear communication with stakeholders. <br> <br> The Steering Committee oversees project outcomes, approves major changes and facilitates access to subject matter experts, when needed. It is made up of Chief Investigators and project advisors. <br> <br> Members bring expertise in governance, leadership, partnerships, data, technology, research, and community engagement, ensuring effective project oversight. <br> <br> Read more about LDaCA’s Steering Committee, including members, Terms of Reference and meeting communiques.',
         image: '/about/organisation/governance.png', 
         link: '/about/steering-committee',
     },
@@ -125,7 +125,7 @@ layout: home
 <People 
     id="partners-advisors"
     heading="PARTNERS & ADVISORS"
-    description="LDaCA is part of the ARDC’s HASS and Indigenous Research Data Commons. It is also a collaboration with the institutions and organisations listed below."
+    description="LDaCA is part of the Australian Research Data Commons’ (ARDC) HASS and Indigenous Research Data Commons. It also collaborates with the institutions and organisations listed below."
     :items="[
         {
           name: 'Visit website',
@@ -173,7 +173,7 @@ layout: home
 
 <CarouselLarge
     id="about-our-branding"
-    heading="ABOUT OUR BRANDING"
+    heading="OUR BRANDING"
     backgroundColor="white"
     tileView="true"
     :items="[

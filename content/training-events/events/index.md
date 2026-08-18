@@ -7,7 +7,7 @@ title: "Events"
 
 <SimpleHero title="Training & events" description="Discover upcoming workshops and events, learn more about past events, and access event recordings and recaps."/>
 
-<section class="max-w-[1280px] mx-auto py-4 px-4 sm:px-6 md:px-8 lg:px-2">
+<section class="max-w-[1480px] mx-auto py-4 px-4 sm:px-6 md:px-8 lg:px-2">
 <div class="flex flex-wrap gap-2">
   <a href="#upcoming-events" class="p-5 rounded-3xl transition-all bg-[#79a38d] text-white text-center hover:opacity-80 min-w-[170px]">Upcoming events</a>
   <a href="#event-recordings" class="p-5 rounded-3xl transition-all bg-[#79a38d] text-white text-center hover:opacity-80 min-w-[170px]">Event recordings</a>
@@ -226,26 +226,6 @@ title: "Events"
     },
     ]"/>
 
-<Carousel 
-  id="on-the-blog"
-  shade="light"
-  backgroundColor="#EAE4D68C"
-  :opacity="100"
-  heading="ON THE BLOG"
-  :items="[
-      {
-        title: 'Reflecting on the Darwin digital languages collections workshop',
-        link: '/resources/posts/darwin-digital-collections-workshop'
-      },
-      {
-        title: 'Indigenous data governance: A discussion',
-        link: '/resources/posts/ID-gov-panel-2024'
-      },
-      {
-        title: 'Arne ingkerreke apurtelhe-ileme: Project launch',
-        link: '/resources/posts/VeronicaDobson-launch2025'
-      }
-    ]"/>
 
 <ContactBox 
   heading="Stay up to date"

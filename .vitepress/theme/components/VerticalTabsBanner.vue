@@ -53,7 +53,7 @@ const isExternal = (url) => {
 
 <template>
   <section class="w-full py-10" :style="props.backgroundColor ? { backgroundColor: props.backgroundColor } : {}">
-    <div class="max-w-[1280px] mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-2">
+    <div class="max-w-[1480px] mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-2">
       <!-- Header -->
       <div class="mb-12 text-left">
         <h1 class="">{{ props.heading }}</h1>
@@ -79,25 +79,28 @@ const isExternal = (url) => {
         <!-- Right: Content display -->
         <div class="lg:col-span-2">
           <div class="rounded-none overflow-hidden h-full">
-            <!-- Top image strip -->
-            <div class="h-[250px] overflow-hidden">
-              <img :src="selectedItem.image" :alt="selectedItem.title" class="w-full h-full object-cover" />
-            </div>
+<div v-if="selectedItem.image" class="h-[250px] overflow-hidden">
+  <img
+    :src="selectedItem.image"
+    :alt="selectedItem.title"
+    class="w-full h-full object-cover"
+  />
+</div>
 
             <!-- Text below -->
-            <div class="pt-8">
+            <div :class="selectedItem.image ? 'pt-8' : 'pt-0'">
               <h2 class="mb-4">{{ selectedItem.title }}</h2>
 
               <p class="text-gray-600 text-xl" v-html="selectedItem.description"></p>
 
-              <p class="text-gray-600 text-xl pt-6">
-                <a :href="selectedItem.link" :target="isExternal(selectedItem.link) ? '_blank' : '_self'"
-                  :rel="isExternal(selectedItem.link) ? 'noopener noreferrer' : null"
-                  :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
-                  class="inline-flex items-center justify-center px-6 py-4 text-xl font-bold rounded-lg transition-colors hover:opacity-80">
-                  {{ props.buttonText }}
-                </a>
-              </p>
+              <p v-if="selectedItem.link" class="text-gray-600 text-xl pt-6">
+  <a :href="selectedItem.link" :target="isExternal(selectedItem.link) ? '_blank' : '_self'"
+    :rel="isExternal(selectedItem.link) ? 'noopener noreferrer' : null"
+    :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
+    class="inline-flex items-center justify-center px-6 py-4 text-xl font-bold rounded-lg transition-colors hover:opacity-80">
+    {{ props.buttonText }}
+  </a>
+</p>
             </div>
           </div>
         </div>
@@ -116,19 +119,25 @@ const isExternal = (url) => {
           </button>
 
           <!-- Image -->
-          <img v-if="selectedItem.title === item.title" :src="selectedItem.image" :alt="selectedItem.title"
-            class="w-full h-48 object-cover rounded-lg" />
+         <img
+  v-if="selectedItem.title === item.title && item.image"
+  :src="item.image"
+  :alt="item.title"
+  class="w-full h-48 object-cover rounded-lg"
+/>
 
           <!-- Text -->
           <div v-if="selectedItem.title === item.title" class="p-4 space-y-2">
             <h3 class="text-lg font-bold">{{ selectedItem.title }}</h3>
             <p class="text-gray-600 text-2xl" v-html="selectedItem.description"></p>
-            <a :href="selectedItem.link" :target="isExternal(selectedItem.link) ? '_blank' : '_self'"
-              :rel="isExternal(selectedItem.link) ? 'noopener noreferrer' : null"
-              :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
-              class="inline-flex items-center justify-center px-6 py-4 text-xl font-bold rounded-lg transition-colors hover:opacity-80">
-              {{ props.buttonText }}
-            </a>
+            <a v-if="selectedItem.link"
+  :href="selectedItem.link"
+  :target="isExternal(selectedItem.link) ? '_blank' : '_self'"
+  :rel="isExternal(selectedItem.link) ? 'noopener noreferrer' : null"
+  :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
+  class="inline-flex items-center justify-center px-6 py-4 text-xl font-bold rounded-lg transition-colors hover:opacity-80">
+  {{ props.buttonText }}
+</a>
           </div>
         </div>
       </div>

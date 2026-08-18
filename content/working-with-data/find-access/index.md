@@ -54,7 +54,7 @@ title: "Find & access"
       {
         title: 'Data Portal User Guide',
         description: 'Information related to using the Data Portal.',
-        image: '/images/LDaCA_data_portal.png',
+        image: '/images/PlainBackgrounds/Altblack.png',
         link: '/resources/guides/portal',
         level: 'Beginner',
         audience: 'Researchers, community, people working with data',
@@ -63,6 +63,8 @@ title: "Find & access"
       {
         title: 'Cite Data',
         description: 'A guide to citing collections and data accessed through the portal.',
+        image: '/images/PlainBackgrounds/AltGreen.png',
+        buttonColor: '#393939',
         link: '/resources/guides/portal/cite-data',
         level: 'Beginner',
         audience: 'Researchers, community, people working with data'

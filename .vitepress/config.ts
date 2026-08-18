@@ -270,14 +270,14 @@ export default defineConfig({
       borderLeft: '50vw'
     } as any,
     partnerLogos: [
-      { src: "/images/partner-logos/ANU_logo.svg", href: 'https://www.anu.edu.au/' },
+      { src: "/images/partner-logos/ARDC - AUS-NCRIS lockup.svg", href: 'https://ardc.edu.au/' },
       { src: "/images/partner-logos/BatchelorInstitute_logo.svg", href: 'https://www.batchelor.edu.au/' },
       { src: "/images/partner-logos/FLA_logo.svg", href: 'https://www.firstlanguages.org.au/' },
       { src: "/images/partner-logos/QUT.svg", href: 'https://www.qut.edu.au/' },
       { src: "/images/partner-logos/UoM_logo.svg", href: 'https://www.unimelb.edu.au/' },
       { src: "/images/partner-logos/Usyd_logo.svg", href: 'https://www.sydney.edu.au/' },
       { src: "/images/partner-logos/UQlogo-Purple-cmyk.svg", href: 'https://www.uq.edu.au/' },
-      { src: "/images/partner-logos/ARDC - AUS-NCRIS lockup.svg", href: 'https://ardc.edu.au/' }
+      {  src: "/images/partner-logos/ANU_logo.svg", href: 'https://www.anu.edu.au/'}
     ],
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -294,9 +294,9 @@ export default defineConfig({
         text: 'Working with data',
         subtitle: 'Information for working with language data in different ways',
         items: [
-          { text: 'Find & access', link: '/working-with-data/find-access' },
+          { text: 'Find & access', link: '/working-with-data/find-access', image: '/images/how-we-can-help/Share.png' },
           { text: 'License, share & govern', link: '/working-with-data/license-share-govern', image: '/images/how-we-can-help/Govern.jpg' },
-          { text: 'Organise & describe', link: '/working-with-data/organise-describe' },
+          { text: 'Organise & describe', link: '/working-with-data/organise-describe', image: '/images/OrganiseandDescribe.jpg'},
           { text: 'Process & analyse', link: '/working-with-data/process-analyse', image: '/images/how-we-can-help/Process.png' }
         ]
       },
@@ -389,7 +389,7 @@ export default defineConfig({
         text: 'About',
         subtitle: 'Information about how the project is organised and governed',
         items: [
-          { text: 'Organisation', link: '/about/organisation', image: '/images/subheadings/Organisation.png' },
+          { text: 'About us', link: '/about/organisation', image: '/images/subheadings/Organisation.png' },
           { text: 'People', link: '/about/people', image: '/images/subheadings/People.jpg' },
           { text: 'Documents & policies', link: '/about/documents-policies', image: '/images/subheadings/Policies.jpeg' }
         ]

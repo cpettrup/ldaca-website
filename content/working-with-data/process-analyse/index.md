@@ -16,7 +16,7 @@ description="Being able to analyse large amounts of language data opens up vast 
     { label: 'Collaborators', href: '#collaborators' }
   ]"
 />
-
+<!-- 
 <CarouselLarge 
   id="tools-notebooks"
   backgroundColor="#EAE4D68C"
@@ -45,27 +45,44 @@ description="Being able to analyse large amounts of language data opens up vast 
         link: 'https://data.ldaca.edu.au/search?f=%257B%2522encodingFormat.%2540value%2522%253A%255B%2522application%252Fx-ipynb%252Bjson%2522%255D%257D'
       },
     ]"/>
+    -->
+
+<CarouselLarge
+  heading="FEATURED TOOL"
+  buttonText="Try it out"
+  :items="[
+    {
+      title: 'LDaCA Wordflow',
+      description: '<b>A code-free interface for text analytics.</b>\n\n Load your text, then stack single-purpose tools — frequency, concordance, trends, topic modelling, quotation — along the flow of your data. Every tool is a lens; the analysis is shaped by how you shape your data, not by which tool you click.',
+      image: '/working-with-data/process-analyse/LDaCAWordflow.png',
+      link: 'https://australian-text-analytics-platform.github.io/LDaCa_Text_Analytics_Tools/',
+    },
+  ]"
+   />
+
 
 <GuideCarousel 
   id="guides"
-  backgroundColor="#EAE4D68C"
-  :opacity="100"
   heading="GUIDES"
   :items="[
       {
         title: 'Introduction to Text Analysis',
-        link: 'https://www.atap.edu.au/text-analysis/overview/'
+        description: 'An introduction to working with text as data. Covers key text analysis concepts and the workflow from preparing and analysing text through to documenting and packaging research outputs for reuse.',
+        link: 'https://www.atap.edu.au/text-analysis/overview/',
+        level: 'Beginner',
+        audience: 'Researchers and students',
+        image:'/images/PlainBackgrounds/Blackplain.png',
+        category: 'FIELD GUIDE'
       },
       {
         title: 'Text Analytics',
-        description: 'Introduces text analysis using R and covers various text analytics methods. These tutorials require some familiarity with R and RStudio, so you should be comfortable with the content in the R Basics section before proceeding here.',
+        description: 'A LADAL tutorial introducing text analysis in R and a range of text analytics methods. Some familiarity with R and RStudio is required, so we recommend being comfortable with the material covered in the R Basics section before getting started.',
+        level: 'Beginner-Intermediate',
+        audience: 'Researchers and students interested in learning R',
+        category: 'TECHNOLOGIES GUIDE',
+        buttonColor: '#393939',
+        image:'/images/PlainBackgrounds/Greenplain.png',
         link: 'https://ladal.edu.au/tutorials.html#text-analytics'
-      },
-      {
-        title: 'LADAL Tutorials',
-        description: 'Contains all tutorials provided by the Language Technology and Data Analysis Laboratory (LADAL), organised in seven sections.',
-        image: '/images/partner-logos/ladal_logo.png',
-        link: 'https://ladal.edu.au/tutorials.html'
       },
     ]"/>
 
@@ -98,14 +115,20 @@ description="Being able to analyse large amounts of language data opens up vast 
   :items="[
       {
         title: 'FIB DigiTalk 2025 ke-7, \'Using Large Data Sets for Qualitative Research\'',
-        image: 'https://img.youtube.com/vi/twCAdPazV2M/sddefault.jpg',
+        image: '/working-with-data/process-analyse/FIBDigiTalk2025.png',
         link: 'https://www.youtube.com/live/twCAdPazV2M',
         category: 'RECORDING'
       },
       {
         title: 'The ParlaMint corpora of European parliamentary proceedings',
         link: '/training-events/events/2025/parlamint-corpora',
-      }
+      },
+       {
+        title: 'Vulgarity in English: Language, Creativity & Social Meaning',
+        image: '/working-with-data/process-analyse/ISLE.png',
+        link: 'https://www.youtube.com/watch?v=l3K4v4LtDTQ',
+        category: 'RECORDING'
+      },
     ]"/>
 
 <Collaborators 

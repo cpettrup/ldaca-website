@@ -88,7 +88,7 @@
   /* Content wrapper with max-width */
   .vp-doc .container,
   .content {
-    @apply max-w-4xl mx-auto;
+    @apply max-w-7xl mx-auto;
   }
 
   /* Responsive padding for content */
@@ -100,7 +100,7 @@
   .blog-post,
   article,
   .prose {
-    @apply px-4 md:px-6 lg:px-8 py-6 md:py-8 max-w-4xl mx-auto;
+    @apply px-4 md:px-6 lg:px-8 py-6 md:py-8 max-w-7xl mx-auto;
   }
 
   /* Figure elements responsive spacing */
@@ -201,8 +201,8 @@
   .VPDoc .content h5 { font-size: 1rem; font-weight: 600; line-height: 1.5; margin: 0.75rem 0 0.5rem; scroll-margin-top: 6rem; }
   .VPDoc .content h6 { font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.5; margin: 0.75rem 0 0.5rem; scroll-margin-top: 6rem; }
 
-  .vp-doc p { @apply text-base leading-7 text-foreground; font-size: 20px; color: var(--vp-c-text-1); line-height: 160%; }
-  .vp-doc strong { @apply font-semibold text-foreground; font-size: 20px; color: var(--vp-c-text-1); }
+  .vp-doc p { @apply text-base leading-7 text-foreground; font-size: 18px; color: var(--vp-c-text-1); line-height: 160%; }
+  .vp-doc strong { @apply font-semibold text-foreground; font-size: 18px; color: var(--vp-c-text-1); }
   .vp-doc em { font-style: italic; font-size: 20px; color: var(--vp-c-text-1); }
   .vp-doc hr { margin: 32px 0; border: none; border-top: 4px dotted #79a38d; }
 

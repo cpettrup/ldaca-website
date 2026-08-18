@@ -50,7 +50,7 @@ const fallbackImage = ((Array.isArray(props.image) && props.image.length > 0
 
 <template>
     <section class="w-full py-12">
-        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
+        <div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
             <div class="mb-12 text-left">
                 <h1 v-if="props.heading" class="">
                     {{ props.heading }}
@@ -82,7 +82,7 @@ const fallbackImage = ((Array.isArray(props.image) && props.image.length > 0
                             class="inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#79a38d]">
                             {{ person.name }}
                         </span>
-                        <p class="m-0 text-[1.1rem] leading-snug text-[#a4a4a4]">
+                        <p class="m-0 text-[1.1rem] leading-snug">
                             {{ person.affiliation }}
                         </p>
                     </div>

@@ -23,7 +23,7 @@ defineProps({
 
 <template>
   <!-- DESKTOP / LARGE SCREENS -->
-  <div class="hidden lg:block max-w-[1280px] mx-auto py-8">
+  <div class="hidden lg:block max-w-[1480px] mx-auto py-8">
     <div class="flex items-center justify-between gap-8 px-10 bg-[#79a38d] rounded-none">
       <!-- TEXT -->
       <div class="flex-1 py-[2.5rem]">

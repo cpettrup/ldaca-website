@@ -11,62 +11,56 @@ layout: home
         {
           name: 'Prof Michael Haugh',
           affiliation: 'University of Queensland',
-          image: '/about/Steering-Committee/MHaugh_150px.jpg',
+          image: '/about/people/MHaugh_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/1498/michael-haugh',
         },
         {
           name: 'Dr Rose Barrowcliffe',
           affiliation: 'University of Queensland',
-          image: '/about/Steering-Committee/RBarrowcliffe_150px.jpg',
+          image: '/about/people/RBarrowcliffe_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/10676/rose-barrowcliffe'
         },
         {
           name: 'Prof Monika Bednarek',
           affiliation: 'University of Sydney',
-          image: '/about/Steering-Committee/MBednarek_150px.jpg',
+          image: '/about/people/MBednarek_300x300.png',
           link: 'https://profiles.sydney.edu.au/monika.bednarek'
         },
         {
           name: 'Jenny Fewster',
           affiliation: 'ARDC',
-          image: '/about/Steering-Committee/JFewster_150px.jpg',
+          image: '/about/people/JFewster_300x300.png',
           link: ''
         },
         {
           name: 'Prof Curtis Roman',
           affiliation: 'Batchelor Institute',
-          image: '',
-          link: ''
+          image: '/about/people/CRoman_300x300.png',
+          link: 'https://www.batchelor.edu.au/research/professor-roman-curtis/'
         },
         {
           name: 'Dr Martin Schweinberger',
           affiliation: 'University of Queensland',
-          image: '/about/Steering-Committee/MSchweinberger_150px.jpg',
+          image: '/about/people/MS_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/4295/martin-schweinberger'
         },
         {
           name: 'Dr Marissa Takahashi',
           affiliation: 'QUT',
-          image: '/about/Steering-Committee/MTakahashi_150px.jpg',
+          image: '/about/people/MT_300x300.png',
           link: 'https://www.qut.edu.au/about/our-people/academic-profiles/marissa.takahashi'
         },
         {
           name: 'A/Prof Nick Thieberger',
           affiliation: 'University of Melbourne',
-          image: '/about/Steering-Committee/NThieberger_150px.jpg',
+          image: '/about/people/NT_300x300.png',
           link: 'https://findanexpert.unimelb.edu.au/profile/18278-nicholas-thieberger'
         },
         {
           name: 'Prof Catherine Travis',
           affiliation: 'ANU',
-          image: '/about/Steering-Committee/CTravis_150px.jpg',
+          image: '/about/people/CT_300x300.png',
           link: 'https://researchportalplus.anu.edu.au/en/persons/catherine-travis/'
-        },
-        {
-          name: 'Beau Williams',
-          affiliation: 'First Languages Australia',
-          image: '/about/Steering-Committee/BWilliams_150px.jpg',
-          link: ''
         },
     ]"/>
 
@@ -76,30 +70,29 @@ layout: home
         {
           name: 'Robert McLellan',
           affiliation: 'University of Queensland',
-          image: '/about/Steering-Committee/RMcLellan_150px.jpg',
-          link: 'https://languages-cultures.uq.edu.au/profile/7156/robert-mclellan',
+          image: '/about/people/RM_300x300.png',
+          link: 'https://about.uq.edu.au/experts/32536',
         },
         {
           name: 'Sue Plunkett-Cole',
           affiliation: 'University of Queensland',
-          image: '',
+          image: '/about/people/SPC_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/9499/sue-plunkett-cole'
         },
     ]"/>
-
 <People 
     heading="RESEARCH TECHNOLOGY"
     :items="[
         {
           name: 'Dr Peter Sefton',
           affiliation: 'University of Queensland',
-          image: '',
+          image: '/about/people/PTS_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/6706/peter-sefton',
         },
         {
           name: 'Moises Sacal Bonequi',
           affiliation: 'University of Queensland',
-          image: '',
+          image: '/about/people/MSB_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/7147/moises-sacal-bonequi'
         },
         {
@@ -111,13 +104,13 @@ layout: home
         {
           name: 'Dr Alvin Sebastian',
           affiliation: 'University of Queensland',
-          image: '',
+          image: '/about/people/AS_300x300.png',
           link: ''
         },
         {
           name: 'Rosanna Smith',
           affiliation: 'University of Queensland',
-          image: '',
+          image: '/about/people/RosannaS_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/10115/rosanna-smith'
         },
         {
@@ -134,12 +127,13 @@ layout: home
         {
           name: 'Dr Simon Musgrave',
           affiliation: 'University of Queensland',
-          image: '',
+          image: '/about/people/SM_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/6696/simon-musgrave',
         },
         {
           name: 'Teresa Chan',
           affiliation: 'University of Queensland',
+          image: '/about/people/TS_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/10300/teresa-chan'
         },
     ]"/>
@@ -150,8 +144,8 @@ layout: home
         {
           name: 'Dr Ben Foley',
           affiliation: 'University of Queensland',
-          image: '',
-          link: 'https://languages-cultures.uq.edu.au/profile/7739/ben-foley',
+          image: '/about/people/BF_300x300.png',
+          link: 'https://about.uq.edu.au/experts/33709',
         },
     ]"/>
 
@@ -159,10 +153,10 @@ layout: home
     heading="RESEARCH ANALYTICS"
     :items="[
         {
-          name: 'Dr Ben Foley',
+          name: 'Dr Sam Hames',
           affiliation: 'University of Queensland',
-          image: '',
-          link: 'https://languages-cultures.uq.edu.au/profile/7739/ben-foley',
+          image: '/about/people/SH_300x300.png',
+          link: 'https://about.uq.edu.au/experts/35549',
         },
     ]"/>
 
@@ -172,13 +166,13 @@ layout: home
         {
           name: 'Chenoa Pettrup',
           affiliation: 'University of Queensland',
-          image: '',
+          image: '/about/people/CP_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/10861/chenoa-pettrup',
         },
         {
           name: 'Bridey Lea',
           affiliation: 'University of Queensland',
-          image: '',
+          image: '/about/people/BL_300x300.png',
           link: 'https://languages-cultures.uq.edu.au/profile/10128/bridey-lea',
         },
         {

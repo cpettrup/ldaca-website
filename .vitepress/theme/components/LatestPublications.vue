@@ -52,7 +52,7 @@ const isExternal = (url = '') => /^https?:\/\//i.test(url)
 		class="w-full py-10"
 		:style="props.backgroundColor ? { backgroundColor: props.backgroundColor, opacity: `${props.opacity}%` } : {}"
 	>
-		<div class="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
+		<div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
 			<!-- Heading -->
             <div class="mb-8 text-left">
                 <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">

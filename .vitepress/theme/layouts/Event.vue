@@ -28,7 +28,7 @@ const event = computed(() => page.value?.frontmatter || {})
         :breadcrumb="event.breadcrumb || ''" backgroundImage="/images/GreenBackground.png" />
 
     <div class="VPDoc">
-        <div class="max-w-[1280px] mx-auto px-4 py-10">
+        <div class="max-w-[1480px] mx-auto px-4 py-10">
 
             <div class="flex flex-col lg:flex-row gap-10">
 

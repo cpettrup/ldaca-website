@@ -214,7 +214,7 @@ const portalLink = computed(() => {
 <template>
   <section v-bind="$attrs" class="w-full py-10"
     :style="props.backgroundColor ? { backgroundColor: props.backgroundColor, opacity: `${props.opacity}%` } : {}">
-    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
+    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
 
       <!-- Header -->
       <div class="w-full mb-8">

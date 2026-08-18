@@ -1,8 +1,8 @@
 ---
 title: "The ParlaMint corpora of European parliamentary proceedings"
-description: "CLARIN colleagues Tomaž Erjavec and Matyáš Kopp delivered the second webinar in our 2025 series in August. Tomaž and Matyáš discussed the compilation and dissemination of the ParlaMint corpora, a collection of 29 corpora of European national and regional parliamentary proceedings, covering at least the period from 2015 to 2022 and containing over 1 billion words."
+description: "In this webinar, CLARIN colleagues Tomaž Erjavec and Matyáš Kopp presented the ParlaMint corpora, a collection of 29 European parliamentary datasets covering national and regional proceedings from 2015–2022 and containing over one billion words."
 layout: event
-image: "https://www.clarin.eu/sites/default/files/styles/max_325x325/public/ParlaMint_2.png?itok=MPnCQlOd"
+image: /training-events/events/2025/parlamint-corpora/ParlaMint_2.png
 link: ""
 eventDate: "28 August 2025"
 eventTime: ""

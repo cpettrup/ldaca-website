@@ -15,9 +15,7 @@ import LatestBlog from '../.vitepress/theme/components/LatestBlog.vue'
 <HomeHero backgroundImage="/images/black_patternback.svg" 
 :videos = "['vovLkye-xLw']"
 tagline = "Connecting People with Language Data"
-description = "The Language Data Commons of Australia brings together digital infrastructure, ethical governance, and long-term care so that language materials remain findable and usable in culturally appropriate ways into the future.
-  <br/>
-  LDaCA offers practical tools, guidance, and infrastructure for everyone working with language data. Whether you collect, steward, discover, analyse or reuse language materials, we can help you do that work well."
+description = "Whether you’re collecting, caring for, finding, accessing or reusing language data, the Language Data Commons of Australia (LDaCA) has resources to help support your work."
   />
 
 <DataPortalBox 
@@ -33,19 +31,19 @@ description = "The Language Data Commons of Australia brings together digital in
   :items = "[
     {
       title: 'Find & access language materials',
-      image: 'https://placehold.co/400x400',
+      image: '/images/FindandAccess.jpg',
       description: 'Exploratory portals to help you discover nationally significant language collections and access previously at-risk datasets. Support and guidance to ensure collections you manage are secure, discoverable and accessible into the future.',
       link: '/working-with-data/find-access/'
     },
     {
       title: 'Organise & describe data',
-      image: 'https://placehold.co/400x400',
+      image: '/images/OrganiseandDescribe.jpg',
       description: 'Practical guidance and tools to help you structure language materials so that they can be understood, found and reused in the right ways. Learn about metadata practices and find hands-on tools like Crate-O to help you package your data in standard formats.',
       link: '/working-with-data/organise-describe/'
     },
     {
       title: 'License collections responsibly',
-      image: 'https://placehold.co/400x400',
+      image: '/images/license.jpg',
       description: 'Example licenses and guidelines for describing who can access your collection and how they can use it. Learn how to understand license conditions and find the licenses of collections accessible on our data portal.',
       link: '/working-with-data/license-share-govern/'
     },

@@ -20,6 +20,7 @@ title: "Documents & policies"
     heading="PRINCIPLES AND FRAMEWORKS"
     :items="[
         {
+<<<<<<< Updated upstream
           title: 'LDaCA Phase 2 Project Plan',
           description: 'LDaCA’s project plan for 2024 – 2028, including our aims, strategy and work plan.',
           image: '/about/documents-policies/Phase2ProjectPlan.png',
@@ -34,6 +35,16 @@ title: "Documents & policies"
         {
           title: 'Protocols for Implementing Long-term Archival Repositories Services (PILARS)',
           description: 'Sets out protocols for the design and implementation of sustainable archival repository services to achieve CAREful FAIRness.',
+=======
+          title: 'Indigenous data governance framework',
+          description: 'Guidance for the ethical, inclusive and effective management of Indigenous data within the Humanities, Arts, Social Sciences and Indigenous Research Data Commons (HASS and Indigenous RDC)',
+          image: '/about/documents-policies/IDGFramework.png',
+          link: 'https://zenodo.org/records/11135962',
+        },
+        {
+          title: 'Protocols for Implementing Long-term Archival Repositories Services (PILARS)',
+          description: 'Sets out protocols for the design and implementation of sustainable archival repository services to achieve CAREful FAIRness',
+>>>>>>> Stashed changes
           image: '/about/documents-policies/PILARS.png',
           link: 'https://pilars-protocols.github.io/pilars/'
         },
@@ -44,7 +55,11 @@ title: "Documents & policies"
         // },
         {
           title: 'FAIR and CARE Principles',
+<<<<<<< Updated upstream
           description: 'Principles for the sustainable and ethical management of data.',
+=======
+          description: 'Principles for the sustainable and ethical management of data',
+>>>>>>> Stashed changes
           image: '/about/documents-policies/FAIRandCARE.png',
           link: '/about/principles/',
         },
@@ -56,21 +71,29 @@ title: "Documents & policies"
     :items="[
         {
           title: 'LDaCA Collecting Strategy',
-          description: 'TODO',
+          description: 'Outlines the decision-making framework for selecting, preparing and including language data collections in the LDaCA Data Portals',
           image: '/about/documents-policies/CollectingStrategy.png',
-          link: '',
+          link: '/about/documents-policies/LDaCACollectingStrategy.pdf',
         },
         {
           title: 'Data Onboarding Process',
+<<<<<<< Updated upstream
           description: 'Outlines the standards and processes that support the onboarding of data collections to LDaCA.',
+=======
+          description: 'Outlines the standards and processes that support the onboarding of data collections to LDaCA',
+>>>>>>> Stashed changes
           link: '/resources/guides/working-with-data/data-onboarding-process',
           image: '/about/documents-policies/DataOnboarding.png',
         },
         {
           title: 'LDaCA Persistent ID Policy, Strategy and Process',
+<<<<<<< Updated upstream
           description: 'Outlines the policy, strategy and process for the use of persistent identifiers for data in the LDaCA project.',
+=======
+          description: 'Outlines the policy, strategy and process for the use of persistent identifiers for data in the LDaCA project',
+>>>>>>> Stashed changes
           image: '/about/documents-policies/PersistentIDpolicy.png',
-          link: '',
+          link: '/about/documents-policies/LDaCAPersistentIDPolicyandStrategy.pdf',
         },
     ]"/>
 
@@ -102,9 +125,19 @@ title: "Documents & policies"
   id="organisational"
   heading="ORGANISATIONAL"
   :items="[
+              {
+          title: 'LDaCA Phase 2 Project Plan',
+          description: 'LDaCA’s project plan for 2024 – 2028, including our aims, strategy and work plan',
+          image: '/about/documents-policies/Phase2ProjectPlan.png',
+          link: 'https://ardc.edu.au/wp-content/uploads/2024/08/ldaca-final-project-plan_2024-2028_v7.1_redacted.pdf',
+        },
       {
         title: '2025 Year in Review',
+<<<<<<< Updated upstream
         description: 'Recaps and evaluates our work in 2025.',
+=======
+        description: 'Recaps and evaluates our work in 2025',
+>>>>>>> Stashed changes
         image: '/about/documents-policies/YearinReview2025.png',
         link: 'https://www.ldaca.edu.au/2025%20Year%20in%20Review/LDaCA_2025YearinReview.pdf',
       },

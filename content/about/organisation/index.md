@@ -3,19 +3,32 @@ title: "Organisation"
 layout: home
 ---
 
-<SimpleHero breadcrumb="About > Organisation" title="Organisation" description="Learn more about what we do, our aims and strategy, and who we work with."/>
+<SimpleHero breadcrumb="About > About us" title="About us" description="Learn more about what we do, our aims, our strategy and who we work with"/>
 
 <SimpleNavigation
   title="Practical support for working with language data"
-  description="The Language Data Commons of Australia (LDaCA) is connecting people with language data through infrastructure that makes language collections sustainable and accessible in culturally appropriate ways. <br> <br>Our resources support language work at all stages of the data lifecycle, from collecting and caring for language data to finding, accessing, analysing and reusing it. <br> <br> By connecting Australia's language collections, communities and researchers, the project aims to contribute to a strong foundation for language research and community-led outcomes."
+  description="The Language Data Commons of Australia (LDaCA) is connecting people with language data through infrastructure that makes language collections sustainable and accessible in culturally appropriate ways. <br/>
+  Our resources support language work at all stages of the data lifecycle, from collecting and caring for language data to finding, accessing, analysing and reusing it.<br/>
+  By connecting Australia's language collections, communities and researchers, the project aims to contribute to a strong foundation for language research and community-led outcomes."
+  
   :contents="[
     { label: 'What is LDaCA?', href: '#what-is-ldaca' },
     { label: 'Our strategy', href: '#our-strategy' },
-    { label: 'Our principles', href: '#our-principles' },
+    { label: 'Our guiding principles', href: '#our-principles' },
     { label: 'Governance', href: '#governance' },
     { label: 'Partners & advisors', href: '#partners-advisors' },
     { label: 'About our branding', href: '#about-our-branding' },
   ]" />
+  
+<div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
 
 <CarouselLarge
     id="what-is-ldaca"
@@ -34,78 +47,57 @@ layout: home
     },
     {
         title: 'Who we support',
-        description: '\n<details><summary><b>Communities and Language Custodians</b></summary><p>Our work supports communities to find, access and use data about their languages. We also provide resources to support collections maintained by individual language custodians and community organisations.</p></details>\n<details><summary><b>Researchers and Research Organisations</b></summary><p>We are building infrastructure for researchers, research support staff and research librarians to open up the research possibilities of Australian language data. Our work supports not only research institutions, consortiums and programs, but also independent and citizen researchers.</p></details>\n<details><summary><b>Collecting Institutions</b></summary><p>We provide infrastructure and best-practice standards for collecting institutions, including GLAM (galleries, libraries, archives and museums) institutions, higher education providers and Aboriginal and Torres Strait Islander community-controlled organisations.</p></details>',
+        description: '\n<details><summary><b>Communities and language custodians</b></summary><p>Our work supports communities to find, access and use data about their languages. We also provide resources to support collections maintained by individual language custodians and community organisations.</p></details>\n<details><summary><b>Researchers and research organisations</b></summary><p>We are building infrastructure for researchers, research support staff and research librarians to open up the research possibilities of Australian language data. Our work supports not only research institutions, consortiums and programs but also independent and citizen researchers.</p></details>\n<details><summary><b>Collecting institutions</b></summary><p>We provide infrastructure and best-practice standards for collecting institutions, including GLAM (galleries, libraries, archives and museums) institutions, higher education providers and Aboriginal and Torres Strait Islander community-controlled organisations.</p></details>',
         image: '/images/subheadings/Organisation.png',
     }
     ]"
 />
-
-<VerticalTabsBanner 
-    id="our-strategy"
-    heading="OUR STRATEGY"
-    description="The LDaCA approach seeks to..."
-    backgroundColor="#EAE4D68C"
-    :items = "[
+<CarouselLarge
+  id="our-strategy"
+  heading="OUR STRATEGY"
+  buttonText="View the strategy"
+    description='Our strategy addresses common challenges in working with language materials, from organising and managing data to finding, accessing and analysing it.'
+  :items="[
     {
-        title: 'Collect & organise language materials',
-        image: 'https://placehold.co/400x400',
-        description: '',
-        link: ''
+      title: 'Towards a more connected language data ecosystem',
+        description: 'Our execution strategy sets out how LDaCA is moving from fragmented data, tools and guidance towards a more connected and sustainable approach to working with language data. \n\nThrough shared infrastructure, standards, tools, training and governance, we are helping communities, researchers and data stewards better organise and conserve language data, manage access and reuse, and analyse data at scale. Central to this work is supporting language communities to have greater control over their language data.',
+        image: '/about/organisation/ExecutionStrategy_short.png',
+        link: '/about/organisation/LDaCAExecutionStrategyOverview.pdf',
     },
-    {
-        title: 'Conserve language data',
-        image: 'https://placehold.co/400x400',
-        description: '<b>Current challenge</b><br>A lot of language data is at risk of being lost forever.<br><br><b>What we’re doing</b><br>Developing shared tools, standards and technical infrastructure to help stewards care for data for the long term.<br><br><b>How this helps</b><br>Good governance and standardised, distributed storage of data helps conserve and return data.',
-        link: ''
-    },
-    {
-        title: 'Find language materials',
-        image: 'https://placehold.co/400x400',
-        description: '',
-        link: ''
-    },
-    {
-        title: 'Streamline access protocols',
-        image: 'https://placehold.co/400x400',
-        description: '',
-        link: ''
-    },
-    {
-        title: 'Analyse language at scale',
-        image: 'https://placehold.co/400x400',
-        description: '',
-        link: ''
-    },
-    {
-        title: 'Provide guidance and training',
-        image: 'https://placehold.co/400x400',
-        description: '',
-        link: ''
-    },
-    ]"
-/>
+  ]"
+   />
 
 <CarouselLarge
     id="our-principles"
-    heading="OUR PRINCIPLES"
+    heading="OUR GUIDING PRINCIPLES"
     backgroundColor="white"
     buttonText="Read more"
     tileView="true"
     :items="[
     {
         title: 'FAIR Principles',
-        description: '<b>Findable, Accessible, Interoperable, Reusable</b>\n\nThe FAIR principles aim to address issues in data management and stewardship. <br> <br> Data and metadata should be easily findable for both humans and computers. Once found, data needs to be accessible. Users need to know how they can access the data, including any authentication and authorisation requirements. The data should be interoperable with other data and with applications or workflows for analysis, storage and processing. The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings. <br> <br> LDaCA supports data practices and initiatives that make data and related research outputs FAIR. The implementation will vary across disciplines and will need discipline-specific approaches and standards.',
+        description: '<b>Findable, Accessible, Interoperable, Reusable</b>\n\nThe FAIR principles aim to address issues in data management and stewardship. Data and metadata should be easily <b>findable</b> for both humans and computers. Once found, data needs to be <b>accessible</b>. Users need to know how they can access the data, including any authentication and authorisation requirements. The data should be <b>interoperable</b> with other data and with applications or workflows for analysis, storage and processing. The ultimate goal of FAIR is to optimise the <b>reuse</b> of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings. \n\nLDaCA supports FAIR data practices and initiatives that make data and related research outputs FAIR. Implementation will vary across disciplines and will need discipline-specific approaches and standards.',
         image: '/about/organisation/FAIR.png', 
         link: '/about/principles/#fair-principles',
     },
     {
         title: 'CARE Principles',
-        description: '<b>Collective benefit, Authority to control, Responsibility, Ethics</b>\n\nThe CARE Principles for Indigenous Data Governance, developed by the Global Indigenous Data Alliance (GIDA), aim to complement the FAIR principles. <br> <br> Data ecosystems should be designed and function in ways that enable Indigenous Peoples to derive collective benefit from the data. Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data should be empowered. Those working with Indigenous data have a responsibility to share how that data is used to support Indigenous Peoples’ self-determination and collective benefit. With respect to ethics, Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem. <br> <br> LDaCA supports the CARE principles to further extend data management principles, ensuring that Indigenous communities benefit from the data.',
+        description: '<b>Collective benefit, Authority to control, Responsibility, Ethics</b>\n\nThe CARE Principles for Indigenous Data Governance, developed by the Global Indigenous Data Alliance (GIDA), aim to complement the FAIR principles. \n\nData ecosystems should be designed and function in ways that enable Indigenous Peoples to derive <b>collective benefit</b> from the data. Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their <b>authority to control</b> such data should be empowered. Those working with Indigenous data have a <b>responsibility</b> to share how those data are used to support Indigenous Peoples’ self-determination and collective benefit. With respect to <b>ethics</b>, Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.\n\nLDaCA supports the CARE principles to further extend data management principles, ensuring that Indigenous communities benefit from the data.',
         image: '/about/organisation/CARE.png', 
         link: '/about/principles/#care-principles',
     },
     ]"
 />
+
+<div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
 
 <CarouselLarge
     id="governance"
@@ -115,17 +107,27 @@ layout: home
     :items="[
     {
         title: 'About the steering committee',
-        description: 'LDaCA is guided by a Steering Committee that provides direction on project issues, advocates for the project and ensures clear communication with stakeholders. <br> <br> The Steering Committee oversees project outcomes, approves major changes and facilitates access to subject matter experts, when needed. It is made up of Chief Investigators and project advisors. <br> <br> Members bring expertise in governance, leadership, partnerships, data, technology, research, and community engagement, ensuring effective project oversight. <br> <br> Read more about LDaCA’s Steering Committee, including members, Terms of Reference and meeting communiques.',
+        description: 'LDaCA is guided by a Steering Committee that provides direction on project issues, advocates for the project and ensures clear communication with stakeholders.\n\nThe Steering Committee oversees project outcomes, approves major changes and facilitates access to subject matter experts when needed. It is made up of Chief Investigators and project advisors. \n\nMembers bring expertise in governance, leadership, partnerships, data, technology, research and community engagement, ensuring effective project oversight.\n\n Read more about LDaCA’s Steering Committee including members, Terms of Reference and meeting communiques.',
         image: '/about/organisation/governance.png', 
         link: '/about/steering-committee',
     },
     ]"
 />
 
+<div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
+
 <People 
-    id="partners-advisors"
-    heading="PARTNERS & ADVISORS"
-    description="LDaCA is part of the Australian Research Data Commons’ (ARDC) HASS and Indigenous Research Data Commons. It also collaborates with the institutions and organisations listed below."
+    id="partners"
+    heading="PARTNERS"
+    description="LDaCA is part of the Australian Research Data Commons’ (ARDC’s) HASS and Indigenous Research Data Commons. It is also a collaboration with the institutions and organisations listed below."
     :items="[
         {
           name: 'Visit website',
@@ -171,6 +173,44 @@ layout: home
         },
     ]"/>
 
+<div class="px-[10px] max-w-[1480px] mx-auto">
+  <hr class="mt-4 border-0 border-t-[2pt] border-dotted border-gray-400">
+</div>
+
+<People 
+    id="Advisors"
+    heading="ADVISORS"
+    :items="[
+        {
+          name: 'Visit website',
+          affiliation: 'Pacific and Regional Archive for Digital Sources in Endangered Cultures (PARADISEC)',
+          image: '/images/partner-logos/square-logos/paradisec.png',
+          link: 'https://www.paradisec.org.au/',
+        },
+        {
+          name: 'Visit website',
+          affiliation: 'Common Language Resources and Technology Infrastructure (CLARIN)',
+          image: '/images/partner-logos/square-logos/CLARIN.png',
+          link: 'https://www.clarin.eu/'
+        },
+        {
+          name: 'Visit website',
+          affiliation: 'Australian Institute of Aboriginal and Torres Strait Islander Studies (AIATSIS)',
+          image: '/images/partner-logos/square-logos/AIATSIS.png',
+          link: 'https://aiatsis.gov.au/'
+        },
+    ]"/>
+
+<div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
+
 <CarouselLarge
     id="about-our-branding"
     heading="OUR BRANDING"
@@ -179,12 +219,13 @@ layout: home
     :items="[
     {
         title: 'About the artwork',
-        description: 'LDaCA’s branding is based on an artwork by Dylan Sarra, which draws inspiration from the Burnett River Petroglyphs and acknowledges the Gooreng Gooreng communal knowledges embodied within these symbols. Like the Indigenous language and cultural data dispersed across institutions and archives that LDaCA works with, the Burnett River Petroglyphs share a history of dispersal: jackhammered and scattered across Queensland in 1972, their story has survived through people. And it is people who remain central to the data LDaCA engages with.',
+        description: 'LDaCA’s branding is based on an artwork by Dylan Sarra, which draws inspiration from the Burnett River Petroglyphs and acknowledges the Gooreng Gooreng communal knowledges embodied within these symbols. Like the Indigenous language and cultural data dispersed across the institutions and archives that LDaCA works with, the Burnett River Petroglyphs also have a history of dispersal: jackhammered and scattered across Queensland in 1972, their story has survived through people. And it is people who remain central to the data LDaCA engages with.',
         image: '/images/LDaCA_logo_Dark-02-02.svg', 
     },
     {
         title: 'About the artist',
         description: 'Dylan Sarra is a Gooreng Gooreng/Taribelang artist from Central Queensland, based in Brisbane. Working across print, digital and sculpture, he explores identity and place — gently drawing audiences toward a more human understanding of the Indigenous experience. Dylan is committed to the research and sharing of cultural knowledge, and hopes his work inspires people to appreciate the role we all play in acknowledging First Nations peoples.',
+        image: '/about/organisation/D_Sarra.jpg', 
     },
     ]"
 />

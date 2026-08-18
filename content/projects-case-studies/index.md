@@ -25,24 +25,20 @@ title: "Projects & case studies"
       {
         title: 'Identifying Precarious Victorian Oral Histories',
         link: '/projects-case-studies/projects/identifying-precarious-victorian-oral-histories',
-        category: 'COMPLETE'
       },
       {
         title: 'Ayeye thipe-akerte',
         link: '/projects-case-studies/projects/ayeye-thipe-akerte',
-        category: 'COMPLETE'
       },
       {
         title: 'Graduate Digital Research Fellowship',
         link: '/projects-case-studies/projects/graduate-digital-research-fellowship',
-        category: 'COMPLETE'
       },
       {
         title: 'CALL Collection Catalogue',
         description: 'The CALL Collection is an archive from Batchelor Institute containing Australian First Nations language materials.',
         link: 'https://callcollection.batchelor.edu.au/',
         image: '/images/partner-logos/BatchelorInstitute_logo.svg',
-        category: 'IN PROGRESS'
       }
     ]"/>
 

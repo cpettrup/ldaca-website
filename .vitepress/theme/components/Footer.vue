@@ -7,9 +7,9 @@ const logo = theme.value.logo ?? {}
 
 // Read footer border configuration with sensible defaults
 const footer = theme.value.footer ?? {}
-const borderTop = footer.borderTop ?? '80px'
+const borderTop = footer.borderTop ?? '76px'
 const borderRight = footer.borderRight ?? '50vw'
-const borderBottom = footer.borderBottom ?? '80px'
+const borderBottom = footer.borderBottom ?? '76px'
 const borderLeft = footer.borderLeft ?? '50vw'
 
 // Get nav items, excluding About and Contact
@@ -37,13 +37,13 @@ const partnerLogos = theme.value.partnerLogos || []
 }
 
 footer {
-  padding: 40px;
+  padding: 0px;
 }
 
 .footer-border {
   display: block;
   position: relative;
-  width: 100%;
+  width: 99%;
   height: calc(v-bind(borderTop) + v-bind(borderBottom));
   overflow: hidden;
 }
@@ -55,7 +55,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  height: 0;
+  height: 101%;
   border-top: v-bind(borderTop) solid transparent;
   border-left: v-bind(borderLeft) solid transparent;
   border-right: v-bind(borderRight) solid v-bind(footerBgColor);
@@ -69,12 +69,13 @@ footer {
   <footer class="w-full mt-auto text-foreground" :style="{ backgroundColor: footerBgColor }">
 
     <div>
-      <div class="container mx-auto pb-12 px-6">
-        <div class="pt-8">
+      <div class="container mx-auto pb-8 px-6">
+        <div>
           <!-- Logo at top -->
-          <div class="relative z-0 flex items-center justify-center gap-2 mb-2">
+          <div class="relative z-0 flex items-center justify-center gap-2">
             <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <img v-if="logo.dark" :src="logo.dark" alt="LDaCA" class="h-52 w-auto">
+              <img v-if="logo.dark" :src="logo.dark" alt="LDaCA" class="h-40
+               w-auto">
               <span v-if="!logo.dark" class="font-bold text-lg">{{ site.title }}</span>
             </a>
           </div>
@@ -82,23 +83,23 @@ footer {
       </div>
 
       <!-- 3 Columns -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
         <!-- Column 1: Acknowledgement & About -->
         <div class="">
-          <p class="text-lg text-[#393939] font-bold text-muted-foreground leading-relaxed mb-8">
+          <p class="text-lg text-[#393939] font-bold leading-relaxed mb-8">
             LDaCA acknowledges all Aboriginal and Torres Strait Islander Traditional Custodians of Country and
             recognises their continuing connection to land, sea, culture and community.<br /><br />
             We pay our respects to Elders past and present.
           </p>
           <div>
             <h3 class="text-[1.3rem] font-bold mb-1 uppercase text-[#393939]">About</h3>
-            <p class="text-1rem text-[#393939] text-muted-foreground leading-relaxed mb-3">
+            <p class="text-1rem text-[#393939] leading-relaxed mb-3">
               LDaCA is ensuring long-term access to Australia's nationally significant language collections through
               digital infrastructure, ethical governance, and long-term care.
             </p>
-            <p class="text-sm text-[#393939] text-muted-foreground leading-relaxed">
-              Learn more about our <a href="/about/organisation"
-                class="text-sm text-[#79A38D] font-bold hover:text-gray-600 transition-colors">organisation</a>, our <a
+            <p class="text-sm text-[#393939] leading-relaxed">
+              Learn more <a href="/about/organisation"
+                class="text-sm text-[#79A38D] font-bold hover:text-gray-600 transition-colors">about us</a>, our <a
                 href="/about/people"
                 class="text-sm text-[#79A38D] font-bold hover:text-gray-600 transition-colors">people</a> and our <a
                 href="/about/documents-policies"
@@ -191,7 +192,7 @@ footer {
       <PartnerLogos :logos="partnerLogos" />
 
       <!-- Bottom Links -->
-      <div class="mt-8 pt-6 border-t border-border">
+      <div class="mt-8 pt-6 pb-6 border-t border-border">
         <nav class="flex items-center justify-center gap-32 flex-wrap">
           <a href="/help" class="text-sm text-[#383938] hover:text-gray-600 transition-colors">
             Help ➔

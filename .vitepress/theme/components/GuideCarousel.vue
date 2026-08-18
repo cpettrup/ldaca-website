@@ -48,16 +48,20 @@ const updateMatch = (mq) => {
 }
 
 let mqListener
+let mediaQuery
+
 onMounted(() => {
-    const mq = window.matchMedia('(min-width: 1024px)')
-    updateMatch(mq)
+    mediaQuery = window.matchMedia('(min-width: 1024px)')
+    updateMatch(mediaQuery)
+
     mqListener = (event) => updateMatch(event)
-    mq.addEventListener('change', mqListener)
+    mediaQuery.addEventListener('change', mqListener)
 })
 
 onBeforeUnmount(() => {
-    const mq = window.matchMedia('(min-width: 1024px)')
-    mq.removeEventListener('change', mqListener)
+    if (mediaQuery && mqListener) {
+        mediaQuery.removeEventListener('change', mqListener)
+    }
 })
 
 const visibleCount = computed(() => {
@@ -70,16 +74,27 @@ const visibleItems = computed(() => {
 
     return Array.from({ length: visibleCount.value }, (_, i) => {
         const rawItem = props.items[(currentIndex.value + i) % total.value]
+
         const pageMetadata = rawItem.link
             ? pagesData[rawItem.link]
             : null
 
+        const assignedImage =
+            rawItem.image ??
+            pageMetadata?.image
+
+        const defaultImage =
+            Array.isArray(props.image)
+                ? props.image[0]
+                : props.image
+
         return {
             ...rawItem,
-            image:
-                rawItem.image ??
-                pageMetadata?.image ??
-                (Array.isArray(props.image) ? props.image[0] : props.image),
+
+            image: assignedImage ?? defaultImage,
+
+            // Used to determine which image overlay appears
+            isDefaultImage: !assignedImage,
 
             description:
                 rawItem.description ??
@@ -87,7 +102,16 @@ const visibleItems = computed(() => {
 
             category:
                 rawItem.category ??
-                pageMetadata?.category
+                pageMetadata?.category,
+
+            // Per-item button colours, with theme fallback
+            buttonColor:
+                rawItem.buttonColor ??
+                buttonColors.bg,
+
+            buttonTextColor:
+                rawItem.buttonTextColor ??
+                buttonColors.text
         }
     })
 })
@@ -114,92 +138,171 @@ const isExternal = (url) => {
 </script>
 
 <template>
-    <section class="w-full py-10">
-        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
+    <section
+        class="w-full py-10"
+        :style="{ backgroundColor: props.backgroundColor || undefined }"
+    >
+        <div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
 
             <!-- Heading -->
             <div class="mb-8 text-left">
                 <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                    <h1 class="">{{ props.heading }}</h1>
-                    <a v-if="props.viewAll" :href="props.viewAll"
-                        class="inline-flex items-center justify-center w-fit px-5 py-3 rounded-lg bg-[#79a38d] text-white font-bold hover:opacity-80 transition-opacity">
+                    <h1>{{ props.heading }}</h1>
+
+                    <a
+                        v-if="props.viewAll"
+                        :href="props.viewAll"
+                        :style="{
+                            backgroundColor: buttonColors.bg,
+                            color: buttonColors.text
+                        }"
+                        class="inline-flex items-center justify-center w-fit px-5 py-3 rounded-lg font-bold hover:opacity-80 transition-opacity"
+                    >
                         View all
                     </a>
                 </div>
-                <p class="text-gray-600 text-xl pt-4">{{ props.description }}</p>
+
+                <p class="text-gray-600 text-xl pt-4">
+                    {{ props.description }}
+                </p>
             </div>
 
-            <div class="hidden lg:grid lg:grid-cols-[auto_1fr_auto] items-center" :class="{ 'gap-6': showArrows }">
+            <!-- DESKTOP -->
+            <div
+                class="hidden lg:grid lg:grid-cols-[auto_1fr_auto] items-center"
+                :class="{ 'gap-6': showArrows }"
+            >
 
                 <!-- LEFT ARROW -->
-                <button v-if="showArrows" type="button" @click="prev"
-                    class="h-16 w-16 flex items-center justify-center rounded-full bg-[#79a38d] text-white font-sans font-bold text-3xl hover:opacity-80 shadow-sm"
-                    aria-label="Previous">
+                <button
+                    v-if="showArrows"
+                    type="button"
+                    @click="prev"
+                    :style="{
+                        backgroundColor: buttonColors.bg,
+                        color: buttonColors.text
+                    }"
+                    class="h-16 w-16 flex items-center justify-center rounded-full font-sans font-bold text-3xl hover:opacity-80 shadow-sm"
+                    aria-label="Previous"
+                >
                     ←
                 </button>
 
                 <!-- GRID PANELS -->
                 <div class="grid grid-cols-2 gap-4">
-                    <div v-for="item in visibleItems" :key="item.title"
-                        class="relative overflow-hidden flex flex-col justify-start h-[600px] p-6 text-white" :style="{
+
+                    <div
+                        v-for="item in visibleItems"
+                        :key="item.title"
+                        class="relative overflow-hidden flex flex-col justify-start h-[600px] p-10 text-white"
+                        :style="{
                             backgroundImage: `url(${item.image})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'bottom',
                             backgroundRepeat: 'no-repeat'
-                        }">
+                        }"
+                    >
 
-                        <!-- Green overlay that fades out -->
-                        <div class="absolute inset-0" style="
-    background: linear-gradient(
-      to bottom,
-      #444544 0%,
-      #444544 50%,
-      rgba(68,69,68,0.85) 85%,
-      rgba(68,69,68,0.5) 100%
-    );
-  "></div>
+                        <!-- Strong overlay for default image -->
+                        <div
+                            v-if="item.isDefaultImage"
+                            class="absolute inset-0"
+                            style="
+                                background: linear-gradient(
+                                    to bottom,
+                                    #444544 0%,
+                                    #444544 50%,
+                                    rgba(68, 69, 68, 0.85) 85%,
+                                    rgba(68, 69, 68, 0.5) 100%
+                                );
+                            "
+                        ></div>
+
+                        <!-- Lighter overlay for assigned images -->
+                        <div
+                            v-else
+                            class="absolute inset-0"
+                            style="
+                                background: linear-gradient(
+                                    to bottom,
+                                    rgba(0, 0, 0, 0.45) 0%,
+                                    rgba(0, 0, 0, 0.30) 50%,
+                                    rgba(0, 0, 0, 0.18) 80%,
+                                    rgba(0, 0, 0, 0.08) 100%
+                                );
+                            "
+                        ></div>
 
                         <!-- Content -->
                         <div class="relative z-10 flex flex-col gap-3 h-full">
-                            <p>{{ item.category }}</p>
+
+                            <p>
+                                {{ item.category }}
+                            </p>
 
                             <h2 class="text-white mb-6">
-                                <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
+                                <a
+                                    :href="item.link"
+                                    :target="isExternal(item.link) ? '_blank' : '_self'"
                                     :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
-                                    class="hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8">
+                                    class="hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8"
+                                >
                                     {{ item.title }}
                                 </a>
                             </h2>
 
-                            <p class="text-white leading-relaxed text-2xl">
+                            <p class="text-white leading-relaxed text-xl">
                                 {{ item.description }}
                             </p>
 
-                            <p v-if="item.level" class="text-white leading-relaxed text-[1.7rem]">
-                                <span class="font-bold">Level</span> {{ item.level }}
+                            <p
+                                v-if="item.level"
+                                class="text-white leading-relaxed text-xl"
+                            >
+                                <span class="font-bold">Level</span>
+                                {{ item.level }}
                             </p>
 
-                            <p v-if="item.audience" class="text-white leading-relaxed text-[1.7rem]">
-                                <span class="font-bold">For</span> {{ item.audience }}
+                            <p
+                                v-if="item.audience"
+                                class="text-white leading-relaxed text-xl"
+                            >
+                                <span class="font-bold">For</span>
+                                {{ item.audience }}
                             </p>
 
                             <div class="flex flex-wrap gap-4 mt-auto">
-                                <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
+                                <a
+                                    :href="item.link"
+                                    :target="isExternal(item.link) ? '_blank' : '_self'"
                                     :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
-                                    :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
-                                    class="inline-flex items-center justify-center px-6 py-3 text-lg font-bold rounded-lg transition-colors hover:opacity-80">
+                                    :style="{
+                                        backgroundColor: item.buttonColor,
+                                        color: item.buttonTextColor
+                                    }"
+                                    class="inline-flex items-center justify-center px-6 py-3 text-lg font-bold rounded-lg transition-opacity hover:opacity-80"
+                                >
                                     Read
                                 </a>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
+
                 </div>
 
                 <!-- RIGHT ARROW -->
-                <button v-if="showArrows" type="button" @click="next"
-                    class="h-16 w-16 flex items-center justify-center rounded-full bg-[#79a38d] text-white font-sans font-bold text-3xl hover:opacity-80 shadow-sm"
-                    aria-label="Next">
+                <button
+                    v-if="showArrows"
+                    type="button"
+                    @click="next"
+                    :style="{
+                        backgroundColor: buttonColors.bg,
+                        color: buttonColors.text
+                    }"
+                    class="h-16 w-16 flex items-center justify-center rounded-full font-sans font-bold text-3xl hover:opacity-80 shadow-sm"
+                    aria-label="Next"
+                >
                     →
                 </button>
 
@@ -207,27 +310,58 @@ const isExternal = (url) => {
 
             <!-- TABLET / MOBILE STACKED PANELS -->
             <div class="lg:hidden flex flex-col gap-4">
-                <div v-for="item in props.items" :key="item.title" class="bg-[#393939] overflow-hidden flex flex-col">
-                    <img :src="item.image ?? (Array.isArray(props.image) ? props.image[0] : props.image)"
-                        :alt="item.title" class="w-full object-cover h-60" />
-                    <div class="px-5 pt-5 pb-3 space-y-3 flex flex-col">
-                        <p class="text-white">{{ item.category }}</p>
+
+                <div
+                    v-for="item in props.items"
+                    :key="item.title"
+                    class="bg-[#393939] overflow-hidden flex flex-col"
+                >
+
+                    <img
+                        :src="item.image ?? (Array.isArray(props.image) ? props.image[0] : props.image)"
+                        :alt="item.title"
+                        class="w-full object-cover h-60"
+                    />
+
+                    <!-- Increased padding -->
+                    <div class="px-8 pt-8 pb-6 space-y-3 flex flex-col">
+
+                        <p class="text-white">
+                            {{ item.category }}
+                        </p>
+
                         <h3 class="text-white">
-                            <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
+                            <a
+                                :href="item.link"
+                                :target="isExternal(item.link) ? '_blank' : '_self'"
                                 :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
-                                class="hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8">
+                                class="hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8"
+                            >
                                 {{ item.title }}
                             </a>
                         </h3>
-                        <p class="text-white leading-relaxed flex-1">{{ item.description }}</p>
+
+                        <p class="text-white leading-relaxed flex-1">
+                            {{ item.description }}
+                        </p>
+
                     </div>
-                    <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
+
+                    <a
+                        :href="item.link"
+                        :target="isExternal(item.link) ? '_blank' : '_self'"
                         :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
-                        class="flex justify-between items-center w-full font-bold mt-auto bg-[#79A38D] hover:bg-[#8faf9b]"
-                        style="color:#FFFEF8; padding:15px;">
+                        :style="{
+                            backgroundColor: item.buttonColor || buttonColors.bg,
+                            color: item.buttonTextColor || buttonColors.text
+                        }"
+                        class="flex justify-between items-center w-full font-bold mt-auto hover:opacity-80 transition-opacity"
+                        style="padding: 15px 2rem;"
+                    >
                         <span class="text-xl">View more</span>
-                        <span class="font-sans font-bold text-white text-xl"> →</span>
+                        <span class="font-sans font-bold text-xl">→</span>
                     </a>
+
                 </div>
             </div>
 

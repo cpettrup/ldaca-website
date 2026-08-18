@@ -72,7 +72,7 @@ const isExternal = (url) => {
 </script>
 
 <template>
-  <section class="max-w-[1280px] mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-2">
+  <section class="max-w-[1480px] mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-2">
 
     <div class="mb-8 text-left flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
       <h1>{{ props.heading }}</h1>

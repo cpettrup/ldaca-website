@@ -1,6 +1,6 @@
 ---
 title: "Get Started with Federal Hansard for Humanities, Arts, and Social Sciences Research"
-description: "Parliamentary bodies around the world have been publishing transcriptions of their proceedings for decades or even centuries. This workshop aimed to provide a starting point for working with the transcribed proceedings of the Australian Federal Parliament, including evaluating how they might be useful for your research, how to get started for different kinds of projects and cautionary notes on potential limitations."
+description: "This workshop introduced the Australian Federal Parliament’s transcribed proceedings, exploring their research potential, how to get started with different projects, and key considerations and limitations when working with parliamentary data."
 layout: event
 image: "https://images.humanitix.com/i/hI2fjuIT7Wai6JZJewXw@responsive-1250.webp"
 link: "https://hass.uq.edu.au/event/session/17466"

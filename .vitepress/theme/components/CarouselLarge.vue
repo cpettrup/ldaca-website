@@ -206,7 +206,6 @@ const showArrows = computed(() =>
     !props.tileView && total.value > visibleCount.value
 )
 
-
 const prev = () => {
     if (total.value === 0) return
     currentIndex.value = (currentIndex.value - 1 + total.value) % total.value
@@ -229,7 +228,7 @@ const isExternal = (url) => {
 <template>
     <section class="w-full py-10"
         :style="props.backgroundColor ? { backgroundColor: props.backgroundColor, opacity: `${props.opacity}%` } : {}">
-        <div class="max-w-[1280px] mx-auto relative px-4 sm:px-6 md:px-8 lg:px-2">
+        <div class="max-w-[1480px] mx-auto relative px-4 sm:px-6 md:px-8 lg:px-2">
 
             <!-- Heading -->
             <div class="mb-4 text-left">
@@ -254,49 +253,63 @@ const isExternal = (url) => {
                 <!-- GRID PANELS -->
                 <div class="grid grid-cols-1 gap-10"
                     :style="desktopPanelMinHeight ? { minHeight: `${desktopPanelMinHeight}px` } : {}">
-                    <div v-for="(item, index) in desktopItems" :key="item.title" class="grid gap-10 overflow-hidden"
-                        :class="props.tileView && index % 2 === 1
-                            ? 'grid-cols-1 lg:grid-cols-2'
-                            : 'grid-cols-1 lg:grid-cols-2'
-                            ">
 
-                        <!-- IMAGE LEFT -->
-                        <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
-                            :rel="isExternal(item.link) ? 'noopener noreferrer' : null" class="block h-full"
-                            :class="props.tileView && index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'">
-                            <img :src="item.image" :alt="item.title"
-                                class="w-full h-full object-contain object-center" />
-                        </a>
+                    <template v-for="(item, index) in desktopItems" :key="item.title">
 
-                        <!-- CONTENT RIGHT -->
-                        <div class="flex flex-col h-full"
-                            :class="props.tileView && index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'">
-                            <!-- Title & description centered vertically -->
-                            <div class="flex-1 flex flex-col justify-center">
-                                <h2 class="mb-3">{{ item.title }}</h2>
-                                <p class="leading-relaxed text-xl whitespace-pre-line" v-html="item.description">
-                                </p>
+                        <div class="grid gap-10 overflow-hidden"
+                            :class="props.tileView && index % 2 === 1
+                                ? 'grid-cols-1 lg:grid-cols-2'
+                                : 'grid-cols-1 lg:grid-cols-2'
+                                ">
+
+                            <!-- IMAGE LEFT -->
+                            <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
+                                :rel="isExternal(item.link) ? 'noopener noreferrer' : null" class="block h-full"
+                                :class="props.tileView && index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'">
+                                <img :src="item.image" :alt="item.title"
+                                    class="w-full h-full object-contain object-center" />
+                            </a>
+
+                            <!-- CONTENT RIGHT -->
+                            <div class="flex flex-col h-full"
+                                :class="props.tileView && index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'">
+                                <!-- Title & description centered vertically -->
+                                <div class="flex-1 flex flex-col justify-center">
+                                    <h2 class="mb-3">{{ item.title }}</h2>
+                                    <p class="leading-relaxed text-l whitespace-pre-line" v-html="item.description">
+                                    </p>
+                                </div>
+
+                                <!-- Buttons at bottom -->
+                                <div v-if="item.link" class="flex flex-wrap gap-4 mt-auto pt-6">
+                                    <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
+                                        :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
+                                        :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
+                                        class="inline-flex items-center justify-center px-6 py-4 text-xl font-bold rounded-lg transition-colors hover:opacity-80">
+                                        {{ props.buttonText }}
+                                    </a>
+
+                                    <a v-if="item.guideLink" :href="item.guideLink"
+                                        :target="isExternal(item.guideLink) ? '_blank' : '_self'"
+                                        :rel="isExternal(item.guideLink) ? 'noopener noreferrer' : null"
+                                        class="inline-flex items-center justify-center px-6 py-4 text-xl font-bold rounded-lg bg-[#444544] text-white transition-colors hover:opacity-80">
+                                        Read the user guide
+                                    </a>
+                                </div>
                             </div>
 
-                            <!-- Buttons at bottom -->
-                            <div v-if="item.link" class="flex flex-wrap gap-4 mt-auto pt-6">
-                                <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
-                                    :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
-                                    :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
-                                    class="inline-flex items-center justify-center px-6 py-4 text-xl font-bold rounded-lg transition-colors hover:opacity-80">
-                                    {{ props.buttonText }}
-                                </a>
-
-                                <a v-if="item.guideLink" :href="item.guideLink"
-                                    :target="isExternal(item.guideLink) ? '_blank' : '_self'"
-                                    :rel="isExternal(item.guideLink) ? 'noopener noreferrer' : null"
-                                    class="inline-flex items-center justify-center px-6 py-4 text-xl font-bold rounded-lg bg-[#444544] text-white transition-colors hover:opacity-80">
-                                    Read the user guide
-                                </a>
-                            </div>
                         </div>
 
-                    </div>
+                        <!-- DIVIDER: tile view only, and not after the final item -->
+                        <div
+                            v-if="props.tileView && index < desktopItems.length - 1"
+                            class="px-[10px] w-full"
+                        >
+                            <hr class="my-8 border-0 border-t-[2pt] border-dotted border-gray-400">
+                        </div>
+
+                    </template>
+
                 </div>
 
                 <div ref="measurementRoot" aria-hidden="true"

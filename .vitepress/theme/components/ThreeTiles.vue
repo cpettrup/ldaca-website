@@ -108,7 +108,7 @@ const isExternal = (url) => {
 
 
 <template>
-    <section class="max-w-[1280px] mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-2">
+    <section class="max-w-[1480px] mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-2">
 
         <!-- Heading -->
         <div class="mb-8 text-left">

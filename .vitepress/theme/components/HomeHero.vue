@@ -77,11 +77,11 @@ const thumbnailUrl = computed(() => {
   }">
 
     <!-- DESKTOP / LARGE SCREEN -->
-    <div class="hidden xl:flex max-w-[1280px] mx-auto py-16 px-4 sm:px-6 md:px-8 lg:px-2 items-center gap-12">
+    <div class="hidden xl:flex max-w-[1480px] mx-auto py-16 px-4 sm:px-6 md:px-8 lg:px-2 items-center gap-12">
       <!-- LEFT: Content -->
       <div class="flex-1 max-w-[calc(100%-814px)]">
         <h1 class="m-0 text-white">{{ tagline }}</h1>
-        <div class="text-lg my-6 text-white/90 leading-relaxed" v-html="description"></div>
+        <div class="text-xl my-6 text-white/90 leading-relaxed" v-html="description"></div>
         <a :href="buttonLink" target="_blank" rel="noopener noreferrer"
           :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
           class="inline-block px-6 py-4 rounded-lg font-semibold transition hover:opacity-90">
@@ -110,7 +110,7 @@ const thumbnailUrl = computed(() => {
     </div>
 
     <!-- MOBILE / TABLET -->
-    <div class="xl:hidden max-w-[1280px] mx-auto py-12 px-4 sm:px-6 md:px-8 lg:px-2 space-y-8">
+    <div class="xl:hidden max-w-[1480px] mx-auto py-12 px-4 sm:px-6 md:px-8 lg:px-2 space-y-8">
       <div v-for="(item, index) in [{ tagline, description, videoUrl }]" :key="index"
         class="bg-gray-800 rounded-lg p-6 shadow-sm">
         <h1 class="text-2xl font-bold text-white mb-4">{{ item.tagline }}</h1>

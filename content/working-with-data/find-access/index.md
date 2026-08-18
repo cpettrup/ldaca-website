@@ -26,7 +26,7 @@ title: "Find & access"
   :items="[
       {
         title: 'LDaCA Data Portal',
-        description: 'Explore and access significant collections of language data, including the Mitchell and Delbridge corpus and the International Corpus of English.',
+        description: 'Explore and access significant collections of language data, including the Mitchell and Delbridge corpus and the Australian component of the International Corpus of English (ICE).',
         image: '/images/LDaCA_data_portal.png',
         link: 'https://data.ldaca.edu.au',
       },

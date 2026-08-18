@@ -1,9 +1,9 @@
 ---
-title: "People"
+title: "Our people"
 layout: home
 ---
 
-<SimpleHero breadcrumb="About > People" title="People" description="Meet the LDaCA team"/>
+<SimpleHero breadcrumb="About > People" title="People" description="Meet the LDaCA team."/>
 
 <People 
     heading="CHIEF INVESTIGATORS"

@@ -3,11 +3,11 @@ layout: home
 title: "Documents & policies"
 ---
 
-<SimpleHero breadcrumb='About > Documents & policies' title='Documents & policies' description='Policy documents, including our data onboarding process and takedown policy, and information about the underlying principles of the project.'/>
+<SimpleHero breadcrumb='About > Documents & policies' title='Documents & policies' description='Policy documents, including our data onboarding process and takedown policy, and information about the principles, strategies and processes we follow.'/>
 
 <SimpleNavigation
-  title="TODO"
-  description="TODO"
+  title="LDaCA’s documents, standards and frameworks"
+  description="This page brings together the documents and policies that guide how LDaCA operates, including the standards we apply to data governance and archival practice. It also contains  LDaCA’s recommendations for how others can work with language data."
   :contents="[
     { label: 'Principles & frameworks', href: '#principles-frameworks' },
     { label: 'Strategies & processes', href: '#strategies-processes' },
@@ -21,30 +21,30 @@ title: "Documents & policies"
     :items="[
         {
           title: 'LDaCA Phase 2 Project Plan',
-          description: 'TODO',
+          description: 'LDaCA’s project plan for 2024 – 2028, including our aims, strategy and work plan.',
           image: '/about/documents-policies/Phase2ProjectPlan.png',
-          link: '',
+          link: 'https://ardc.edu.au/wp-content/uploads/2024/08/ldaca-final-project-plan_2024-2028_v7.1_redacted.pdf',
         },
         {
-          title: 'Indigenous data governance framework',
-          description: 'TODO',
+          title: 'Indigenous Data Governance Framework',
+          description: 'Guidance for the ethical, inclusive and effective management of Indigenous data within the Humanities, Arts, Social Sciences and Indigenous Research Data Commons (HASS and Indigenous RDC).',
           image: '/about/documents-policies/IDGFramework.png',
-          link: '',
+          link: 'https://ardc.edu.au/resource/framework-for-the-governance-of-indigenous-data-hass-and-indigenous-research-data-commons/',
         },
         {
           title: 'Protocols for Implementing Long-term Archival Repositories Services (PILARS)',
-          description: 'TODO',
+          description: 'Sets out protocols for the design and implementation of sustainable archival repository services to achieve CAREful FAIRness.',
           image: '/about/documents-policies/PILARS.png',
           link: 'https://pilars-protocols.github.io/pilars/'
         },
         // {
         //   title: 'LDaCA Technical Architechture',
-        //   description: 'TODO',
+        //   description: '',
         //   link: '',
         // },
         {
           title: 'FAIR and CARE Principles',
-          description: 'TODO',
+          description: 'Principles for the sustainable and ethical management of data.',
           image: '/about/documents-policies/FAIRandCARE.png',
           link: '/about/principles/',
         },
@@ -62,12 +62,13 @@ title: "Documents & policies"
         },
         {
           title: 'Data Onboarding Process',
+          description: 'Outlines the standards and processes that support the onboarding of data collections to LDaCA.',
           link: '/resources/guides/working-with-data/data-onboarding-process',
           image: '/about/documents-policies/DataOnboarding.png',
         },
         {
           title: 'LDaCA Persistent ID Policy, Strategy and Process',
-          description: 'TODO',
+          description: 'Outlines the policy, strategy and process for the use of persistent identifiers for data in the LDaCA project.',
           image: '/about/documents-policies/PersistentIDpolicy.png',
           link: '',
         },
@@ -79,16 +80,19 @@ title: "Documents & policies"
   :items="[
       {
         title: 'Privacy Policy',
+        description: 'Describes what information we collect about users and how we manage personal information.',
         link: '',
         image: '/about/documents-policies/PrivacyPolicy.png',
       },
       {
         title: 'Takedown Policy',
+        description: 'Outlines the mechanism for requesting an adjustment to the access conditions of published materials.',
         link: '',
         image: '/about/documents-policies/TakedownPolicy.png',
       },
       {
         title: 'Access Policy',
+        description: 'Describes how we make data accessible in appropriate ways that accord with legal, moral and ethical aspects of data sharing.',
         link: '/resources/guides/working-with-data/access-policy',
         image: '/about/documents-policies/AccessPolicy.png',
       },
@@ -100,7 +104,8 @@ title: "Documents & policies"
   :items="[
       {
         title: '2025 Year in Review',
+        description: 'Recaps and evaluates our work in 2025.',
         image: '/about/documents-policies/YearinReview2025.png',
-        link: ''
+        link: 'https://www.ldaca.edu.au/2025%20Year%20in%20Review/LDaCA_2025YearinReview.pdf',
       },
     ]"/>

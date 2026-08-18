@@ -311,7 +311,7 @@ export default defineConfig({
       } as any,
       {
         text: 'Resources',
-        subtitle: 'Search for resources from across our ecosystem by type or subject',
+        subtitle: 'Resources from across our ecosystem searchable by type',
         items: [
           {
             title: 'By Type',
@@ -379,7 +379,7 @@ export default defineConfig({
       {
         text: 'Projects & case studies',
         link: '/projects-case-studies',
-        // subtitle: 'something something',
+        // subtitle: 'Collaborative projects and in-depth case studies using our tools and approaches',
         // items: [
         //   { text: 'Projects', link: '/projects-case-studies/projects', image: '/images/subheadings/Projects.png' },
         //   { text: 'Case Studies', link: '/projects-case-studies/case-studies/', image: 'https://placehold.co/150x100' }
@@ -387,7 +387,7 @@ export default defineConfig({
       },
       {
         text: 'About',
-        subtitle: 'Learn more about how the project is organised and governed',
+        subtitle: 'Information about how the project is organised and governed',
         items: [
           { text: 'Organisation', link: '/about/organisation', image: '/images/subheadings/Organisation.png' },
           { text: 'People', link: '/about/people', image: '/images/subheadings/People.jpg' },

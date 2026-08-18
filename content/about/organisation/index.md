@@ -10,7 +10,6 @@ layout: home
   description="The Language Data Commons of Australia (LDaCA) is connecting people with language data through infrastructure that makes language collections sustainable and accessible in culturally appropriate ways. <br/>
   Our resources support language work at all stages of the data lifecycle, from collecting and caring for language data to finding, accessing, analysing and reusing it.<br/>
   By connecting Australia's language collections, communities and researchers, the project aims to contribute to a strong foundation for language research and community-led outcomes."
-  
   :contents="[
     { label: 'What is LDaCA?', href: '#what-is-ldaca' },
     { label: 'Our strategy', href: '#our-strategy' },

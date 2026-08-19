@@ -16,50 +16,13 @@ description="Being able to analyse large amounts of language data opens up vast 
     { label: 'Collaborators', href: '#collaborators' }
   ]"
 />
-<!-- 
-<CarouselLarge 
+
+<ToolsGrid 
   id="tools-notebooks"
-  backgroundColor="#EAE4D68C"
-  :opacity="100"
   heading="ANALYTICAL TOOLS & NOTEBOOKS"
   description="Explore available tools for language research and work."
-  :items="[
-      {
-        title: 'Nyingarn',
-        description: 'Nyingarn makes manuscript sources of Australian Indigenous languages available as searchable and reusable text documents to support language revitalisation.',
-        image: 'https://nyingarn.net/wp-content/uploads/2023/04/Nyingarn_Vertical_Peppermint_RGB-1024x1024.png',
-        link: 'https://nyingarn.net/'
-      },
-      // {
-      //   title: 'Tools from USyd/SIH/ATAP/Sydney Corpus Lab',
-      //   link: ''
-      // },
-      // {
-      //   title: 'Tools from LADAL',
-      //   image: '/images/partner-logos/ladal_logo.png',
-      //   link: ''
-      // },
-      {
-        title: 'Collection-specific Jupyter notebooks',
-        image: 'https://jupyter.org/assets/homepage/main-logo.svg',
-        link: 'https://data.ldaca.edu.au/search?f=%257B%2522encodingFormat.%2540value%2522%253A%255B%2522application%252Fx-ipynb%252Bjson%2522%255D%257D'
-      },
-    ]"/>
-    -->
-
-<CarouselLarge
-  heading="FEATURED TOOL"
-  buttonText="Try it out"
-  :items="[
-    {
-      title: 'LDaCA Wordflow',
-      description: '<b>A code-free interface for text analytics.</b>\n\n Load your text, then stack single-purpose tools — frequency, concordance, trends, topic modelling, quotation — along the flow of your data. Every tool is a lens; the analysis is shaped by how you shape your data, not by which tool you click.',
-      image: '/working-with-data/process-analyse/LDaCAWordflow.png',
-      link: 'https://australian-text-analytics-platform.github.io/LDaCa_Text_Analytics_Tools/',
-    },
-  ]"
-   />
-
+  crate="https://raw.githubusercontent.com/Language-Research-Technology/ldaca-analytical-tools/refs/heads/main/ro-crate/ro-crate-metadata.json"
+  />
 
 <GuideCarousel 
   id="guides"
@@ -136,16 +99,6 @@ description="Being able to analyse large amounts of language data opens up vast 
   heading="COLLABORATORS"
   :items="[
       {
-        title: 'LADAL',
-        image: '/images/partner-logos/ladal_logo.png',
-        link: 'https://ladal.edu.au/'
-      },
-      {
-        title: 'MDAP',
-        image: 'https://dataservices.research.unimelb.edu.au/static/img/logos/logo-2023.svg',
-        link: 'https://www.unimelb.edu.au/mdap'
-      },
-      {
         title: 'Sydney Corpus Lab',
         image: '/images/partner-logos/cropped-SydneyCorpusLab_Black_Small.png',
         link: 'https://sydneycorpuslab.com/'
@@ -154,7 +107,22 @@ description="Being able to analyse large amounts of language data opens up vast 
         title: 'Sydney Informatics Hub',
         image: '/images/partner-logos/sydney_informatics_hub_logo.png',
         link: 'https://www.sydney.edu.au/research/facilities/sydney-informatics-hub.html'
-      }
+      },
+      {
+        title: 'LADAL',
+        image: '/images/partner-logos/ladal_logo.png',
+        link: 'https://ladal.edu.au/'
+      },
+      {
+        title: 'ADO',
+        image: '',
+        link: 'https://www.digitalobservatory.net.au/'
+      },
+      {
+        title: 'MDAP',
+        image: 'https://dataservices.research.unimelb.edu.au/static/img/logos/logo-2023.svg',
+        link: 'https://www.unimelb.edu.au/mdap'
+      },
     ]"/>
 
 <ContactBox 

@@ -11,7 +11,7 @@ layout: "home"
   :contents="[
     { label: 'Latest publications', href: '#latest-publications' },
     { label: 'Latest guides', href: '#latest-guides' },
-    // { label: 'Latest tools & technologies', href: '#latest-tools-technologies' },
+    { label: 'Latest tools & technologies', href: '#latest-tools-technologies' },
     { label: 'Latest videos', href: '#latest-videos' },
     { label: 'Latest presentations', href: '#latest-presentations' },
     { label: 'Latest interviews', href: '#latest-interviews' },
@@ -70,11 +70,11 @@ layout: "home"
       },
     ]"/>
 
-<!-- <CollectionsGrid 
+<ToolsGrid 
   id="latest-tools-technologies"
   heading="LATEST TOOLS & TECHNOLOGIES"
-  description=""
-  /> -->
+  crate="https://raw.githubusercontent.com/Language-Research-Technology/ldaca-analytical-tools/refs/heads/main/ro-crate/ro-crate-metadata.json"
+  />
 
 <Carousel 
   id="latest-videos"

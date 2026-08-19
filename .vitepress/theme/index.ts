@@ -24,6 +24,7 @@ import DocTiles from './components/DocTiles.vue'
 import VerticalTabs from './components/VerticalTabs.vue'
 import VerticalTabsBanner from './components/VerticalTabsBanner.vue'
 import Contact from './components/Contact.vue'
+import ToolsGrid from './components/ToolsGrid.vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import '@fontsource/work-sans/400.css'
@@ -56,6 +57,7 @@ export default {
     app.component('VerticalTabs', VerticalTabs)
     app.component('VerticalTabsBanner', VerticalTabsBanner)
     app.component('Contact', Contact)
+    app.component('ToolsGrid', ToolsGrid)
   },
   Layout: Layout,
 } satisfies Theme

@@ -238,7 +238,7 @@ const portalLink = computed(() => {
                 {{ item.title }}
               </button>
             </h3>
-            <p class="text-[#383938] mb-5">{{ truncateWords(item.description, 40) }}</p>
+            <p class="text-[#383938]">{{ truncateWords(item.description, 40) }}</p>
           </div>
 
           <button @click="openWidget(item)"

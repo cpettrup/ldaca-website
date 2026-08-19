@@ -234,6 +234,7 @@ All components are stored in `/theme/components`. To use components, add `<Compo
 | SimpleNavigation.vue | `title`: text<br>`description`: text<br>`contents`: array |
 | TagsList.vue | N/A |
 | ThreeTiles.vue | `heading`: text`items`: array<br>`image`: filepath (default: '/images/Petroglyph_Pattern.svg')<br>`backgroundColor`: colour<br>`opacity`: number (default: 100)<br>`shade`: light (default: dark) |
+| ToolsGrid.vue | `heading`: text<br>`description`: text<br>`backgroundColor`: colour (default: '#79a38d')<br>`backgroundImage`: filepath (default: '/images/Collections_BG.png')<br>`opacity`: number (default: 100)<br>`buttonText`: text (default: 'Learn more')<br>`crate`: filepath or url to ro-crate-metadata.json |
 | TwoTiles.vue | `heading`: text`items`: array **OR** `type`: presentation<br>`image`: filepath (default: '/images/Petroglyph_Pattern.svg')<br>`buttonText`: text (default: 'View all')<br>`viewAll`: link |
 | VerticalTabs.vue | `heading`: text<br>`description`: text<br>`background`: colour<br>`items`: array |
 | VerticalTabsBanner.vue | `heading`: text<br>`description`: text<br>`background`: colour<br>`items`: array<br>`buttonText`: text (default: 'Find out more') |

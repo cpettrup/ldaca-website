@@ -110,7 +110,7 @@ const profile = computed<ProfileData | null>(() => {
   bottom: auto;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 10px;
+  margin-top: 8px;
   margin-bottom: 0;
   z-index: 9999;
   pointer-events: auto;
@@ -120,12 +120,12 @@ const profile = computed<ProfileData | null>(() => {
   /* force an opaque background so tooltip text is always readable */
   background-color: rgba(255, 255, 255, 0.98);
   color: #0b0b0b;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  padding: 12px 16px;
-  min-width: 280px;
-  max-width: 360px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  border: 0.8px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6.4px;
+  padding: 9.6px 12.8px;
+  min-width: 224px;
+  max-width: 288px;
+  box-shadow: 0 6.4px 19.2px rgba(0, 0, 0, 0.18);
   z-index: 10000;
   backdrop-filter: none;
 }
@@ -142,35 +142,35 @@ const profile = computed<ProfileData | null>(() => {
   .profile-tooltip-content {
     background-color: #0b1220;
     color: #e6eef8;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 0.8px solid rgba(255, 255, 255, 0.06);
   }
 }
 
 .profile-tooltip-content h4 {
-  margin: 0 0 8px 0;
-  font-size: 14px;
+  margin: 0 0 6.4px 0;
+  font-size: 11.2px;
   font-weight: 600;
   color: var(--vp-c-text-1);
 }
 
 .position {
-  margin: 4px 0;
-  font-size: 12px;
+  margin: 3.2px 0;
+  font-size: 9.6px;
   color: var(--vp-c-brand);
   font-weight: 500;
 }
 
 .biog {
-  margin: 8px 0;
-  font-size: 12px;
+  margin: 6.4px 0;
+  font-size: 9.6px;
   color: var(--vp-c-text-2);
   line-height: 1.5;
 }
 
 .external-link-arrow {
   display: inline-block;
-  margin-top: 8px;
-  font-size: 12px;
+  margin-top: 6.4px;
+  font-size: 9.6px;
   color: var(--vp-c-brand);
   text-decoration: none;
   transition: color 0.2s ease;

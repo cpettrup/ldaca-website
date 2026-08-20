@@ -15,7 +15,7 @@ const buttonColors = theme.value.buttonColors || { bg: '#79A38D', text: '#ffffff
 
 <template>
   <section class="w-full py-12">
-    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8">
+    <div class="max-w-[1184px] mx-auto px-4 sm:px-6 md:px-8">
 
       <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-start">
 

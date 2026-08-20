@@ -6,7 +6,7 @@ aliases:
   - "/licenses/ldaca-binderhub/all/v0.0.6/"
 ---
 
-<iframe src="./LDaCA_ATAP_BinderHub_Terms_of_Use.pdf" width="100%" height="800px" style="border: none;"></iframe>
+<iframe src="./LDaCA_ATAP_BinderHub_Terms_of_Use.pdf" width="100%" height="640px" style="border: none;"></iframe>
 
 <br>
 <br>

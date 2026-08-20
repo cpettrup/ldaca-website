@@ -7,9 +7,9 @@ const logo = theme.value.logo ?? {}
 
 // Read footer border configuration with sensible defaults
 const footer = theme.value.footer ?? {}
-const borderTop = footer.borderTop ?? '80px'
+const borderTop = footer.borderTop ?? '64px'
 const borderRight = footer.borderRight ?? '50vw'
-const borderBottom = footer.borderBottom ?? '80px'
+const borderBottom = footer.borderBottom ?? '64px'
 const borderLeft = footer.borderLeft ?? '50vw'
 
 // Get nav items, excluding About and Contact
@@ -76,7 +76,7 @@ footer {
             <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <img v-if="logo.dark" :src="logo.dark" alt="LDaCA" class="h-40
                w-auto">
-              <span v-if="!logo.dark" class="font-bold text-lg">{{ site.title }}</span>
+              <span v-if="!logo.dark" class="type-card-title">{{ site.title }}</span>
             </a>
           </div>
         </div>
@@ -86,24 +86,24 @@ footer {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
         <!-- Column 1: Acknowledgement & About -->
         <div class="">
-          <p class="text-lg text-[#393939] font-bold leading-relaxed mb-8">
+          <p class="type-lead text-[#393939] font-semibold mb-8">
             LDaCA acknowledges all Aboriginal and Torres Strait Islander Traditional Custodians of Country and
             recognises their continuing connection to land, sea, culture and community.<br /><br />
             We pay our respects to Elders past and present.
           </p>
           <div>
-            <h3 class="text-[1.3rem] font-bold mb-1 uppercase text-[#393939]">About</h3>
-            <p class="text-1rem text-[#393939] leading-relaxed mb-3">
+            <h3 class="type-label-heading mb-1 text-[#393939]">About</h3>
+            <p class="type-body text-[#393939] mb-3">
               LDaCA is ensuring long-term access to Australia's nationally significant language collections through
               digital infrastructure, ethical governance, and long-term care.
             </p>
-            <p class="text-sm text-[#393939] leading-relaxed">
+            <p class="type-small text-[#393939]">
               Learn more <a href="/about/organisation"
-                class="text-sm text-[#79A38D] font-bold hover:text-gray-600 transition-colors">about us</a>, our <a
+                class="type-small text-[#79A38D] font-bold hover:text-gray-600 transition-colors">about us</a>, our <a
                 href="/about/people"
-                class="text-sm text-[#79A38D] font-bold hover:text-gray-600 transition-colors">people</a> and our <a
+                class="type-small text-[#79A38D] font-bold hover:text-gray-600 transition-colors">people</a> and our <a
                 href="/about/documents-policies"
-                class="text-sm text-[#79A38D] font-bold hover:text-gray-600 transition-colors">policies and
+                class="type-small text-[#79A38D] font-bold hover:text-gray-600 transition-colors">policies and
                 principles</a>.
             </p>
           </div>
@@ -113,15 +113,15 @@ footer {
         <div class="">
           <div v-for="navItem in footerNav" :key="navItem.text" class="mb-6">
             <a v-if="navItem.link" :href="navItem.link">
-              <h3 class="text-[1.3rem] font-bold mb-1 uppercase text-[#393939]">{{ navItem.text }}</h3>
+              <h3 class="type-label-heading mb-1 text-[#393939]">{{ navItem.text }}</h3>
             </a>
-            <h3 v-else class="text-[1.3rem] font-bold mb-1 uppercase text-[#393939]">{{ navItem.text }}</h3>
+            <h3 v-else class="type-label-heading mb-1 text-[#393939]">{{ navItem.text }}</h3>
             <ul class="space-y-2">
               <!-- Regular items with link -->
               <template v-for="item in (navItem.items || [])" :key="item.link || item.title">
                 <li v-if="!item.children && item.link">
                   <a :href="item.link"
-                    class="text-base text-[#393939] text-muted-foreground hover:text-primary transition-colors pl-2">
+                    class="type-body text-[#393939] text-muted-foreground hover:text-primary transition-colors pl-2">
                     {{ item.text }}
                   </a>
                 </li>
@@ -129,7 +129,7 @@ footer {
                 <template v-if="item.children">
                   <li v-for="child in item.children" :key="child.link">
                     <a :href="child.link" v-if="!child?.bold"
-                      class="text-base text-[#393939] text-muted-foreground hover:text-primary transition-colors pl-2">
+                      class="type-body text-[#393939] text-muted-foreground hover:text-primary transition-colors pl-2">
                       {{ child.text }}
                     </a>
                   </li>
@@ -143,7 +143,7 @@ footer {
         <div class="">
           <!-- Newsletter Section -->
           <div class="mb-8 border-t border-border">
-            <h3 class="text-[1.3rem] font-bold mb-4 uppercase text-[#393939]">Subscribe to our Newsletter</h3>
+            <h3 class="type-label-heading mb-4 text-[#393939]">Subscribe to our Newsletter</h3>
             <a href="https://ldaca.us13.list-manage.com/subscribe?u=ef8667be63aefb1e35062a797&id=de4b682e46"
               target="_blank" rel="noopener noreferrer"
               :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
@@ -151,14 +151,14 @@ footer {
               Subscribe
             </a>
             <a href="/newsletter"
-              class="block mt-2 text-base  text-[#393939] text-muted-foreground hover:text-primary transition-colors">
+              class="type-body block mt-2 text-[#393939] text-muted-foreground hover:text-primary transition-colors">
               View past newsletters
             </a>
           </div>
 
           <!-- Contact Section -->
           <div class="mb-8 border-t border-border">
-            <h3 class="text-[1.3rem] font-bold mb-4 uppercase text-[#393939]">Contact</h3>
+            <h3 class="type-label-heading mb-4 text-[#393939]">Contact</h3>
             <a href="mailto:contact@ldaca.edu.au"
               :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
               class="inline-block p-4 rounded-lg font-semibold hover:opacity-80 transition-opacity mb-4">
@@ -194,16 +194,16 @@ footer {
       <!-- Bottom Links -->
       <div class="mt-8 pt-6 pb-6 border-t border-border">
         <nav class="flex items-center justify-center gap-32 flex-wrap">
-          <a href="/sitemap.xml" class="text-sm text-[#383938] hover:text-gray-600 transition-colors">
+          <a href="/sitemap.xml" class="type-small text-[#383938] hover:text-gray-600 transition-colors">
             Sitemap ➔
           </a>
-          <a href="/disclaimer" class="text-sm text-[#383938] hover:text-gray-600 transition-colors">
+          <a href="/disclaimer" class="type-small text-[#383938] hover:text-gray-600 transition-colors">
             Disclaimer ➔
           </a>
-          <a href="/privacy" class="text-sm text-[#383938] hover:text-gray-600 transition-colors">
+          <a href="/privacy" class="type-small text-[#383938] hover:text-gray-600 transition-colors">
             Privacy ➔
           </a>
-          <a href="/terms-conditions" class="text-sm text-[#383938] hover:text-gray-600 transition-colors">
+          <a href="/terms-conditions" class="type-small text-[#383938] hover:text-gray-600 transition-colors">
             Terms of use ➔
           </a>
         </nav>

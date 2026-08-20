@@ -14,7 +14,7 @@ Since her retirement in 2022, Jane Simpson has been [Professor Emerita](https://
 <br>
 
 <figure>
-  <img src="./fig_1_JaneSimpson.jpg" alt="Jane Simpson" title="Jane Simpson" class="max-h-[400px] mx-auto block" />
+  <img src="./fig_1_JaneSimpson.jpg" alt="Jane Simpson" title="Jane Simpson" class="max-h-[320px] mx-auto block" />
   <figcaption>
     Figure 1: Jane Simpson, Professor Emerita at the Australian National University (ANU). (Image: ANU)
   </figcaption>
@@ -61,7 +61,7 @@ I honestly can't see why long-term digital storage is such a problem. If the Nat
 <br>
 
 <figure>
-  <img src="./fig_2_nyingarn.png" alt="Nyingarn" title="Nyingarn" class="max-h-[600px] mx-auto block" />
+  <img src="./fig_2_nyingarn.png" alt="Nyingarn" title="Nyingarn" class="max-h-[480px] mx-auto block" />
   <figcaption>
     Figure 2: A manuscript document and its text version being edited in Nyingarn. (Image: Paul Williams)
   </figcaption>
@@ -104,7 +104,7 @@ Similarly, the Kaurna dictionary has been a fantastic asset for the Kaurna commu
 <br>
 
 <figure>
-  <img src="./fig_3_Kaurna_dictionary.jpg" alt="Teichelmann and Schürmann's original Kaurna dictionary" title="Teichelmann and Schürmann's original Kaurna dictionary" class="max-h-[800px] mx-auto block" />
+  <img src="./fig_3_Kaurna_dictionary.jpg" alt="Teichelmann and Schürmann's original Kaurna dictionary" title="Teichelmann and Schürmann's original Kaurna dictionary" class="max-h-[640px] mx-auto block" />
   <figcaption>
     Figure 3: Pages 32 and 33 from 'Outlines of a grammar, vocabulary, and phraseology of the Aboriginal language of South Australia, spoken by the natives in and for some distance around Adelaide' by C.G. Teichelmann and C.W. Schürmann (1840). (Image: Michael Treloar Antiquarian Booksellers, Adelaide)
   </figcaption>
@@ -135,7 +135,7 @@ Grace and I, as her executors, are left with her papers, which are very valuable
 <br>
 
 <figure>
-  <img src="./fig_4_hercus_manuscripts.png" alt="Digitisation of a Luise Hercus manuscript by ANU student Daniel Majchrzak" title="Digitisation of a Luise Hercus manuscript by ANU student Daniel Majchrzak" class="max-h-[400px] mx-auto block" />
+  <img src="./fig_4_hercus_manuscripts.png" alt="Digitisation of a Luise Hercus manuscript by ANU student Daniel Majchrzak" title="Digitisation of a Luise Hercus manuscript by ANU student Daniel Majchrzak" class="max-h-[320px] mx-auto block" />
   <figcaption>
     Figure 4: ANU student Daniel Majchrzak using a shelf-mounted digital camera for high-resolution image capture of the manuscripts of Luise Hercus. (Image: Julia Colleen Miller)
   </figcaption>

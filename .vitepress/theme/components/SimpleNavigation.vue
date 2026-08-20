@@ -79,8 +79,8 @@ const scrollTo = (href) => {
 <template>
   <!-- TITLE + DESCRIPTION -->
   <section class="p-0">
-    <div class="relative w-full bg-cover bg-center bg-no-repeat min-h-[200px]">
-      <div class="max-w-[1480px] mx-auto py-8 px-4 sm:px-6 md:px-8 lg:px-2">
+    <div class="relative w-full bg-cover bg-center bg-no-repeat min-h-[160px]">
+      <div class="max-w-[1184px] mx-auto py-8 px-4 sm:px-6 md:px-8 lg:px-2">
         <div class="flex flex-col lg:flex-row items-start">
           <!-- Main content section -->
           <div class="max-w-[100%] lg:max-w-[60%] relative z-10">
@@ -99,7 +99,7 @@ const scrollTo = (href) => {
           <!-- Desktop sidebar -->
           <div class="hidden lg:block w-[30%] bg-white ml-auto sticky">
             <p class="text-2xl font-bold text-white mb-4 bg-[#79a38d] p-2">On this page</p>
-            <ul class="list-none" style="padding-left: 10px;">
+            <ul class="list-none" style="padding-left: 8px;">
               <li v-for="item in contents" :key="item.href"
                 class="text-xl font-bold py-2 border-b border-gray-200 hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8">
                 <a href="javascript:void(0)" @click.prevent="scrollTo(item.href)">
@@ -115,9 +115,9 @@ const scrollTo = (href) => {
 
   <!-- Mobile / Tablet sidebar -->
   <section class="lg:hidden">
-    <div class="max-w-[1480px] mx-auto px-4 py-4">
+    <div class="max-w-[1184px] mx-auto px-4 py-4">
       <p class="text-2xl font-bold text-white mb-4 bg-[#79a38d] p-2">On this page</p>
-      <ul class="bg-white p-4" style="padding-left: 10px;">
+      <ul class="bg-white p-4" style="padding-left: 8px;">
         <li v-for="item in contents" :key="item.href"
           class="text-xl font-bold py-2 border-b border-gray-200 last:border-b-0 hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8">
           <a href="javascript:void(0)" @click.prevent="scrollTo(item.href)">

@@ -60,7 +60,7 @@ a {
 a:hover {
   text-decoration-line: underline;
   text-decoration-style: dotted;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 8px;
+  text-decoration-thickness: 1.6px;
+  text-underline-offset: 6.4px;
 }
 </style>

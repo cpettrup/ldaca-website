@@ -80,11 +80,11 @@ const isExternal = (url) => {
 
 <template>
     <section class="w-full py-12">
-        <div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
+        <div class="max-w-[1184px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
             <div class="mb-12 text-left">
-                <h1 v-if="heading">
+                <h2 v-if="heading" class="type-section-title">
                     {{ heading }}
-                </h1>
+                </h2>
             </div>
 
             <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -98,7 +98,7 @@ const isExternal = (url) => {
                         :href="item.link"
                         :target="isExternal(item.link) ? '_blank' : '_self'"
                         :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
-                        class="block w-[365px]"
+                        class="block w-[292px]"
                     >
                         <div class="relative aspect-square w-full overflow-hidden">
                             <img
@@ -116,13 +116,13 @@ const isExternal = (url) => {
                                 <div class="flex max-w-[90%] flex-col">
                                     <span
                                         v-if="item.category"
-                                        class="mb-3 text-[1rem] font-bold uppercase tracking-wide text-white"
+                                        class="type-eyebrow mb-3 text-white"
                                     >
                                         {{ item.category }}
                                     </span>
 
                                     <span
-                                        class="text-[2.5rem] font-bold leading-[1.05] text-white"
+                                        class="type-card-display text-white"
                                     >
                                         {{ item.title }}
                                     </span>
@@ -131,7 +131,7 @@ const isExternal = (url) => {
                         </div>
                     </a>
 
-                    <div v-else class="block w-[365px]">
+                    <div v-else class="block w-[292px]">
                         <div class="relative aspect-square w-full overflow-hidden">
                             <img
                                 class="block h-full w-full object-cover"
@@ -148,13 +148,13 @@ const isExternal = (url) => {
                                 <div class="flex max-w-[90%] flex-col">
                                     <span
                                         v-if="item.category"
-                                        class="mb-3 text-[1rem] font-bold uppercase tracking-wide text-white"
+                                        class="type-eyebrow mb-3 text-white"
                                     >
                                         {{ item.category }}
                                     </span>
 
                                     <span
-                                        class="text-[2.5rem] font-bold leading-[1.05] text-white"
+                                        class="type-card-display text-white"
                                     >
                                         {{ item.title }}
                                     </span>
@@ -165,12 +165,12 @@ const isExternal = (url) => {
 
                     <div class="flex flex-col gap-1">
                         <span
-                            class="inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#383938] pt-2 pb-4"
+                            class="type-card-title inline-flex items-center gap-2 pt-2 pb-4 text-[#383938]"
                         >
                             {{ item.title }}
                         </span>
 
-                        <p class="m-0 pb-4 text-[1.1rem] leading-snug">
+                        <p class="type-body m-0 pb-4">
                             {{ item.description }}
                         </p>
 
@@ -179,7 +179,7 @@ const isExternal = (url) => {
                             :href="item.link"
                             :target="isExternal(item.link) ? '_blank' : '_self'"
                             :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
-                            class="pb-2 inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#79a38d] hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8"
+                            class="type-action pb-2 inline-flex items-center gap-2 text-[#79a38d] hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8"
                         >
                             <span>Read &gt;</span>
                         </a>

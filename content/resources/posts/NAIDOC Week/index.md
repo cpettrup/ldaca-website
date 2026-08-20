@@ -19,7 +19,7 @@ We invited several of LDaCA's Chief Investigators, Advisors and collaborators to
 # Standing on the shoulders of ancestors
 
 <figure>
-  <img src="./AlHarvey.jpg" alt="Photo of Alistair Harvey" title="Photo of Alistair Harvey" style="height: 250px;" />
+  <img src="./AlHarvey.jpg" alt="Photo of Alistair Harvey" title="Photo of Alistair Harvey" style="height: 200px;" />
   <figcaption>Alistair Harvey (Image: Marc Grimwade/ARDC)</figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ We invited several of LDaCA's Chief Investigators, Advisors and collaborators to
 
 Alistair Harvey is of Saibai Island descent and an Industry Fellow with the Language Data Commons of Australia (LDaCA). He reflected on the enduring strength of Saibai Islanders and Torres Strait Islander communities. He highlighted the generations who have protected language, governance and cultural authority and described a future where Indigenous languages and knowledge systems shape research on their own terms. His response reminds us that research is strongest when knowledge remains connected to people, place and community.
 
-<div style="margin-left: 100px; margin-right: 100px;">
+<div style="margin-left: 80px; margin-right: 80px;">
 
 ### What does “50 Years of Deadly” mean to you in your research?
 “50 Years of Deadly” speaks to the strength of Torres Strait Islander and Aboriginal peoples and to the ongoing reality that our communities are still adapting to rapid and often disruptive changes affecting language, culture and governance. In my research, it recognises the deliberate work of Saibai Islanders and Torres Strait Islander communities to maintain cultural authority, economic independence and governance autonomy in the face of colonial systems. It also signals a shift in how our knowledge is positioned. Saibai language and cultural knowledge are not simply subjects to be studied; they are knowledge canons, with their own frameworks for understanding, interpreting and engaging with the world. “Deadly” therefore honours the foresight of our forebears, who preserved language and culture so future generations have pathways back to knowledge, identity and self-determination.
@@ -51,7 +51,7 @@ I associate “50 Years of Deadly” with a Saibai saying *‘Saibailgaw za ngar
 # Language revitalisation is community work
 
 <figure>
-  <img src="./BlancheAlexander.gif" alt="Photo of Blanche Alexander" title="Blanche Alexander" style="height: 250px;" />
+  <img src="./BlancheAlexander.gif" alt="Photo of Blanche Alexander" title="Blanche Alexander" style="height: 200px;" />
   <figcaption>Blanche Alexander (Image: Blanche Alexander)</figcaption> 
 </figure>
 
@@ -63,7 +63,7 @@ Blanche Alexander is a Gooreng Gooreng, Yidinji, Pitta Pitta and Mitakoodi woman
 Blanche reflected on the decades of work Aboriginal and Torres Strait Islander communities have invested in protecting and revitalising languages. She noted the importance of community-led research, decolonising language revitalisation and creating research that strengthens identity, wellbeing and connection to Country. Her vision for the future places Indigenous storywork and community priorities at the heart of research.
 
 
-<div style="margin-left: 100px; margin-right: 100px;">
+<div style="margin-left: 80px; margin-right: 80px;">
 
 ### What does “50 Years of Deadly” mean to you in your research?
 “50 Years of Deadly” in my research means recognising and honouring the long, community‑driven work that has made today’s language revitalisation possible. In my current research on language data and revitalisation, I note that Aboriginal and Torres Strait Islander communities have established their own language centres and recorded Elders, creating grassroots archives that protect and share deep cultural knowledge. Communities have further developed and led local language classes, school programs and learning resources, highlighting how using Indigenous languages supports identity, wellbeing and community pride, and showing that deadly research is built on community-led practice across generations. 
@@ -85,7 +85,7 @@ Indigenous communities have challenged extractive research models and data colle
 # Looking back to look forward
 
 <figure>
-  <img src="./DesCrump.jpg" alt="Photo of Desmond Crump" title="Desmond Crump" style="height: 250px;" />
+  <img src="./DesCrump.jpg" alt="Photo of Desmond Crump" title="Desmond Crump" style="height: 200px;" />
   <figcaption>Desmond Crump (Image: Desmond Crump)</figcaption> 
 </figure>
 
@@ -94,7 +94,7 @@ Indigenous communities have challenged extractive research models and data colle
 
 Desmond Crump is from the Gamilaroi Nation in South-West Queensland and is an Advisor for LDaCA. His reflection is deeply personal, tracing his own journey from being one of the few Aboriginal students at his school to becoming involved in language research. He reflected on the mentors and experiences that shaped his career and his response celebrated the growing recognition of Indigenous knowledges across education and research, while looking ahead to the role these knowledges will play in solving future challenges.
 
-<div style="margin-left: 100px; margin-right: 100px;">
+<div style="margin-left: 80px; margin-right: 80px;">
 
 ### What does “50 Years of Deadly” mean to you in your research?
 In terms of research, I think there is a lot more Aboriginal and Torres Strait Islander led research now — certainly 50 years ago, it seems that there was still a lot of research 'about' Indigenous people and topics rather than 'with us'.
@@ -116,7 +116,7 @@ In Gamilaraay we have a word *dhirrabuu* that means very flash / deadly!!
 # Research that serves community
 
 <figure>
-  <img src="./GavinStanbrook.jpg" alt="Photo of Gavin Stanbrook" title="Gavin Stanbrook" style="height: 250px;" />
+  <img src="./GavinStanbrook.jpg" alt="Photo of Gavin Stanbrook" title="Gavin Stanbrook" style="height: 200px;" />
   <figcaption>Gavin Stanbrook (Image: ARDC)</figcaption> 
 </figure>
 
@@ -125,7 +125,7 @@ In Gamilaraay we have a word *dhirrabuu* that means very flash / deadly!!
 
 Gavin Stanbrook is from Gumbaynggirr country on the New South Wales mid-north coast and is the Program Manager (Indigenous Data Governance) for the ARDC. He reflected on the generations of Indigenous leaders whose advocacy made today's research landscape possible. He said that Indigenous protocols are transforming research by shifting the focus from institutions and data towards people, community benefit and accountability. While recognising there is still work to do, he remains optimistic about the growing movement for Indigenous-led research and solidarity across the sector.
 
-<div style="margin-left: 100px; margin-right: 100px;">
+<div style="margin-left: 80px; margin-right: 80px;">
 
 ### What does “50 Years of Deadly” mean to you in your research?
 It's a culmination of resistance by generations of Indigenous communities against racism and oppression, for genuine self-determination.
@@ -143,7 +143,7 @@ We have a long way to go, embedding Indigenous protocols into research practice 
 # Keeping the fire burning
 
 <figure>
-  <img src="./RobertMcLellan.jpg" alt="Photo of Robert McLellan" title="Robert McLellan" style="height: 250px;" />
+  <img src="./RobertMcLellan.jpg" alt="Photo of Robert McLellan" title="Robert McLellan" style="height: 200px;" />
   <figcaption>Robert McLellan (Image: Marc Grimwade/ARDC)</figcaption> 
 </figure>
 
@@ -154,7 +154,7 @@ Robert McLellan is a proud Gooreng Gooreng descendant of the Wide Bay region and
 
 <br>
 
-<div style="margin-left: 100px; margin-right: 100px;">
+<div style="margin-left: 80px; margin-right: 80px;">
 NAIDOC was born not from celebration, but from struggle. It emerged through the courage of Aboriginal and Torres Strait Islander people who came before us, those who marched, protested the systemic mistreatment of our people, and tirelessly advocated for our rights, often at great personal cost. Their work was neither easy nor without sacrifice, yet it created opportunities for future generations to occupy spaces from which our people had long been excluded.
 
 This is particularly evident in research. Today, Indigenous researchers and communities are advancing Indigenous Cultural and Intellectual Property, Indigenous Data Sovereignty, Indigenous Data Governance, Indigenous-led research, policy reform and governance frameworks that centre Indigenous authority, knowledge systems and aspirations. This includes refined methodologies that transcend their historical predecessors, specifically extractive research models, by adopting approaches grounded in Indigenous self-determination.

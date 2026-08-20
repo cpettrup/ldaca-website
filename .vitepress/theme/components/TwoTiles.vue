@@ -72,7 +72,7 @@ const isExternal = (url) => {
 </script>
 
 <template>
-  <section class="max-w-[1480px] mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-2">
+  <section class="max-w-[1184px] mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-2">
 
     <div class="mb-8 text-left flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
       <h1>{{ props.heading }}</h1>
@@ -84,7 +84,7 @@ const isExternal = (url) => {
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-      <article v-for="item in normalizedItems" :key="`${item.link}-${item.title}`" class="relative overflow-hidden shadow-xl h-[700px]">
+      <article v-for="item in normalizedItems" :key="`${item.link}-${item.title}`" class="relative overflow-hidden shadow-xl h-[560px]">
 
         <!-- background image link -->
         <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"

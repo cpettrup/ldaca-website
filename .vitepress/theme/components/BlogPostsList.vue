@@ -7,8 +7,8 @@ const { theme } = useData()
 const imageFallback = theme.value.postImageFallback ||
   'data:image/svg+xml;utf8,' +
   encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">' +
-    '<rect width="96" height="96" fill="#e5e7eb"/>' +
+    '<svg xmlns="http://www.w3.org/2000/svg" width="76.8" height="76.8" viewBox="0 0 96 96">' +
+    '<rect width="76.8" height="76.8" fill="#e5e7eb"/>' +
     '<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="#6b7280">No Image</text>' +
     '</svg>'
   )

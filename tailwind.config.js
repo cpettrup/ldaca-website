@@ -6,6 +6,33 @@ export default {
     './.vitepress/**/*.{vue,js,ts,jsx,tsx}',
   ],
   theme: {
+    // 80% equivalents of Tailwind's default breakpoints. This preserves
+    // the responsive behaviour the site had when viewed at 80% browser zoom.
+    screens: {
+      sm: '512px',
+      md: '614.4px',
+      lg: '819.2px',
+      xl: '1024px',
+      '2xl': '1228.8px',
+    },
+    // Unified typography scale. All site text should use these named sizes
+    // instead of one-off rem/px values. Values are backed by CSS variables
+    // declared in .vitepress/theme/style.css so the scale has one source of truth.
+    fontSize: {
+      xs: ['var(--type-xs)', { lineHeight: '1rem' }],
+      sm: ['var(--type-sm)', { lineHeight: '1.25rem' }],
+      base: ['var(--type-base)', { lineHeight: '1.45rem' }],
+      lg: ['var(--type-lg)', { lineHeight: '1.5rem' }],
+      xl: ['var(--type-xl)', { lineHeight: '1.65rem' }],
+      '2xl': ['var(--type-2xl)', { lineHeight: '1.85rem' }],
+      '3xl': ['var(--type-3xl)', { lineHeight: '2.1rem' }],
+      '4xl': ['var(--type-4xl)', { lineHeight: '2.45rem' }],
+      '5xl': ['var(--type-5xl)', { lineHeight: '1.1' }],
+      '6xl': ['3.25rem', { lineHeight: '1.05' }],
+      '7xl': ['3.75rem', { lineHeight: '1.05' }],
+      '8xl': ['4.5rem', { lineHeight: '1' }],
+      '9xl': ['6rem', { lineHeight: '1' }],
+    },
     extend: {
       colors: {
         border: 'hsl(var(--border))',

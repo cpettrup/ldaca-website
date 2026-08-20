@@ -137,7 +137,7 @@ function parseGlossaryContent(content: string) {
 }
 
 .glossary-item {
-  border-bottom: 1px solid var(--vp-c-divider);
+  border-bottom: 0.8px solid var(--vp-c-divider);
   padding-bottom: 1.5rem;
 }
 
@@ -147,7 +147,7 @@ function parseGlossaryContent(content: string) {
 
 .glossary-term {
   font-weight: 600;
-  scroll-margin-top: calc(var(--vp-nav-height) + 16px);
+  scroll-margin-top: calc(var(--vp-nav-height) + 12.8px);
   line-height: 1.6;
 }
 

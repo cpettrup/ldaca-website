@@ -67,12 +67,12 @@ const informationHtml = computed(() => renderSimpleMarkdownInline(event.value.in
         :breadcrumb="event.breadcrumb || ''" backgroundImage="/images/GreenBackground.png" />
 
     <div class="VPDoc">
-        <div class="max-w-[1480px] mx-auto px-4 py-10">
+        <div class="max-w-[1184px] mx-auto px-4 py-10">
 
             <div class="flex flex-col lg:flex-row gap-10">
 
                 <!-- LEFT: Markdown content -->
-                <article class="vp-doc project-content flex-1 max-w-[700px] pl-0 ml-0 pt-0 mt-0">
+                <article class="vp-doc project-content flex-1 max-w-[560px] pl-0 ml-0 pt-0 mt-0">
 
                     <!-- Author -->
                     <div v-if="event.author" class="mb-4 italic text-gray-600">
@@ -94,7 +94,7 @@ const informationHtml = computed(() => renderSimpleMarkdownInline(event.value.in
                 </article>
 
                 <!-- RIGHT: Event details -->
-                <div class="w-full lg:w-[470px] flex flex-col gap-6">
+                <div class="w-full lg:w-[376px] flex flex-col gap-6">
 
                     <aside class="h-fit">
 

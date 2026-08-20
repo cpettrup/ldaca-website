@@ -14,7 +14,7 @@ const getImage = (post) =>
 </script>
 
 <template>
-  <section class="max-w-[1480px] mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-2">
+  <section class="max-w-[1184px] mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-2">
 
     <div class="mb-8 text-left">
       <h1>LATEST ON THE BLOG</h1>
@@ -22,7 +22,7 @@ const getImage = (post) =>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-      <article v-for="post in latestPosts" :key="post.url" class="relative overflow-hidden shadow-xl h-[700px]">
+      <article v-for="post in latestPosts" :key="post.url" class="relative overflow-hidden shadow-xl h-[480px]">
 
         <!-- background image link -->
         <a :href="post.url" class="absolute inset-0 block" :aria-label="post.frontmatter.title">

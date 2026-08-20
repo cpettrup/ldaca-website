@@ -43,8 +43,8 @@ const tickerFeatures = computed(() => [
             class="ticker-item"
           >
             <svg
-              width="19"
-              height="21"
+              width="15.2"
+              height="16.8"
               viewBox="0 0 19 21"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -76,8 +76,8 @@ const tickerFeatures = computed(() => [
             class="ticker-item"
           >
             <svg
-              width="19"
-              height="21"
+              width="15.2"
+              height="16.8"
               viewBox="0 0 19 21"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

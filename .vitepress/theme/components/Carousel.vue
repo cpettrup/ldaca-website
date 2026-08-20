@@ -58,7 +58,7 @@ const props = defineProps({
 })
 
 const cardBgClass = computed(() =>
-  props.shade === 'dark' ? 'bg-[#393939]' : 'bg-white border-[0.75px] border-[#b0b0b0]'
+  props.shade === 'dark' ? 'bg-[#393939]' : 'bg-white border-[0.6px] border-[#b0b0b0]'
 )
 
 const textClass = computed(() =>
@@ -161,14 +161,14 @@ const updateMatch = (mq) => {
 
 let mqListener
 onMounted(() => {
-  const mq = window.matchMedia('(min-width: 1024px)')
+  const mq = window.matchMedia('(min-width: 819.2px)')
   updateMatch(mq)
   mqListener = (event) => updateMatch(event)
   mq.addEventListener('change', mqListener)
 })
 
 onBeforeUnmount(() => {
-  const mq = window.matchMedia('(min-width: 1024px)')
+  const mq = window.matchMedia('(min-width: 819.2px)')
   mq.removeEventListener('change', mqListener)
 })
 
@@ -215,7 +215,7 @@ const isExternal = (url) => {
 <template>
   <section class="w-full pb-10"
     :style="props.backgroundColor ? { backgroundColor: props.backgroundColor, opacity: `${props.opacity}%` } : {}">
-    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2 py-10">
+    <div class="max-w-[1184px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2 py-10">
 
       <!-- Heading -->
       <div class="mb-8 text-left flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -255,7 +255,7 @@ const isExternal = (url) => {
             <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
               :rel="isExternal(item.link) ? 'noopener noreferrer' : null" class="block">
               <img :src="item.image" :alt="item.title"
-                :class="['w-full object-cover h-80', item.imageWasFallback ? 'bg-[#79a38d]' : '']" />
+                :class="['w-full object-cover h-60', item.imageWasFallback ? 'bg-[#79a38d]' : '']" />
             </a>
 
             <div class="px-5 pt-5 pb-3 space-y-3 flex flex-col">
@@ -280,7 +280,7 @@ const isExternal = (url) => {
             <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
               :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
               class="flex justify-between items-center w-full font-bold mt-auto bg-[#79A38D] hover:bg-[#8faf9b]"
-              style="color:#FFFEF8; padding:15px;">
+              style="color:#FFFEF8; padding:12px;">
               <span class="text-xl">{{ props.buttonText }}</span>
               <span class="text-xl ml-auto font-sans font-bold">→</span>
             </a>
@@ -326,7 +326,7 @@ const isExternal = (url) => {
           <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
             :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
             class="flex justify-between items-center w-full font-bold mt-auto bg-[#79A38D] hover:bg-[#8faf9b]"
-            style="color:#FFFEF8; padding:15px;">
+            style="color:#FFFEF8; padding:12px;">
             <span class="text-xl">{{ props.buttonText }}</span>
             <span class="font-sans font-bold text-white text-xl"> →</span>
           </a>

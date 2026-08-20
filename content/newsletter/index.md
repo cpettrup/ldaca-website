@@ -10,7 +10,7 @@ description: "Catch up with LDaCA by reading our past newsletters."
 
 <br>
 
-<iframe src="https://us13.campaign-archive.com/?u=ef8667be63aefb1e35062a797&id=62ca105abc" width="100%" height="500px" style="border:1px solid black;">
+<iframe src="https://us13.campaign-archive.com/?u=ef8667be63aefb1e35062a797&id=62ca105abc" width="100%" height="400px" style="border:0.8px solid black;">
 </iframe>
 
 <br>

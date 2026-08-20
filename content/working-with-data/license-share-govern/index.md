@@ -56,7 +56,7 @@ title: "License, share & govern"
       },
     ]"/>
       <div
-  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  class="w-full max-w-[1184px] h-[5.6px] mx-auto"
   style="
     background-image: url('/images/section-divider.png');
     background-size: cover;
@@ -82,7 +82,7 @@ title: "License, share & govern"
 />
 
   <div
-  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  class="w-full max-w-[1184px] h-[5.6px] mx-auto"
   style="
     background-image: url('/images/section-divider.png');
     background-size: cover;
@@ -113,7 +113,7 @@ title: "License, share & govern"
   ]"/>
  
   <div
-  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  class="w-full max-w-[1184px] h-[5.6px] mx-auto"
   style="
     background-image: url('/images/section-divider.png');
     background-size: cover;

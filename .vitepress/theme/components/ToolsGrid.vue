@@ -204,7 +204,7 @@ watch(
 <template>
   <section v-bind="$attrs" class="w-full py-10"
     :style="props.backgroundColor ? { backgroundColor: props.backgroundColor, opacity: `${props.opacity}%` } : {}">
-    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
+    <div class="max-w-[1024px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
       <div class="w-full mb-8">
         <h1 class="mb-2 text-white">{{ heading }}</h1>
         <p class="text-white text-xl">{{ description }}</p>
@@ -315,7 +315,7 @@ watch(
             </a>
           </div>
 
-          <div class="mb-6 p-6 bg-gray-100 min-h-[100px] text-gray-500">
+          <div class="mb-6 p-6 bg-gray-100 min-h-[80px] text-gray-500">
             <h3>At a glance</h3>
 
             <p v-if="selectedItem?.publisher" class="text-[#79a38d] text-xl font-bold pt-2">Institution/Team</p>

@@ -41,11 +41,11 @@ const selectItem = (item) => {
 
 <template>
   <section class="w-full pb-8" :style="props.backgroundColor ? { backgroundColor: props.backgroundColor } : {}">
-    <div class="max-w-[1480px] mx-auto py-4 px-4 sm:px-6 md:px-8 lg:px-2">
+    <div class="max-w-[1184px] mx-auto py-4 px-4 sm:px-6 md:px-8 lg:px-2">
       <!-- Header -->
       <div class="mb-12 text-left">
-        <h1 class="">{{ props.heading }}</h1>
-        <p class="text-gray-600 text-[1.7rem]">{{ props.description }}</p>
+        <h2 class="type-page-title">{{ props.heading }}</h2>
+        <p class="text-xl text-gray-600">{{ props.description }}</p>
       </div>
 
       <!-- DESKTOP / LARGE SCREEN -->
@@ -58,7 +58,7 @@ const selectItem = (item) => {
               color: selectedItem.title === item.title ? buttonColors.text : menuColors.unselectedText,
               borderColor: selectedItem.title === item.title ? buttonColors.bg : '#d1d5db'
             }"
-              class="w-full text-left px-4 py-3 first:rounded-t-lg last:rounded-b-lg border-[0.75px] transition-all hover:opacity-80">
+              class="type-button w-full text-left px-4 py-3 first:rounded-t-lg last:rounded-b-lg border-[0.6px] transition-all hover:opacity-80">
               {{ item.title }}
             </button>
           </div>
@@ -70,15 +70,15 @@ const selectItem = (item) => {
             <div class="grid grid-cols-2 gap-6"
               :style="props.backgroundColor ? { backgroundColor: props.backgroundColor } : {}">
               <!-- Left: Image -->
-              <div class="h-[333px] overflow-hidden">
+              <div class="h-[266.4px] overflow-hidden">
                 <img :src="selectedItem.image" :alt="selectedItem.title"
                   class="w-full h-full object-cover rounded-none" />
               </div>
               <!-- Right: Text -->
               <div class="flex flex-col justify-start gap-4">
-                <h3>{{ selectedItem.title }}</h3>
-                <p class="text-gray-600 text-lg" v-html="selectedItem.description"></p>
-                <p class=" text-[1.4rem] text-[#85A08C] pb-1">
+                <h3 class="type-subsection-title">{{ selectedItem.title }}</h3>
+                <p class="type-body text-gray-600" v-html="selectedItem.description"></p>
+                <p class="type-action text-[#85A08C] pb-1">
                   <a :href="selectedItem.link"
                     class="font-bold hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-3 ">
                     Find out more
@@ -99,7 +99,7 @@ const selectItem = (item) => {
             backgroundColor: selectedItem.title === item.title ? buttonColors.bg : menuColors.unselectedBg,
             color: selectedItem.title === item.title ? buttonColors.text : menuColors.unselectedText,
             borderColor: selectedItem.title === item.title ? buttonColors.bg : '#d1d5db'
-          }" class="w-full text-left px-4 py-3 border-[0.75px] rounded-lg transition-all hover:opacity-80">
+          }" class="type-button w-full text-left px-4 py-3 border-[0.6px] rounded-lg transition-all hover:opacity-80">
             {{ item.title }}
           </button>
 
@@ -109,8 +109,8 @@ const selectItem = (item) => {
 
           <!-- Text -->
           <div v-if="selectedItem.title === item.title" class="p-4 space-y-2">
-            <h3 class="text-lg font-bold">{{ selectedItem.title }}</h3>
-            <p class="text-gray-600 text-2xl" v-html="selectedItem.description"></p>
+            <h3 class="type-card-title">{{ selectedItem.title }}</h3>
+            <p class="type-body text-gray-600" v-html="selectedItem.description"></p>
             <a :href="selectedItem.link"
               class="block font-bold hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8">
               Find out more ➜</a>

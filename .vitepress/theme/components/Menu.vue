@@ -66,16 +66,16 @@ const getGridClass = (items) => {
           <li v-for="item in nav" :key="item.text" class="list-none relative">
             <!-- If item has a link and no sub-items, render as link -->
             <a v-if="item.link && !item.items" :href="item.link || '#'"
-              class="flex items-center gap-1.5 text-2xl font-medium text-white hover:text-[#79A38D] hover:font-bold hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8 transition-colors">
+              class="flex items-center gap-1.5 text-xl font-medium text-white hover:text-[#79A38D] hover:font-bold hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8 transition-colors">
               {{ item.text }}
             </a>
             <!-- Otherwise, render as dropdown button -->
             <button v-else @click="toggleMenu(item.text)"
-              class="flex items-center gap-1.5 text-2xl font-medium text-white hover:text-[#79A38D] hover:font-bold hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8 transition-colors">
+              class="flex items-center gap-1.5 text-xl font-medium text-white hover:text-[#79A38D] hover:font-bold hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8 transition-colors">
               {{ item.text }}
               <svg v-if="item.items" class="h-4 w-4 transition-transform"
                 :class="{ 'rotate-180': activeMenu === item.text }" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
+                stroke="currentColor" stroke-width="1.6">
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
@@ -98,7 +98,7 @@ const getGridClass = (items) => {
               {{ item.text }}
               <svg v-if="item.items" class="h-3 w-3 transition-transform"
                 :class="{ 'rotate-180': activeMenu === item.text }" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
+                stroke="currentColor" stroke-width="1.6">
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
@@ -106,15 +106,15 @@ const getGridClass = (items) => {
         </ul>
       </nav>
 
-      <!-- Mobile Hamburger Button (≤767px) -->
+      <!-- Mobile Hamburger Button (≤613.6px) -->
       <div class="md:hidden flex items-center justify-center">
         <button @click="toggleMobileMenu" class="text-white hover:text-gray-300 transition-colors p-2"
           aria-label="Toggle menu">
           <svg v-if="!mobileMenuOpen" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2">
+            stroke-width="1.6">
             <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg v-else class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg v-else class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
             <path d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -140,7 +140,7 @@ const getGridClass = (items) => {
                 <h2 class="">
                   {{ item.text }}
                 </h2>
-                <p v-if="item.subtitle" class="mt-4 text-[#898989] text-2xl">
+                <p v-if="item.subtitle" class="mt-4 text-[#898989] text-xl">
                   {{ item.subtitle }}
                 </p>
               </div>
@@ -196,7 +196,7 @@ const getGridClass = (items) => {
     <!-- Tablet condensed menu backdrop (768-1023px) -->
     <div v-if="activeMenu" @click="closeMenu" class="hidden md:block lg:hidden fixed inset-0 z-40" />
 
-    <!-- Mobile Slide-out Menu (≤767px) -->
+    <!-- Mobile Slide-out Menu (≤613.6px) -->
     <transition enter-active-class="transition ease-out duration-300" enter-from-class="translate-x-full"
       enter-to-class="translate-x-0" leave-active-class="transition ease-in duration-200"
       leave-from-class="translate-x-0" leave-to-class="translate-x-full">
@@ -207,7 +207,7 @@ const getGridClass = (items) => {
           <div class="flex justify-end mb-6">
             <button @click="closeMobileMenu" class="text-white hover:text-gray-300 transition-colors p-2"
               aria-label="Close menu">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                 <path d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
@@ -230,7 +230,7 @@ const getGridClass = (items) => {
                     <span>{{ item.text }}</span>
                     <svg class="h-5 w-5 transition-transform"
                       :class="{ 'rotate-180': mobileActiveSubmenu === item.text }" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2">
+                      stroke="currentColor" stroke-width="1.6">
                       <path d="M6 9l6 6 6-6" />
                     </svg>
                   </button>
@@ -270,7 +270,7 @@ const getGridClass = (items) => {
       </div>
     </transition>
 
-    <!-- Mobile backdrop (≤767px) -->
+    <!-- Mobile backdrop (≤613.6px) -->
     <transition enter-active-class="transition ease-out duration-300" enter-from-class="opacity-0"
       enter-to-class="opacity-100" leave-active-class="transition ease-in duration-200" leave-from-class="opacity-100"
       leave-to-class="opacity-0">

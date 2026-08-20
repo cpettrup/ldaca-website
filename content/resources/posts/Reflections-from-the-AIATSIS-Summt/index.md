@@ -17,7 +17,7 @@ Among the attendees was Blanche Alexander, the newly appointed Data and Research
 <br>
 
 <figure>
-<img src="./alex-and-moises-at-aiatsis-summit.jpg" Alt="Alex Hohoi and Moises Sacal Bonequi present at the AIATSIS Summit 2026" title="Alex Hohoi and Moises Sacal Bonequi present at the AIATSIS Summit 2026" style="height: 525px" /> <figcaption>Alex Hohoi and Moises Sacal Bonequi present at the AIATSIS Summit 2026 (Image: Robert McLellan)</figcaption>
+<img src="./alex-and-moises-at-aiatsis-summit.jpg" Alt="Alex Hohoi and Moises Sacal Bonequi present at the AIATSIS Summit 2026" title="Alex Hohoi and Moises Sacal Bonequi present at the AIATSIS Summit 2026" style="height: 420px" /> <figcaption>Alex Hohoi and Moises Sacal Bonequi present at the AIATSIS Summit 2026 (Image: Robert McLellan)</figcaption>
 </figure>
 
 <br>
@@ -29,7 +29,7 @@ Alex also discussed data governance in Milingimbi (a remote Yolŋu island commun
 <br>
 
 <figure>
-<div class="designer-grid" style="width:900px; margin: auto; !important;">
+<div class="designer-grid" style="width:720px; margin: auto; !important;">
     <div class="item left">
         <img src="./AIATSIS-Summit-MC.jpg" alt="Presenter at AIATSIS Summit 2026">
     </div>
@@ -56,7 +56,7 @@ Overall, my experience at AIATSIS has led to professional and personal growth, w
 ### About the author
 
 <figure>
-<img Src="./Blanche_A_Photo.png" Alt="Blanche Alexander" style="height: 300px" />
+<img Src="./Blanche_A_Photo.png" Alt="Blanche Alexander" style="height: 240px" />
 <figcaption>"Blanche Alexander" (Image: Blanche Alexander)</figcaption>
 </figure>
 

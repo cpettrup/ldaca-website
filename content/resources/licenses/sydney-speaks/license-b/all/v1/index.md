@@ -9,7 +9,7 @@ aliases:
 
 <br/>
 
-<iframe src="./Sydney_Speaks_License_B.pdf" width="100%" height="800px" style="border: none;"></iframe>
+<iframe src="./Sydney_Speaks_License_B.pdf" width="100%" height="640px" style="border: none;"></iframe>
 
 <br/>
 <br/>

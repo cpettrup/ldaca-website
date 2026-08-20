@@ -22,7 +22,7 @@ const headerBgColor = theme.value.headerBgColor ?? 'transparent'
           </a>
         </div>
 
-        <!-- Right quick menu - Desktop (≥1024px) -->
+        <!-- Right quick menu - Desktop (≥819.2px) -->
         <div class="hidden lg:flex items-center gap-6 ml-auto pl-32">
           <a href="/resources/posts/"
             class="text-base text-white hover:text-[#79A38D] hover:font-bold transition-colors">Blog</a>
@@ -55,7 +55,7 @@ const headerBgColor = theme.value.headerBgColor ?? 'transparent'
 
 <style>
 html {
-  scroll-padding-top: 140px;
+  scroll-padding-top: 112px;
   /* Adjust to match header height */
 }
 </style>

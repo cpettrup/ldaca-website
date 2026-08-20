@@ -71,40 +71,40 @@ const isExternal = (url) => {
 
 <template>
     <section class="w-full py-12">
-        <div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
+        <div class="max-w-[1184px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
             <div class="mb-12 text-left">
-                <h1 v-if="heading">
+                <h2 v-if="heading" class="type-section-title">
                     {{ heading }}
-                </h1>
+                </h2>
             </div>
 
             <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
                 <article v-for="item in normalizedItems" :key="item.link || item.title"
                     class="flex flex-col items-start gap-4">
                     <a v-if="item.link" :href="item.link" target="_blank" rel="noopener noreferrer"
-                        class="block w-[365px]">
+                        class="block w-[292px]">
                         <img class="block aspect-square w-full object-cover" :src="item.image" :alt="item.title"
                             loading="lazy">
                     </a>
 
-                    <div v-else class="block w-[365px]">
+                    <div v-else class="block w-[292px]">
                         <img class="block aspect-square w-full object-cover" :src="item.image" :alt="item.title"
                             loading="lazy">
                     </div>
 
                     <div class="flex flex-col gap-1">
                         <span
-                            class="inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#383938] pt-2 pb-4">
+                            class="type-card-title inline-flex items-center gap-2 pt-2 pb-4 text-[#383938]">
                             {{ item.title }}
                         </span>
 
-                        <p class="m-0 pb-4 text-[1.1rem] leading-snug">
+                        <p class="type-body m-0 pb-4">
                             {{ item.description }}
                         </p>
 
                         <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
                             :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
-                            class="pb-2 inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#79a38d] hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8">
+                            class="type-action pb-2 inline-flex items-center gap-2 text-[#79a38d] hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8">
                             <span>Read &gt;</span>
                         </a>
                     </div>

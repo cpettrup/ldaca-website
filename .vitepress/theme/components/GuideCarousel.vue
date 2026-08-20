@@ -51,7 +51,7 @@ let mqListener
 let mediaQuery
 
 onMounted(() => {
-    mediaQuery = window.matchMedia('(min-width: 1024px)')
+    mediaQuery = window.matchMedia('(min-width: 819.2px)')
     updateMatch(mediaQuery)
 
     mqListener = (event) => updateMatch(event)
@@ -142,7 +142,7 @@ const isExternal = (url) => {
         class="w-full py-10"
         :style="{ backgroundColor: props.backgroundColor || undefined }"
     >
-        <div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
+        <div class="max-w-[1184px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
 
             <!-- Heading -->
             <div class="mb-8 text-left">
@@ -194,7 +194,7 @@ const isExternal = (url) => {
                     <div
                         v-for="item in visibleItems"
                         :key="item.title"
-                        class="relative overflow-hidden flex flex-col justify-start h-[600px] p-10 text-white"
+                        class="relative overflow-hidden flex flex-col justify-start h-[440px] p-10 text-white"
                         :style="{
                             backgroundImage: `url(${item.image})`,
                             backgroundSize: 'cover',
@@ -356,7 +356,7 @@ const isExternal = (url) => {
                             color: item.buttonTextColor || buttonColors.text
                         }"
                         class="flex justify-between items-center w-full font-bold mt-auto hover:opacity-80 transition-opacity"
-                        style="padding: 15px 2rem;"
+                        style="padding: 12px 2rem;"
                     >
                         <span class="text-xl">View more</span>
                         <span class="font-sans font-bold text-xl">→</span>

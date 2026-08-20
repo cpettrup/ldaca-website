@@ -214,7 +214,7 @@ const portalLink = computed(() => {
 <template>
   <section v-bind="$attrs" class="w-full py-10"
     :style="props.backgroundColor ? { backgroundColor: props.backgroundColor, opacity: `${props.opacity}%` } : {}">
-    <div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
+    <div class="max-w-[1184px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
 
       <!-- Header -->
       <div class="w-full mb-8">
@@ -300,7 +300,7 @@ const portalLink = computed(() => {
           <p class="text-xl text-gray-600 mb-6">{{ selectedItem.description }}</p>
 
           <!-- Space for additional content -->
-          <div class="mb-6 p-6 bg-gray-100 min-h-[100px] text-gray-500">
+          <div class="mb-6 p-6 bg-gray-100 min-h-[80px] text-gray-500">
             <h3>At a Glance</h3>
             <p v-if="selectedItem.language" class="text-[#79a38d] text-xl font-bold pt-2">Languages</p>
             <p v-if="selectedItem.language" class="text-[#383938] text-xl">{{ selectedItem.language }}</p>
@@ -319,14 +319,14 @@ const portalLink = computed(() => {
               <div class="flex flex-wrap gap-3">
                 <a :href="props.notebook.cooeeArdc" :target="isExternal(props.notebook.cooeeArdc) ? '_blank' : '_self'"
                   :rel="isExternal(props.notebook.cooeeArdc) ? 'noopener noreferrer' : null"
-                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[210px]">
+                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[168px]">
                   <span class="block">ARDC BinderHub</span>
                   <span class="block text-sm font-normal opacity-90">(Authentication required)</span>
                 </a>
                 <a :href="props.notebook.cooeePublic"
                   :target="isExternal(props.notebook.cooeePublic) ? '_blank' : '_self'"
                   :rel="isExternal(props.notebook.cooeePublic) ? 'noopener noreferrer' : null"
-                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[210px]">
+                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[168px]">
                   <span class="block">MyBinder</span>
                   <span class="block text-sm font-normal opacity-90">(Public)</span>
                 </a>
@@ -336,13 +336,13 @@ const portalLink = computed(() => {
               <div class="flex flex-wrap gap-3">
                 <a :href="props.notebook.f2fArdc" :target="isExternal(props.notebook.f2fArdc) ? '_blank' : '_self'"
                   :rel="isExternal(props.notebook.f2fArdc) ? 'noopener noreferrer' : null"
-                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[210px]">
+                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[168px]">
                   <span class="block">ARDC BinderHub</span>
                   <span class="block text-sm font-normal opacity-90">(Authentication required)</span>
                 </a>
                 <a :href="props.notebook.f2fPublic" :target="isExternal(props.notebook.f2fPublic) ? '_blank' : '_self'"
                   :rel="isExternal(props.notebook.f2fPublic) ? 'noopener noreferrer' : null"
-                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[210px]">
+                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[168px]">
                   <span class="block">MyBinder</span>
                   <span class="block text-sm font-normal opacity-90">(Public)</span>
                 </a>
@@ -353,14 +353,14 @@ const portalLink = computed(() => {
                 <a :href="props.notebook.ausredditArdc"
                   :target="isExternal(props.notebook.ausredditArdc) ? '_blank' : '_self'"
                   :rel="isExternal(props.notebook.ausredditArdc) ? 'noopener noreferrer' : null"
-                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[210px]">
+                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[168px]">
                   <span class="block">ARDC BinderHub</span>
                   <span class="block text-sm font-normal opacity-90">(Authentication required)</span>
                 </a>
                 <a :href="props.notebook.ausredditPublic"
                   :target="isExternal(props.notebook.ausredditPublic) ? '_blank' : '_self'"
                   :rel="isExternal(props.notebook.ausredditPublic) ? 'noopener noreferrer' : null"
-                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[210px]">
+                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[168px]">
                   <span class="block">MyBinder</span>
                   <span class="block text-sm font-normal opacity-90">(Public)</span>
                 </a>
@@ -372,14 +372,14 @@ const portalLink = computed(() => {
                 <a :href="props.notebook.twittersphereArdc"
                   :target="isExternal(props.notebook.twittersphereArdc) ? '_blank' : '_self'"
                   :rel="isExternal(props.notebook.twittersphereArdc) ? 'noopener noreferrer' : null"
-                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[210px]">
+                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[168px]">
                   <span class="block">ARDC BinderHub</span>
                   <span class="block text-sm font-normal opacity-90">(Authentication required)</span>
                 </a>
                 <a :href="props.notebook.twitterspherePublic"
                   :target="isExternal(props.notebook.twitterspherePublic) ? '_blank' : '_self'"
                   :rel="isExternal(props.notebook.twitterspherePublic) ? 'noopener noreferrer' : null"
-                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[210px]">
+                  class="inline-block bg-[#79a38d] hover:bg-opacity-80 text-white text-xl font-bold px-6 py-3 rounded-lg text-center min-w-[168px]">
                   <span class="block">MyBinder</span>
                   <span class="block text-sm font-normal opacity-90">(Public)</span>
                 </a>

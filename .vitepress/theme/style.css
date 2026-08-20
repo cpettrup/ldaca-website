@@ -8,7 +8,19 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    font-size: 20px;
+    /* 20px -> 16px: renders rem-based site sizing at 80% of the previous scale. */
+    font-size: 16px;
+
+    /* Unified typography tokens */
+    --type-xs: 0.75rem;      /* 12px */
+    --type-sm: 0.8125rem;    /* 13px */
+    --type-base: 0.9rem;     /* 14.4px */
+    --type-lg: 1rem;         /* 16px */
+    --type-xl: 1.125rem;     /* 18px */
+    --type-2xl: 1.35rem;     /* 21.6px */
+    --type-3xl: 1.7rem;      /* 27.2px */
+    --type-4xl: 2.15rem;     /* 34.4px */
+    --type-5xl: 2.7rem;      /* 43.2px */
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -60,22 +72,70 @@
     @apply border-border;
   }
   body, html {
-    @apply text-[1.7rem] leading-[1.3];
     font-family: 'Work Sans', Arial, Helvetica, sans-serif !important;
-    font-size: 1rem !important;
+    font-size: var(--type-base) !important;
+    line-height: 1.6;
   }
+  /* Semantic heading fallback. Reusable components use the role classes below. */
   h1 {
-    @apply text-[3rem] font-bold leading-[1.2] text-[#383938];
+    font-size: var(--type-4xl);
+    font-weight: 700;
+    line-height: 1.12;
+    color: #383938;
   }
   h2 {
-    @apply text-[2.5rem] font-bold leading-none text-[#383938];
+    font-size: var(--type-3xl);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #383938;
   }
   h3 {
-    @apply text-[1.7rem] font-bold leading-[1.3] text-[#383938];
+    font-size: var(--type-2xl);
+    font-weight: 650;
+    line-height: 1.25;
+    color: #383938;
+  }
+  h4 {
+    font-size: var(--type-xl);
+    font-weight: 650;
+    line-height: 1.3;
+    color: #383938;
+  }
+  h5 {
+    font-size: var(--type-lg);
+    font-weight: 650;
+    line-height: 1.35;
+    color: #383938;
+  }
+  h6 {
+    font-size: var(--type-sm);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #383938;
   }
 }
 
 @layer components {
+  /*
+   * TYPOGRAPHY ROLES
+   * Use these classes in reusable components instead of choosing a raw text-* size.
+   * This keeps visual hierarchy consistent even when the HTML element changes.
+   */
+  .type-display { font-size: var(--type-5xl); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; }
+  .type-page-title { font-size: var(--type-4xl); font-weight: 700; line-height: 1.12; letter-spacing: -0.015em; }
+  .type-section-title { font-size: var(--type-3xl); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+  .type-subsection-title { font-size: var(--type-2xl); font-weight: 650; line-height: 1.25; }
+  .type-card-display { font-size: var(--type-3xl); font-weight: 700; line-height: 1.08; letter-spacing: -0.01em; }
+  .type-card-title { font-size: var(--type-lg); font-weight: 700; line-height: 1.3; }
+  .type-lead { font-size: var(--type-lg); font-weight: 400; line-height: 1.6; }
+  .type-body { font-size: var(--type-base); font-weight: 400; line-height: 1.6; }
+  .type-small { font-size: var(--type-sm); font-weight: 400; line-height: 1.5; }
+  .type-meta { font-size: var(--type-sm); font-weight: 500; line-height: 1.45; }
+  .type-eyebrow, .type-label-heading { font-size: var(--type-sm); font-weight: 700; line-height: 1.3; text-transform: uppercase; letter-spacing: 0.06em; }
+  .type-action, .type-button { font-size: var(--type-base); font-weight: 700; line-height: 1.2; }
+
   .menu-link {
     @apply text-lg font-medium text-foreground hover:text-primary transition-colors;
   }
@@ -137,26 +197,26 @@
   }
 
   /* Mobile-first breakpoints */
-  @media (max-width: 640px) {
+  @media (max-width: 512px) {
     .vp-doc {
       @apply px-4 py-6;
     }
     
     .blog-post figure img,
     article figure img {
-      @apply max-h-[300px];
+      @apply max-h-[240px];
     }
   }
 
   /* Tablet */
-  @media (min-width: 641px) and (max-width: 1024px) {
+  @media (min-width: 512.8px) and (max-width: 819.2px) {
     .vp-doc {
       @apply px-6 py-8;
     }
     
     .blog-post figure img,
     article figure img {
-      @apply max-h-[500px];
+      @apply max-h-[400px];
     }
   }
 }
@@ -164,29 +224,29 @@
 /* Markdown baseline styles (LDaCA look & feel) */
 @layer components {
   /* Typography scale for markdown in VitePress docs */
-  .vp-doc h1 { @apply font-semibold leading-tight; scroll-margin-top: 6rem; font-size: 48px; }
+  .vp-doc h1 { font-size: var(--type-3xl); font-weight: 700; line-height: 1.2; scroll-margin-top: 6rem; }
   .vp-doc h2 {
     position: relative;
-    margin: 24px 0 16px;   /* spacing above + below section */
-    padding-top: 30px;     /* spacing between divider and text */
-    font-size: 36px;
-    font-weight: 600;
+    margin: 19.2px 0 12.8px;   /* spacing above + below section */
+    padding-top: 24px;     /* spacing between divider and text */
+    font-size: var(--type-2xl);
+    font-weight: 700;
     line-height: 1.2;
-    border-top: 4px dotted #79a38d;
-    scroll-margin-top: 90px;
+    border-top: 3.2px dotted #79a38d;
+    scroll-margin-top: 72px;
   }
   .vp-doc h2:first-child { border-top: none; }
-  .vp-doc h3 { @apply font-semibold leading-snug; scroll-margin-top: 6rem; font-size: 24px; }
-  .vp-doc h4 { @apply font-semibold leading-snug; scroll-margin-top: 6rem; font-size: 22px; }
-  .vp-doc h5 { @apply font-semibold; scroll-margin-top: 6rem; font-size: 22px; }
-  .vp-doc h6 { @apply font-semibold uppercase tracking-wide; scroll-margin-top: 6rem; font-size: 22px; }
+  .vp-doc h3 { font-size: var(--type-xl); font-weight: 650; line-height: 1.3; scroll-margin-top: 6rem; }
+  .vp-doc h4 { font-size: var(--type-lg); font-weight: 650; line-height: 1.35; scroll-margin-top: 6rem; }
+  .vp-doc h5 { font-size: var(--type-base); font-weight: 650; line-height: 1.4; scroll-margin-top: 6rem; }
+  .vp-doc h6 { font-size: var(--type-sm); font-weight: 700; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.04em; scroll-margin-top: 6rem; }
 
   /* Also style VitePress-rendered page title when frontmatter `title` is present */
   .VPDoc h1,
   .VPDoc .title h1,
   .VPDoc .content h1 {
-    font-size: 1.875rem; /* ~text-3xl */
-    font-weight: 600;
+    font-size: var(--type-4xl);
+    font-weight: 700;
     line-height: 1.25;
     scroll-margin-top: 6rem;
     margin-top: 2rem;
@@ -195,47 +255,47 @@
   }
 
   /* Fallback: style headings inside VPDoc content even if `.vp-doc` is missing */
-  .VPDoc .content h2 { font-size: 36px; font-weight: 600; line-height: 1.25; margin: 1.5rem 0 0.75rem; scroll-margin-top: 6rem; }
-  .VPDoc .content h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.375; margin: 1.25rem 0 0.5rem; scroll-margin-top: 6rem; }
-  .VPDoc .content h4 { font-size: 1.125rem; font-weight: 600; line-height: 1.5; margin: 1rem 0 0.5rem; scroll-margin-top: 6rem; }
-  .VPDoc .content h5 { font-size: 1rem; font-weight: 600; line-height: 1.5; margin: 0.75rem 0 0.5rem; scroll-margin-top: 6rem; }
-  .VPDoc .content h6 { font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.5; margin: 0.75rem 0 0.5rem; scroll-margin-top: 6rem; }
+  .VPDoc .content h2 { font-size: var(--type-2xl); font-weight: 700; line-height: 1.25; margin: 1.5rem 0 0.75rem; scroll-margin-top: 6rem; }
+  .VPDoc .content h3 { font-size: var(--type-xl); font-weight: 650; line-height: 1.375; margin: 1.25rem 0 0.5rem; scroll-margin-top: 6rem; }
+  .VPDoc .content h4 { font-size: var(--type-lg); font-weight: 650; line-height: 1.5; margin: 1rem 0 0.5rem; scroll-margin-top: 6rem; }
+  .VPDoc .content h5 { font-size: var(--type-base); font-weight: 650; line-height: 1.5; margin: 0.75rem 0 0.5rem; scroll-margin-top: 6rem; }
+  .VPDoc .content h6 { font-size: var(--type-sm); font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.5; margin: 0.75rem 0 0.5rem; scroll-margin-top: 6rem; }
 
-  .vp-doc p { @apply text-base leading-7 text-foreground; font-size: 18px; color: var(--vp-c-text-1); line-height: 160%; }
-  .vp-doc strong { @apply font-semibold text-foreground; font-size: 18px; color: var(--vp-c-text-1); }
-  .vp-doc em { font-style: italic; font-size: 20px; color: var(--vp-c-text-1); }
-  .vp-doc hr { margin: 32px 0; border: none; border-top: 4px dotted #79a38d; }
+  .vp-doc p { @apply text-base text-foreground; color: var(--vp-c-text-1); line-height: 1.6; }
+  .vp-doc strong { @apply font-semibold text-foreground; font-size: inherit; color: inherit; }
+  .vp-doc em { font-style: italic; font-size: inherit; color: inherit; }
+  .vp-doc hr { margin: 25.6px 0; border: none; border-top: 3.2px dotted #79a38d; }
 
   /* Links */
   .vp-doc a { color:#79A38D; font-weight: bold; text-decoration-line: none; }
-  .vp-doc a:hover { color: #79A38D; text-decoration-line: underline; text-decoration-style: dotted; text-underline-offset: 4px; text-decoration-thickness: 12%;}
+  .vp-doc a:hover { color: #79A38D; text-decoration-line: underline; text-decoration-style: dotted; text-underline-offset: 3.2px; text-decoration-thickness: 12%;}
   .vp-doc [id^="fn-"]::before {
     content: "";
     display: block;
-    height: calc(var(--vp-nav-height) + 24px);
-    margin-top: calc(-1 * (var(--vp-nav-height) + 24px));
+    height: calc(var(--vp-nav-height) + 19.2px);
+    margin-top: calc(-1 * (var(--vp-nav-height) + 19.2px));
     visibility: hidden;
   }
   .vp-doc [id^="back-"]::before {
     content: "";
-    height: calc(var(--vp-nav-height) + 24px);
-    margin-top: calc(-1 * (var(--vp-nav-height) + 24px));
+    height: calc(var(--vp-nav-height) + 19.2px);
+    margin-top: calc(-1 * (var(--vp-nav-height) + 19.2px));
     visibility: hidden;
   }
 .vp-doc sup { display: inline; line-height: 0; }
 
   /* Lists */
-  .vp-doc ul { @apply list-disc pl-6 space-y-2; font-size: 20px; }
-  .vp-doc ol { @apply list-decimal pl-6 space-y-2; font-size: 20px; }
-  .vp-doc li { @apply leading-7; font-size: 20px; line-height: 160%; }
+  .vp-doc ul { @apply text-base list-disc pl-6 space-y-2; }
+  .vp-doc ol { @apply text-base list-decimal pl-6 space-y-2; }
+  .vp-doc li { font-size: inherit; line-height: 1.6; }
   .vp-doc ul li::marker { color: #79A38D; content: "●  "; }
   .vp-doc ul ul li::marker { content: "○  "; }
 
   /* Blockquotes */
-  .vp-doc blockquote { @apply my-6 px-4 py-4; background: #d4e2db; font-size: 20px; color: black; }
-  .vp-doc blockquote p { @apply m-0; border-color: #79a38d; font-size: 20px; color: black; }
-  .vp-doc blockquote strong { @apply font-semibold; font-size: 20px; color: black; }
-  .vp-doc blockquote em { font-style: italic; font-size: 20px; color: black; }
+  .vp-doc blockquote { @apply text-base my-6 px-4 py-4; background: #d4e2db; color: black; }
+  .vp-doc blockquote p { @apply m-0; border-color: #79a38d; font-size: inherit; color: black; }
+  .vp-doc blockquote strong { @apply font-semibold; font-size: inherit; color: black; }
+  .vp-doc blockquote em { font-style: italic; font-size: inherit; color: black; }
 
   /* Pull quotes */
   .vp-doc .pull-quote::before {
@@ -243,19 +303,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 100px;
+  font-size: 72px;
   line-height: 1;
   color: #79A38D;
 }
-  .vp-doc .pull-quote { @apply m-0; border-color: #79a38d; font-size: 28px; font-weight: bold; color: black; position: relative;
+  .vp-doc .pull-quote { @apply text-2xl m-0; border-color: #79a38d; font-weight: bold; color: black; position: relative;
   margin: 2rem 0; padding-top: 3.5rem; /* space for the big quote */
   }
-  .vp-doc .pull-quote cite { display: block; font-size: 16px; font-weight: normal; font-style: normal; color: black; }
+  .vp-doc .pull-quote cite { @apply text-sm; display: block; font-weight: normal; font-style: normal; color: black; }
 
   /* Inline code */
   .vp-doc :not(pre) > code {
     @apply rounded px-1.5 py-0.5;
-    font-size: 16px;
+    font-size: var(--type-sm);
     background: var(--vp-c-default-soft);
     color: var(--vp-c-text-1);
   }
@@ -264,15 +324,15 @@
   .vp-doc pre {
     @apply my-6 rounded-lg overflow-x-auto p-4;
     background: var(--vp-c-default-soft);
-    border: 1px solid var(--vp-c-default-2);
-    font-size: 20px;
+    border: 0.8px solid var(--vp-c-default-2);
+    font-size: var(--type-base);
   }
   .vp-doc pre code { @apply bg-transparent p-0; }
 
   /* Tables */
   .vp-doc table { @apply w-full border-collapse my-6; }
   .vp-doc th, .vp-doc td { @apply text-left py-2 px-3 border-b; }
-  .vp-doc thead th { background: #79a38d; color: white; font-size: 24px; font-weight: bold; border-color: #79a38d; }
+  .vp-doc thead th { @apply text-base; background: #79a38d; color: white; font-weight: bold; border-color: #79a38d; }
   /* .vp-doc tbody tr:hover { background: color-mix(in oklab, var(--vp-c-default-soft) 80%, transparent); } */
 
   /* Images */
@@ -291,12 +351,12 @@
 }
 
 .vp-doc details {
-  border-bottom: 1px solid #b9b9b9;
+  border-bottom: 0.8px solid #b9b9b9;
   padding: 1rem 0;
 }
 
 .vp-doc summary {
-  font-size: 20px;
+  font-size: var(--type-base);
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -312,7 +372,7 @@
 .vp-doc summary::after {
   content: "+";
   color: #79a38d;
-  font-size: 32px;
+  font-size: var(--type-2xl);
   font-weight: bold;
   line-height: 1;
 }
@@ -322,7 +382,7 @@
 }
 
 summary {
-  font-size: 20px;
+  font-size: var(--type-base);
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -338,7 +398,7 @@ summary::-webkit-details-marker {
 summary::after {
   content: "+";
   color: #79a38d;
-  font-size: 32px;
+  font-size: var(--type-2xl);
   font-weight: bold;
   line-height: 1;
 }
@@ -487,18 +547,18 @@ details[open] > summary::after {
     #bd34fe 50%,
     #47caff 50%
   );
-  --vp-home-hero-image-filter: blur(44px);
+  --vp-home-hero-image-filter: blur(35.2px);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 512px) {
   :root {
-    --vp-home-hero-image-filter: blur(56px);
+    --vp-home-hero-image-filter: blur(44.8px);
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   :root {
-    --vp-home-hero-image-filter: blur(68px);
+    --vp-home-hero-image-filter: blur(54.4px);
   }
 }
 
@@ -524,9 +584,9 @@ details[open] > summary::after {
 /* Designer image grid */
 .designer-grid {
   display: grid;
-  grid-template-columns: calc(66% - 5px) calc(34% - 5px);
-  grid-template-rows: calc(50% - 5px) calc(50% - 5px);
-  grid-gap: 10px;
+  grid-template-columns: calc(66% - 4px) calc(34% - 4px);
+  grid-template-rows: calc(50% - 4px) calc(50% - 4px);
+  grid-gap: 8px;
   aspect-ratio: 16 / 9;
 }
 

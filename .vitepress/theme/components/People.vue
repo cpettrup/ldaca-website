@@ -50,12 +50,12 @@ const fallbackImage = ((Array.isArray(props.image) && props.image.length > 0
 
 <template>
     <section class="w-full py-12">
-        <div class="max-w-[1480px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
+        <div class="max-w-[1184px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
             <div class="mb-12 text-left">
-                <h1 v-if="props.heading" class="">
+                <h2 v-if="props.heading" class="type-section-title">
                     {{ props.heading }}
-                </h1>
-                <p v-if="description" class="my-4 text-gray-600 text-xl">
+                </h2>
+                <p v-if="description" class="type-lead my-4 text-gray-600">
                     {{ description }}
                 </p>
             </div>
@@ -64,25 +64,25 @@ const fallbackImage = ((Array.isArray(props.image) && props.image.length > 0
                 <article v-for="person in items" :key="person.link || person.name"
                     class="flex flex-col items-start gap-4">
                     <a v-if="person.link" :href="person.link" target="_blank" rel="noopener noreferrer"
-                        class="block w-[282px]">
+                        class="block w-[225.6px]">
                         <img class="block aspect-square w-full object-cover" :src="person.image || fallbackImage"
                             :alt="person.name" loading="lazy">
                     </a>
-                    <div v-else class="block w-[282px]">
+                    <div v-else class="block w-[225.6px]">
                         <img class="block aspect-square w-full object-cover" :src="person.image || fallbackImage"
                             :alt="person.name" loading="lazy">
                     </div>
 
                     <div class="flex flex-col gap-1">
                         <a v-if="person.link" :href="person.link" target="_blank" rel="noopener noreferrer"
-                            class="pb-2 inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#79a38d] underline decoration-dotted decoration-2 underline-offset-8 hover:text-[#5e7f6e] transition-colors">
+                            class="type-card-title pb-2 inline-flex items-center gap-2 text-[#79a38d] hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8">
                             <span>{{ person.name }} &gt;</span>
                         </a>
                         <span v-else
-                            class="pb-2 inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#79a38d]">
+                            class="type-card-title inline-flex items-center gap-2 pb-2 text-[#79a38d]">
                             {{ person.name }}
                         </span>
-                        <p class="m-0 text-[1.1rem] leading-snug">
+                        <p class="type-body m-0">
                             {{ person.affiliation }}
                         </p>
                     </div>

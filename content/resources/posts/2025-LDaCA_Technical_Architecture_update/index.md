@@ -167,7 +167,7 @@ We have an opportunity now to consider how the distributed LDaCA technical team 
 <iframe src="./LDaCA_Technical_Architecture_update_2025.pdf" 
 width="1200" 
   height="600"
-  style="border: 1px solid #ccc;"
+  style="border: 0.8px solid #ccc;"
 >
 </iframe>
 </div>

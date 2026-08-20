@@ -20,7 +20,7 @@ layout: home
   ]" />
   
 <div
-  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  class="w-full max-w-[1184px] h-[5.6px] mx-auto"
   style="
     background-image: url('/images/section-divider.png');
     background-size: cover;
@@ -89,7 +89,7 @@ layout: home
 />
 
 <div
-  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  class="w-full max-w-[1184px] h-[5.6px] mx-auto"
   style="
     background-image: url('/images/section-divider.png');
     background-size: cover;
@@ -114,7 +114,7 @@ layout: home
 />
 
 <div
-  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  class="w-full max-w-[1184px] h-[5.6px] mx-auto"
   style="
     background-image: url('/images/section-divider.png');
     background-size: cover;
@@ -172,7 +172,7 @@ layout: home
         },
     ]"/>
 
-<div class="px-[10px] max-w-[1480px] mx-auto">
+<div class="px-[8px] max-w-[1184px] mx-auto">
   <hr class="mt-4 border-0 border-t-[2pt] border-dotted border-gray-400">
 </div>
 
@@ -201,7 +201,7 @@ layout: home
     ]"/>
 
 <div
-  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  class="w-full max-w-[1184px] h-[5.6px] mx-auto"
   style="
     background-image: url('/images/section-divider.png');
     background-size: cover;

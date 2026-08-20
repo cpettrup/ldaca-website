@@ -28,12 +28,12 @@ const event = computed(() => page.value?.frontmatter || {})
         :breadcrumb="event.breadcrumb || ''" backgroundImage="/images/GreenBackground.png" />
 
     <div class="VPDoc">
-        <div class="max-w-[1480px] mx-auto px-4 py-10">
+        <div class="max-w-[1184px] mx-auto px-4 py-10">
 
             <div class="flex flex-col lg:flex-row gap-10">
 
                 <!-- LEFT: Markdown content -->
-                <article class="vp-doc flex-1 max-w-[700px] pl-0 ml-0 pt-0 mt-0">
+                <article class="vp-doc flex-1 max-w-[560px] pl-0 ml-0 pt-0 mt-0">
 
                     <!-- Author -->
                     <div v-if="event.author" class="mb-4 italic text-gray-600">
@@ -55,7 +55,7 @@ const event = computed(() => page.value?.frontmatter || {})
                 </article>
 
                 <!-- RIGHT: Event details -->
-                <aside class="w-full lg:w-[470px] bg-[#F5F5F5] p-6 h-fit">
+                <aside class="w-full lg:w-[376px] bg-[#F5F5F5] p-6 h-fit">
 
                     <!-- Event image -->
                     <div v-if="event.image" class="mb-6">

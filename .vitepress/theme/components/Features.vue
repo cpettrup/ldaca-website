@@ -27,13 +27,13 @@ const list = [
 <style scoped>
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
 }
 .feature {
   padding: 1rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
+  border: 0.8px solid var(--vp-c-divider);
+  border-radius: 6.4px;
 }
 </style>

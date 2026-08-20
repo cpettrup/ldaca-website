@@ -141,7 +141,7 @@ const updateMatch = (mq) => {
 
 let mqListener
 onMounted(() => {
-    const mq = window.matchMedia('(min-width: 1024px)')
+    const mq = window.matchMedia('(min-width: 819.2px)')
     updateMatch(mq)
     mqListener = (event) => updateMatch(event)
     mq.addEventListener('change', mqListener)
@@ -160,7 +160,7 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-    const mq = window.matchMedia('(min-width: 1024px)')
+    const mq = window.matchMedia('(min-width: 819.2px)')
     mq.removeEventListener('change', mqListener)
 
     window.removeEventListener('resize', scheduleMeasure)
@@ -228,7 +228,7 @@ const isExternal = (url) => {
 <template>
     <section class="w-full py-10"
         :style="props.backgroundColor ? { backgroundColor: props.backgroundColor, opacity: `${props.opacity}%` } : {}">
-        <div class="max-w-[1480px] mx-auto relative px-4 sm:px-6 md:px-8 lg:px-2">
+        <div class="max-w-[1184px] mx-auto relative px-4 sm:px-6 md:px-8 lg:px-2">
 
             <!-- Heading -->
             <div class="mb-12 text-left">
@@ -245,7 +245,7 @@ const isExternal = (url) => {
 
                 <!-- LEFT ARROW -->
                 <button v-if="showArrows" type="button" @click="prev"
-                    class="self-start mt-[250px] h-16 w-16 flex items-center justify-center rounded-full bg-[#79a38d] text-white font-sans font-bold text-3xl hover:opacity-80 shadow-sm"
+                    class="self-start mt-[200px] h-16 w-16 flex items-center justify-center rounded-full bg-[#79a38d] text-white font-sans font-bold text-3xl hover:opacity-80 shadow-sm"
                     aria-label="Previous">
                     ←
                 </button>
@@ -303,7 +303,7 @@ const isExternal = (url) => {
                         <!-- DIVIDER: tile view only, and not after the final item -->
                         <div
                             v-if="props.tileView && index < desktopItems.length - 1"
-                            class="px-[10px] w-full"
+                            class="px-[8px] w-full"
                         >
                             <hr class="my-8 border-0 border-t-[2pt] border-dotted border-gray-400">
                         </div>
@@ -353,7 +353,7 @@ const isExternal = (url) => {
 
                 <!-- RIGHT ARROW -->
                 <button v-if="showArrows" type="button" @click="next"
-                    class="self-start mt-[240px] h-16 w-16 flex items-center justify-center rounded-full bg-[#79a38d] text-white font-sans font-bold text-3xl hover:opacity-80 shadow-sm"
+                    class="self-start mt-[192px] h-16 w-16 flex items-center justify-center rounded-full bg-[#79a38d] text-white font-sans font-bold text-3xl hover:opacity-80 shadow-sm"
                     aria-label="Next">
                     →
                 </button>

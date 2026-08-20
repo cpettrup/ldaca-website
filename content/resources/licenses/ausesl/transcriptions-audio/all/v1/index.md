@@ -9,7 +9,7 @@ aliases:
 
 <br>
 
-<iframe src="./AusESL_DataLicense.pdf" width="100%" height="800px" style="border: none;"></iframe>
+<iframe src="./AusESL_DataLicense.pdf" width="100%" height="640px" style="border: none;"></iframe>
 
 <br>
 <br>

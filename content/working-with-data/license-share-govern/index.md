@@ -14,41 +14,87 @@ title: "License, share & govern"
     { label: 'Additional resources', href: '#additional-resources' },
   ]" />
 
+<CarouselLarge
+  heading="FEATURED RESOURCE"
+  buttonText="Read more"
+  :items="[
+    {
+      title: 'Framework for the Governance of Indigenous Data: HASS and Indigenous Research Data Commons',
+      description: 'The Framework for the Governance of Indigenous Data provides a practical, culturally grounded approach to embedding Indigenous data governance across the HASS and Indigenous Research Data Commons. Developed through consultation and co-design, it supports Indigenous self-determination by providing principles, guidelines and accountability mechanisms for the ethical governance of Indigenous data throughout its lifecycle.',
+      image: '/working-with-data/license-share-govern/IDGFramework.png',
+      link: 'https://zenodo.org/records/11135962',
+    },
+  ]"
+   />
 <GuideCarousel 
   id="guides"
-  backgroundColor="#EAE4D68C"
+  backgroundColor="#fff"
   :opacity="100"
   heading="GUIDES"
   :items="[
       {
         title: 'Determining Access Conditions',
         link: '/resources/guides/working-with-data/determining-access-conditions',
+        image:'/images/PlainBackgrounds/Blackplain.png',
+        level: 'Beginner-intermediate',
+        audience: 'Data custodians, collection managers and researchers',
       },
       {
         title: 'Obtaining a DOI',
-        link: '/resources/guides/working-with-data/obtaining-a-doi'
-      },
-      {
-        title: 'Access Policy',
-        link: '/resources/guides/working-with-data/access-policy'
+        link: '/resources/guides/working-with-data/obtaining-a-doi',
+        image:'/images/PlainBackgrounds/Greenplain.png',
+        buttonColor:'#393939',
+        level: 'Beginner',
+        audience: 'Researchers, data custodians and collection managers',
       },
       {
         title: 'Guidance for Data Governance Decisions',
-        link: '/resources/guides/working-with-data/guidance-for-data-governance-decisions'
+        link: '/resources/guides/working-with-data/guidance-for-data-governance-decisions',
+        image:'/images/PlainBackgrounds/Blackplain.png',
+        level: 'Intermediate',
+        audience: 'Data stewards, researchers and collection managers',
       },
     ]"/>
+      <div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
 
-<DataPortalBox 
-  heading="Licenses"
-  description="Custom licenses that data contributors have applied to the content of their collection, including the content coverage of that license, in cases where these are not already-existing licenses (e.g. Creative Commons)."
-  buttonText="Go to existing licenses"
-  buttonLink="/resources/licenses"
+
+<CarouselLarge
+    id="LDaCA Collection Licenses"
+    heading="LDACA COLLECTION LICENSES"
+    backgroundColor="white"
+    buttonText="Go to existing licenses"
+    :items="[
+    {
+        title: 'Explore existing licenses',
+        description: 'Collections in the LDaCA Data Portal may use established licences, such as Creative Commons, or custom licences developed by data contributors to reflect the specific requirements of their collection. \n\n Explore the custom licences currently applied to LDaCA Data Portal collections, including what collection content they cover and how they shape access and use. Reviewing these examples may also help you consider appropriate licensing approaches for your own collections.',
+        image: '/working-with-data/license-share-govern/licence_graphic.png', 
+        link: '/resources/licenses',
+    },
+    ]"
 />
+
+  <div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
 
 <Carousel 
   id="on-the-blog"
   shade="light"
-  backgroundColor="#EAE4D68C"
+  backgroundColor="#fff"
   :opacity="100"
   heading="ON THE BLOG"
   :items="[
@@ -65,6 +111,16 @@ title: "License, share & govern"
         link: '/resources/posts/fair-and-care'
       },
   ]"/>
+ 
+  <div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
 
 <ThreeTiles 
   id="additional-resources"

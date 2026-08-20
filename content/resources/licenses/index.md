@@ -12,31 +12,30 @@ aliases:
 
 <!-- ### A Corpus of Oz Early English (COOEE)
 
-All content: [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+[Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 <br>
 
 ### AustLit
 
-All content: [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+[Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 <br>
 
 ### Australian Corpus of English
 
-All content: [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+[Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 <br> -->
 
-### Australian Deafblind Signing Corpus
+<!-- ### Australian Deafblind Signing Corpus
 
-All content: [Australian Deafblind Signing Corpus Placeholder License](australian-deafblind-signing-corpus/placeholder/all/v1/)
-
-<br>
+[Australian Deafblind Signing Corpus Placeholder License](australian-deafblind-signing-corpus/placeholder/all/v1/)<br>-->
 
 <!--### Australian Radio Talkback
 
-All content: [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+[Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+License for all content in the collection
 
 <br>
 
@@ -48,15 +47,15 @@ All content: [Attribution-NoDerivatives 3.0 Australia (CC BY-ND 3.0 AU)](https:/
 
 ### Corpus of Australian English as a Second Language (AusESL)
 
-All content: [Corpus of Australian English as a Second Language (AusESL) License - Transcriptions and audio (de-identified)](ausesl/transcriptions-audio/all/v1/)
+[Corpus of Australian English as a Second Language (AusESL) License - Transcriptions and audio (de-identified)](ausesl/transcriptions-audio/all/v1/)<br>
+ License for all content in the collection 
 
-<br>
 
-### Holmer Fieldnotes
+<!--### Holmer Fieldnotes
 
-All content: [Holmer Fieldnotes Placeholder License](holmer-fieldnotes/placeholder/all/v1/)
+[Holmer Fieldnotes Placeholder License](holmer-fieldnotes/placeholder/all/v1/)
 
-<br>
+<br>-->
 
 <!-- ### International Corpus of English (ICE-AUS)
 
@@ -66,23 +65,24 @@ All content: [Attribution 4.0 International (CC BY 4.0)](https://creativecommons
 
 ### LDaCA BinderHub Terms of Use
 
-All LDaCA BinderHub resources: [LDaCA BinderHub Terms of Use](ldaca-binderhub/all/v0.0.6/)
+[LDaCA BinderHub Terms of Use](ldaca-binderhub/all/v0.0.6/)<br>
+License for all LDaCA BinderHub resources
 
-<br>
 
 ### Sydney Speaks
 
-All other content: [Sydney Speaks License A](sydney-speaks/license-a/all/v1/)
+[Sydney Speaks License A](sydney-speaks/license-a/all/v1/)<br>
+License for all other Sydney Speaks content
 <br>
-Reference Corpus: [Sydney Speaks License B](sydney-speaks/license-b/all/v1/)
+[Sydney Speaks License B](sydney-speaks/license-b/all/v1/)<br>
+License for Sydney Speaks Reference Corpus
 
-<br>
 
-### The Expanded Auslan Corpus
+<!--#### The Expanded Auslan Corpus
 
 All content: [The Expanded Auslan Corpus Placeholder License](the-expanded-auslan-corpus/placeholder/all/v1/)
 
-<br>
+<br> -->
 
 <!--### The La Trobe Corpus of Spoken Australian English
 

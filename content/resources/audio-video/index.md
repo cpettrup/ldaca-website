@@ -6,9 +6,9 @@ title: "Audio & video"
 <SimpleHero breadcrumb='Resources > Audio & video' title="Audio & video" description="Videos and audio recordings including presentations from our team and bite-size explainers."/>
 
 <Carousel 
-  backgroundColor="#EAE4D68C"
+  backgroundColor="#fff"
+  tileView=true
   :opacity="100"
-  heading="LDACA YOUTUBE VIDEOS"
   :items="[
       {
         title: 'Introduction to The Language Data Commons of Australia',
@@ -25,31 +25,23 @@ title: "Audio & video"
         category: 'RECORDING'
       },
       {
-        title: 'Interviews',
-        link: 'https://www.youtube.com/playlist?list=PLpaCkX03fhiZjAYS6VtHzYzUopj3UJIy6',
-        category: 'RECORDING'
+        title: 'Robert McLellan talks to Sarah Morice (ABC NewsRadio) ',
+        description: 'Robert McLellan, Program Manager at LDaCA, talks to Sarah Morice of ABC NewsRadio on 09/08/2024.',
+        link: 'https://youtu.be/JCzYj3LeZWI?si=18tKLyMZAZMunRML',
+        image:'https://i.ytimg.com/vi/JCzYj3LeZWI/sddefault.jpg',
+        category: 'AUDIO'
       },
       {
-        title: 'Presentations',
-        link: 'https://www.youtube.com/playlist?list=PLpaCkX03fhibCyiXEFo0Q8xJqOMM76ITA',
-        category: 'RECORDING'
-      },
-      {
-        title: 'Video Explainers',
-        link: 'https://www.youtube.com/playlist?list=PLpaCkX03fhiYNp0r6oxdUPVPa2N87h8HN',
+        title: 'What is an RO-Crate?',
+        description: 'An explainer about Research Object Crates (RO-Crates). Created by Otis Carmichael.',
+        image: 'https://i.ytimg.com/vi/tAR-JNN3EbA/hqdefault.jpg',
+        link: 'https://youtu.be/tAR-JNN3EbA?si=Sy143FWRmBYBVWmk',
         category: 'RECORDING'
       },
       {
         title: 'The ParlaMint corpora of European parliamentary proceedings',
         link: '/training-events/events/2025/parlamint-corpora',
-      }
-    ]"/>
-
-<Carousel 
-  backgroundColor="#EAE4D68C"
-  :opacity="100"
-  heading="ARDC YOUTUBE VIDEOS"
-  :items="[
+      },
       {
         title: 'Language Data Commons of Australia - HASS & Indigenous Research Data Commons Symposium 2025',
         link: '/training-events/events/2025/hass-irdc-symposium-2',
@@ -87,14 +79,7 @@ title: "Audio & video"
         image: 'https://img.youtube.com/vi/Hln7_rFoIHI/sddefault.jpg',
         link: 'https://www.youtube.com/watch?v=Hln7_rFoIHI',
         category: 'RECORDING'
-      }
-    ]"/>
-
-<Carousel 
-  backgroundColor="#EAE4D68C"
-  :opacity="100"
-  heading="EXTERNAL VIDEOS"
-  :items="[
+      },
       {
         title: 'Burridge, Beers Fägersten & Stapleton - Vulgarity in English: Language, Creativity & Social Meaning',
         description: 'ISLE Forum featuring Kate Burridge, Kristy Beers Fägersten & Karyn Stapleton on \'Vulgarity in English: Language, Creativity, and Social Meaning\'; Recorded on 12 December 2025; Moderated by ISLE Vice President (Profession) Martin Schweinberger.',
@@ -107,13 +92,6 @@ title: "Audio & video"
         description: 'Michael Haugh, Simon Musgrave and Robert McLellan. The Language Data Commons of Australia: Towards a Nationally Distributed Research Infrastructure.',
         image: 'https://img.youtube.com/vi/1cARj6w3qZs/sddefault.jpg',
         link: 'https://www.youtube.com/watch?v=1cARj6w3qZs',
-        category: 'RECORDING'
-      },
-      {
-        title: 'Vulgarity Around The World',
-        description: 'This study investigates the use of vulgarity in spoken interaction across a range of English varieties, drawing on data from the International Corpus of English (ICE) and the Santa Barbara Corpus of Spoken American English. While vulgarity and swearing are often associated with hate speech, bullying, or online abuse, they fulfil a wide range of social, linguistic, psychological, and cultural functions, including expressing emotion, indexing identity, negotiating social hierarchies, and providing stylistic or rhetorical resources.',
-        image: 'https://img.youtube.com/vi/Y0EFJMZn4KM/sddefault.jpg',
-        link: 'https://www.youtube.com/watch?v=Y0EFJMZn4KM',
         category: 'RECORDING'
       },
       {
@@ -132,6 +110,7 @@ title: "Audio & video"
       {
         title: 'Digital Preservation Masterclass PARADISEC',
         image: 'https://img.youtube.com/vi/gRuwHx744KU/sddefault.jpg',
+        description: 'LDaCA Chief Investigator Nick Thieberger presents a digital preservation masterclass exploring how PARADISEC is improving the long-term preservation, accessibility and sustainability of language and cultural collections through digitisation, RO-Crate and community-focused access.',
         link: 'https://www.youtube.com/watch?v=gRuwHx744KU',
         category: 'RECORDING'
       },

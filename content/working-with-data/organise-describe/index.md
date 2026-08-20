@@ -25,44 +25,60 @@ title: "Organise & describe"
   :items="[
       {
         title: 'Metadata editor: Crate-O',
-        description: 'A tool that allows you to create and update Research Object Crates (RO-Crates) using a web interface, and with metadata spreadsheets. It provides researchers with a relatively simple way to  describe their data using the best practices in formal metadata  description.',
-        image: 'https://language-research-technology.github.io/crate-o/logo.svg',
+        description: 'A browser-based tool for creating and editing RO-Crates. Use Crate-O to describe data and collections with structured metadata, add or update files and entities and build an RO-Crate through a guided interface.',
+        image: '/working-with-data/organise-describe/CrateO.png',
         link: 'https://language-research-technology.github.io/crate-o/#/',
         guideLink: '/resources/guides/crate-o'
       },
       {
         title: 'RO-Crate Playground',
-        description: 'RO-Crate Playground provides tools and resources for creating, managing and sharing RO-Crates for efficient data organisation and accessibility.',
+        description: 'Already have an RO-Crate? RO-Crate Playground is a browser-based tool for exploring, testing and validating RO-Crates. Use the Playground to inspect RO-Crate metadata, check how entities and properties are structured and identify issues with an existing RO-Crate.',
+        image: '/working-with-data/organise-describe/ROCratePlayground.png',
         link: 'https://ro-crate.ldaca.edu.au/'
       }
     ]"/>
 
 <GuideCarousel 
   id="guides"
-  backgroundColor="#EAE4D68C"
+  backgroundColor="#fff"
   :opacity="100"
   heading="GUIDES"
   description="LDaCA provides hands-on support to make language data usable, ethical and future-ready."
   :items="[
       {
         title: 'Metadata',
-        description: 'Not sure what metadata actually means or why everyone keeps talking about it? This guide has you covered — no jargon, just clear and practical advice.',
+        category: 'RESOURCE',
+        description: 'Not sure what metadata means or why it matters when working with language data? This guide breaks down the key concepts and explains how metadata helps make language materials easier to describe, find and use.',
         level: 'Beginner',
+        image:'/images/PlainBackgrounds/Greenplain.png',
         audience: 'Researchers, community, people working with data',
-        link: '/resources/guides/metadata'
+        link: '/resources/guides/metadata',
+        buttonColor:'#393939',
       },
       {
         title: 'Crate-O User Guide',
-        description: 'Information related to using Crate-O for language data.',
+        description: 'A practical guide to using Crate-O, covering key RO-Crate and metadata concepts, navigating the interface, creating RO-Crates and adding metadata in bulk using spreadsheets.',
         image: '/resources/guides/crate-o/ro-crate-creation/add_entity_metadata.png',
-        link: '/resources/guides/crate-o'
+        link: '/resources/guides/crate-o',
+        level: 'Beginner–Intermediate',
+        audience: 'Researchers, data managers, archivists and people working with data',
+        category: 'LDACA TECHNOLOGIES GUIDE',
+        image:'/images/PlainBackgrounds/Blackplain.png',
       }
     ]"/>
-
+<div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
 <Carousel
   id="on-the-blog"
   shade="light"
-  backgroundColor="#EAE4D68C"
+  backgroundColor="#fff"
   :opacity="100"
   heading="ON THE BLOG"
   :items="[
@@ -80,7 +96,15 @@ title: "Organise & describe"
         link: '/resources/posts/2024-OR-Crate-O'
       }
     ]"/>
-
+<div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
 <ThreeTiles 
   id="additional-resources"
   backgroundColor="#EAE4D68C"
@@ -90,6 +114,7 @@ title: "Organise & describe"
       {
         title: 'Language Data Commons Schema Terms',
         description: 'This is a language data schema, in the style of the Schema.org schema. It is based on OLAC terms for use in the LDaCA project. This schema builds on Schema.org and is intended to be used with the Language Data Commons RO-Crate Profile.',
+        image:'/images/PlainBackgrounds/Green.png',
         link: 'https://w3id.org/ldac/terms',
         category: 'WEB PAGE'
       },

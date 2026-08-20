@@ -231,7 +231,7 @@ const isExternal = (url) => {
         <div class="max-w-[1480px] mx-auto relative px-4 sm:px-6 md:px-8 lg:px-2">
 
             <!-- Heading -->
-            <div class="mb-4 text-left">
+            <div class="mb-12 text-left">
                 <h1 class="mb-0">{{ props.heading }}</h1>
                 <p class="mt-2 mb-6 text-gray-600 text-xl">
                     <template v-for="(segment, index) in descriptionSegments" :key="index">
@@ -281,7 +281,7 @@ const isExternal = (url) => {
                                 </div>
 
                                 <!-- Buttons at bottom -->
-                                <div v-if="item.link" class="flex flex-wrap gap-4 mt-auto pt-6">
+                                <div v-if="item.link" class="flex flex-wrap gap-4 mt-auto pb-6 pt-6">
                                     <a :href="item.link" :target="isExternal(item.link) ? '_blank' : '_self'"
                                         :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
                                         :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"

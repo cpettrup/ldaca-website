@@ -7,9 +7,9 @@ const logo = theme.value.logo ?? {}
 
 // Read footer border configuration with sensible defaults
 const footer = theme.value.footer ?? {}
-const borderTop = footer.borderTop ?? '76px'
+const borderTop = footer.borderTop ?? '80px'
 const borderRight = footer.borderRight ?? '50vw'
-const borderBottom = footer.borderBottom ?? '76px'
+const borderBottom = footer.borderBottom ?? '80px'
 const borderLeft = footer.borderLeft ?? '50vw'
 
 // Get nav items, excluding About and Contact
@@ -43,7 +43,7 @@ footer {
 .footer-border {
   display: block;
   position: relative;
-  width: 99%;
+  width: 100%;
   height: calc(v-bind(borderTop) + v-bind(borderBottom));
   overflow: hidden;
 }
@@ -55,7 +55,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  height: 101%;
+  height: 100%;
   border-top: v-bind(borderTop) solid transparent;
   border-left: v-bind(borderLeft) solid transparent;
   border-right: v-bind(borderRight) solid v-bind(footerBgColor);
@@ -194,9 +194,6 @@ footer {
       <!-- Bottom Links -->
       <div class="mt-8 pt-6 pb-6 border-t border-border">
         <nav class="flex items-center justify-center gap-32 flex-wrap">
-          <a href="/help" class="text-sm text-[#383938] hover:text-gray-600 transition-colors">
-            Help ➔
-          </a>
           <a href="/sitemap.xml" class="text-sm text-[#383938] hover:text-gray-600 transition-colors">
             Sitemap ➔
           </a>
@@ -207,7 +204,7 @@ footer {
             Privacy ➔
           </a>
           <a href="/terms-conditions" class="text-sm text-[#383938] hover:text-gray-600 transition-colors">
-            Terms & Conditions ➔
+            Terms of use ➔
           </a>
         </nav>
       </div>

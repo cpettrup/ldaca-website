@@ -40,7 +40,7 @@ const tagLinks = computed(() => {
         <!-- Back link -->
         <div class="mb-6">
           <a href="/resources/posts/"
-            class="inline-block px-3 py-1 bg-gray-100 text-blue-600 rounded text-sm no-underline transition-colors hover:bg-gray-200">←
+            class="inline-block px-3 py-1 bg-gray-100 text-text-[#79a38d]rounded text-sm no-underline transition-colors hover:bg-gray-200">←
             All Posts</a>
         </div>
         <!-- Auto-display title from front matter -->
@@ -62,7 +62,7 @@ const tagLinks = computed(() => {
         <div v-if="tags.length > 0" class="mb-6 pb-6 border-b-4 border-[#79a38d] border-dotted">
           <div class="flex flex-wrap gap-2">
             <a v-for="tag in tagLinks" :key="tag.label" :href="tag.url"
-              class="inline-block px-3 py-1 bg-gray-100 text-blue-600 rounded text-sm no-underline transition-colors hover:bg-gray-200">
+              class="inline-block px-3 py-1 bg-gray-100 text-[#79a38d] rounded text-sm no-underline transition-colors hover:bg-gray-200">
               {{ tag.label }}
             </a>
           </div>

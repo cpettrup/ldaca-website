@@ -102,7 +102,7 @@ onMounted(() => {
               :href="page.url"
               class="block px-4 py-3 hover:bg-gray-50 transition-colors"
             >
-              <div class="font-medium text-blue-600 hover:text-blue-800">{{ page.title }}</div>
+              <div class="font-medium text-text-[#79a38d] hover:text-blue-800">{{ page.title }}</div>
               <div v-if="page.date" class="text-sm text-gray-500">{{ formatDate(page.date) }}</div>
             </a>
           </div>

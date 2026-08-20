@@ -17,9 +17,19 @@ title: "Find & access"
     { label: 'Collaborators', href: '#collaborators' },
   ]" />
 
+<div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
+
 <CarouselLarge 
   id="available-portals"
-  backgroundColor="#EAE4D68C"
+  backgroundColor="#fff"
   :opacity="100"
   heading="AVAILABLE PORTALS"
   description='<GlossaryLink display="Oni" id="oni" />: A web application that provides indexing, searching and access to secure data repositories following the <GlossaryLink display="Arkisto" id="arkisto" /> model. This is used to build the LDaCA Portal: The online interface of the Language Data Commons of Australia where users can discover and access language collections.'
@@ -33,7 +43,7 @@ title: "Find & access"
       {
         title: 'PARADISEC Portal',
         description: 'PARADISEC has more than 700 collections representing over 1,370 languages.',
-        image: '/images/partner-logos/paradisec_logo.png',
+        image: '/images/Paradisec_data_portal.png',
         link: 'https://catalog.paradisec.org.au/oni/'
       },
     ]"/>
@@ -46,14 +56,14 @@ title: "Find & access"
 
 <GuideCarousel 
   id="guides"
-  backgroundColor="#EAE4D68C"
+  backgroundColor="#fff"
   :opacity="100"
   heading="GUIDES"
   description="LDaCA guides to help you navigate language collections."
   :items="[
       {
         title: 'Data Portal User Guide',
-        description: 'Information related to using the Data Portal.',
+        description: 'Guide to assist with using the LDaCA data portal.',
         image: '/images/PlainBackgrounds/Altblack.png',
         link: '/resources/guides/portal',
         level: 'Beginner',
@@ -62,19 +72,30 @@ title: "Find & access"
       },
       {
         title: 'Cite Data',
-        description: 'A guide to citing collections and data accessed through the portal.',
+        description: 'A guide to citing collections and data accessed through the LDaCA data portal.',
         image: '/images/PlainBackgrounds/AltGreen.png',
         buttonColor: '#393939',
         link: '/resources/guides/portal/cite-data',
         level: 'Beginner',
+        category: 'HOW-TO GUIDE',
         audience: 'Researchers, community, people working with data'
       },
     ]"/>
 
+    
+<div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
 <Carousel 
   id="on-the-blog"
   shade="light"
-  backgroundColor="#EAE4D68C"
+  backgroundColor="#fff"
   :opacity="100"
   heading="ON THE BLOG"
   :items="[
@@ -91,7 +112,15 @@ title: "Find & access"
         link: '/resources/posts/ausnc'
       }
     ]"/>
-
+<div
+  class="w-full max-w-[1480px] h-[7px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
 <ThreeTiles 
   id="additional-resources"
   backgroundColor="#EAE4D68C"
@@ -100,7 +129,7 @@ title: "Find & access"
   :items="[
       {
         title: 'Digital Preservation Masterclass PARADISEC',
-        image: 'https://img.youtube.com/vi/gRuwHx744KU/sddefault.jpg',
+        image: '/working-with-data/find-access/DCC_Masterclass.png',
         link: 'https://www.youtube.com/watch?v=gRuwHx744KU',
         category: 'RECORDING'
       },

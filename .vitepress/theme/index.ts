@@ -21,6 +21,7 @@ import Collaborators from './components/Collaborators.vue'
 import CollectionsGrid from './components/CollectionsGrid.vue'
 import People from './components/People.vue'
 import DocTiles from './components/DocTiles.vue'
+import GuideTiles from './components/GuideTiles.vue'
 import VerticalTabs from './components/VerticalTabs.vue'
 import VerticalTabsBanner from './components/VerticalTabsBanner.vue'
 import Contact from './components/Contact.vue'
@@ -54,6 +55,7 @@ export default {
     app.component('CollectionsGrid', CollectionsGrid)
     app.component('People', People)
     app.component('DocTiles', DocTiles)
+    app.component('GuideTiles', GuideTiles)
     app.component('VerticalTabs', VerticalTabs)
     app.component('VerticalTabsBanner', VerticalTabsBanner)
     app.component('Contact', Contact)

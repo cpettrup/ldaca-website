@@ -83,7 +83,7 @@ const informationHtml = computed(() => renderSimpleMarkdownInline(event.value.in
                     <div v-if="tags.length > 0" class="mb-6 pb-6 border-b-4 border-[#79a38d] border-dotted">
                         <div class="flex flex-wrap gap-2">
                             <a v-for="tag in tagLinks" :key="tag.label" :href="tag.url"
-                                class="inline-flex px-3 py-1 bg-gray-100 text-blue-600 rounded text-sm hover:bg-gray-200">
+                                class="inline-flex px-3 py-1 bg-gray-100 text-[#79a38d]rounded text-sm hover:bg-gray-200">
                                 {{ tag.label }}
                             </a>
                         </div>

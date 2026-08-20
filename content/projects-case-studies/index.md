@@ -11,6 +11,7 @@ title: "Projects & case studies"
   :items="[
     {
       title: 'Arne ingkerreke apurtelhe-ileme (Gathering all the things together)',
+      image: '/projects-case-studies/VeronicaDobsonwebsite.png',
       link: '/projects-case-studies/projects/arne-ingkerreke-apurtelhe-ileme',
     },
   ]"

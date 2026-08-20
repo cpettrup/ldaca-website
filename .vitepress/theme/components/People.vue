@@ -75,11 +75,11 @@ const fallbackImage = ((Array.isArray(props.image) && props.image.length > 0
 
                     <div class="flex flex-col gap-1">
                         <a v-if="person.link" :href="person.link" target="_blank" rel="noopener noreferrer"
-                            class="pb-2 inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#79a38d] hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8">
+                            class="pb-2 inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#79a38d] underline decoration-dotted decoration-2 underline-offset-8 hover:text-[#5e7f6e] transition-colors">
                             <span>{{ person.name }} &gt;</span>
                         </a>
                         <span v-else
-                            class="inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#79a38d]">
+                            class="pb-2 inline-flex items-center gap-2 text-[1.15rem] font-bold leading-none text-[#79a38d]">
                             {{ person.name }}
                         </span>
                         <p class="m-0 text-[1.1rem] leading-snug">

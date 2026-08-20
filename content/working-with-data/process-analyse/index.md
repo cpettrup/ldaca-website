@@ -21,7 +21,7 @@ description="Being able to analyse large amounts of language data opens up vast 
   id="tools-notebooks"
   heading="ANALYTICAL TOOLS & NOTEBOOKS"
   description="Explore available tools for language research and work."
-  crate="https://raw.githubusercontent.com/Language-Research-Technology/ldaca-analytical-tools/refs/heads/main/ro-crate/ro-crate-metadata.json"
+  crateUrl="https://raw.githubusercontent.com/Language-Research-Technology/ldaca-analytical-tools/refs/heads/main/ro-crate/"
   />
 
 <GuideCarousel 

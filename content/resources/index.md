@@ -73,7 +73,7 @@ layout: "home"
 <ToolsGrid 
   id="latest-tools-technologies"
   heading="LATEST TOOLS & TECHNOLOGIES"
-  crate="https://raw.githubusercontent.com/Language-Research-Technology/ldaca-analytical-tools/refs/heads/main/ro-crate/ro-crate-metadata.json"
+  crateUrl="https://raw.githubusercontent.com/Language-Research-Technology/ldaca-analytical-tools/refs/heads/main/ro-crate/"
   />
 
 <Carousel 

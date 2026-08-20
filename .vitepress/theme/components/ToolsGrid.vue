@@ -13,9 +13,9 @@ const props = defineProps({
     type: String,
     default: '/images/Collections_BG.png'
   },
-  crate: {
-    type: [Object, String, null],
-    default: null
+  crateUrl: {
+    type: String,
+    default: ''
   },
   opacity: {
     type: Number,
@@ -38,6 +38,49 @@ const perPage = 6
 
 const firstValue = (v) => (Array.isArray(v) ? v[0] : v)
 
+const extractUrlLikeValue = (value) => {
+  const first = firstValue(value)
+  if (!first) return ''
+  if (typeof first === 'string') return first
+  if (typeof first === 'object') return first.url || first['@id'] || ''
+  return ''
+}
+
+const toRawGithubUrl = (value) => {
+  const m = String(value).match(/^https:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\/([^/]+)\/(.+)$/)
+  if (!m) return value
+
+  const owner = m[1]
+  const repo = m[2]
+  const ref = m[3]
+  const path = m[4]
+  return `https://raw.githubusercontent.com/${owner}/${repo}/${ref}/${path}`
+}
+
+const resolveAbsoluteUrl = (value, baseUrl = window.location.href) => {
+  if (!value) return ''
+  const normalized = toRawGithubUrl(String(value))
+
+  try {
+    return new URL(normalized, baseUrl).href
+  } catch {
+    return normalized
+  }
+}
+
+const ensureTrailingSlash = (value) => (value.endsWith('/') ? value : `${value}/`)
+
+const resolveImageUrl = (imageValue, crateBaseUrl, imageBase) => {
+  const imagePath = extractUrlLikeValue(imageValue)
+  if (!imagePath) return ''
+
+  if (imageBase) {
+    return resolveAbsoluteUrl(imagePath, imageBase)
+  }
+
+  return resolveAbsoluteUrl(imagePath, crateBaseUrl || window.location.href)
+}
+
 const joinValues = (v, separator = ', ') => {
   if (Array.isArray(v)) {
     return v.map(item => {
@@ -54,7 +97,7 @@ const hasSoftwareApplicationType = (entity) => {
   return types.some(type => type === 'SoftwareApplication' || type?.['@id'] === 'SoftwareApplication')
 }
 
-const mapSoftwareItem = (item) => ({
+const mapSoftwareItem = (item, crateBaseUrl, imageBase) => ({
   title: firstValue(item?.name) || item?.['@id'] || 'Untitled tool',
   description: firstValue(item?.description) || 'No description available',
   link: item?.url,
@@ -65,22 +108,23 @@ const mapSoftwareItem = (item) => ({
   additionalNotes: joinValues(item?.['custom:additionalNotes']),
   codeURL: item?.['custom:codeURL'],
   guideURL: item?.['custom:guideURL'],
+  image: resolveImageUrl(item?.image, crateBaseUrl, imageBase)
 })
 
-const getSoftwareApplications = (crateData) => {
+const getSoftwareApplications = (crateData, crateBaseUrl, imageBase) => {
   if (!crateData) return []
 
   const crate = new ROCrate(crateData, { link: true })
   return crate.graph
     .filter(entity => entity && typeof entity === 'object' && hasSoftwareApplicationType(entity))
-    .map(mapSoftwareItem)
+    .map(entity => mapSoftwareItem(entity, crateBaseUrl, imageBase))
 }
 
 const loadSoftwareItems = async () => {
-  if (!props.crate) {
+  if (!props.crateUrl) {
     softwareItems.value = []
     loading.value = false
-    error.value = 'No RO-Crate metadata was provided.'
+    error.value = 'No RO-Crate source was provided.'
     return
   }
 
@@ -90,19 +134,16 @@ const loadSoftwareItems = async () => {
   currentPage.value = 1
 
   try {
-    let crateData = props.crate
+    const base = ensureTrailingSlash(resolveAbsoluteUrl(props.crateUrl, window.location.href))
+    const metadataUrl = new URL('ro-crate-metadata.json', base).href
 
-    if (typeof props.crate === 'string') {
-      const url = props.crate.startsWith('http://') || props.crate.startsWith('https://')
-        ? props.crate
-        : new URL(props.crate, window.location.origin).href
+    const response = await fetch(metadataUrl)
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+    const crateData = await response.json()
+    const crateBaseUrl = metadataUrl
+    const imageBase = base
 
-      const response = await fetch(url)
-      if (!response.ok) throw new Error(`HTTP ${response.status}`)
-      crateData = await response.json()
-    }
-
-    const items = getSoftwareApplications(crateData)
+    const items = getSoftwareApplications(crateData, crateBaseUrl, imageBase)
     softwareItems.value = items
 
     if (!items.length) {
@@ -194,7 +235,7 @@ onMounted(() => {
 })
 
 watch(
-  () => props.crate,
+  () => props.crateUrl,
   () => {
     loadSoftwareItems()
   }
@@ -334,6 +375,11 @@ watch(
             <p v-if="selectedItem?.additionalNotes" class="text-[#383938] text-xl">{{ selectedItem.additionalNotes }}</p>
 
           </div>
+        </div>
+
+        <div v-if="selectedItem?.image" class="pb-6 px-8 min-h-[100px] text-gray-500">
+            <h3 class="pb-4">Tool preview</h3>
+          <img :src="selectedItem.image" :alt="selectedItem.title" class="w-full h-auto pb-8">
         </div>
 
       </template>

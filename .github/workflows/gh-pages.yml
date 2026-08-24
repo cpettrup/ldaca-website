@@ -1,6 +1,8 @@
 name: github pages
 
 on:
+  push:
+    branches: [new-design]
   workflow_dispatch:
 
 permissions:

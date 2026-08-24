@@ -271,7 +271,7 @@ export default defineConfig({
     } as any,
     partnerLogos: [
       { src: "/images/partner-logos/ARDC - AUS-NCRIS lockup.svg", href: 'https://ardc.edu.au/' },
-      { src: "/images/partner-logos/BatchelorInstitute_logo.svg", href: 'https://www.batchelor.edu.au/' },
+      { src: "/images/partner-logos/BatchelorInstitute_logo.png", href: 'https://www.batchelor.edu.au/' },
       { src: "/images/partner-logos/FLA_logo.svg", href: 'https://www.firstlanguages.org.au/' },
       { src: "/images/partner-logos/QUT.svg", href: 'https://www.qut.edu.au/' },
       { src: "/images/partner-logos/UoM_logo.svg", href: 'https://www.unimelb.edu.au/' },

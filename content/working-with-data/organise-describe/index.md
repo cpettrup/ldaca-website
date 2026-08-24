@@ -35,6 +35,12 @@ title: "Organise & describe"
         description: 'Already have an RO-Crate? RO-Crate Playground is a browser-based tool for exploring, testing and validating RO-Crates. Use the Playground to inspect RO-Crate metadata, check how entities and properties are structured and identify issues with an existing RO-Crate.',
         image: '/working-with-data/organise-describe/ROCratePlayground.png',
         link: 'https://ro-crate.ldaca.edu.au/'
+      },
+            {
+        title: 'Nyingarn',
+        description: 'Nyingarn is a digital workspace for organising, describing and working with manuscript sources of Australian Indigenous languages. Users can add structured metadata to manuscript items, enhance transcriptions with information about people, places and languages, and prepare materials for appropriate access and reuse. Nyingarn combines transcription and metadata tools to help transform manuscript images into well-described, searchable and reusable digital language resources.',
+        image: '/working-with-data/organise-describe/Nyingarn_screenshot.png',
+        link: 'https://nyingarn.net/'
       }
     ]"/>
 

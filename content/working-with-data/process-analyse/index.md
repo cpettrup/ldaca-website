@@ -16,6 +16,30 @@ description="Being able to analyse large amounts of language data opens up vast 
     { label: 'Collaborators', href: '#collaborators' }
   ]"
 />
+<div
+  class="w-full max-w-[1184px] h-[5.6px] mx-auto"
+  style="
+    background-image: url('/images/section-divider.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+></div>
+
+<CarouselLarge
+  heading="FEATURED RESOURCE"
+  backgroundColor="#fff"
+  buttonText="Try it out"
+  :items="[
+    {
+      title: 'LDaCA Wordflow',
+      description: 'LDaCA Wordflow is a code-free text analytics tool that makes it easier for researchers to explore and analyse text without needing programming skills. Users can build flexible workflows by combining tools for frequency analysis, concordancing, trends, topic modelling and quotation analysis, with results from one tool feeding into the next.',
+      image: '/working-with-data/process-analyse/LDaCAWordflow.png',
+      link: 'https://australian-text-analytics-platform.github.io/LDaCa_Text_Analytics_Tools/',
+    },
+  ]"
+   />
+
 
 <ToolsGrid 
   id="tools-notebooks"
@@ -23,6 +47,7 @@ description="Being able to analyse large amounts of language data opens up vast 
   description="Explore available tools for language research and work."
   crateUrl="https://raw.githubusercontent.com/Language-Research-Technology/ldaca-analytical-tools/refs/heads/main/ro-crate/"
   />
+  
 
 <GuideCarousel 
   id="guides"
@@ -31,7 +56,7 @@ description="Being able to analyse large amounts of language data opens up vast 
       {
         title: 'Introduction to Text Analysis',
         description: 'An introduction to working with text as data. Covers key text analysis concepts and the workflow from preparing and analysing text through to documenting and packaging research outputs for reuse.',
-        link: 'https://www.atap.edu.au/text-analysis/overview/',
+        link: '/resources/guides/working-with-data/Introduction-to-text-analysis',
         level: 'Beginner',
         audience: 'Researchers and students',
         image:'/images/PlainBackgrounds/Blackplain.png',
@@ -115,12 +140,12 @@ description="Being able to analyse large amounts of language data opens up vast 
       },
       {
         title: 'ADO',
-        image: '',
+        image: '/images/partner-logos/ADOLogo.png',
         link: 'https://www.digitalobservatory.net.au/'
       },
       {
         title: 'MDAP',
-        image: 'https://dataservices.research.unimelb.edu.au/static/img/logos/logo-2023.svg',
+        image: '/images/partner-logos/MDAPLogo.png',
         link: 'https://www.unimelb.edu.au/mdap'
       },
     ]"/>

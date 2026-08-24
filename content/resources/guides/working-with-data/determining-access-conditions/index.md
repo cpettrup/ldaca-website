@@ -2,7 +2,7 @@
 title: "Determining access conditions"
 date: 2023-10-03T12:07:19+11:00
 # tags: ["Governance, rights & access"]
-description: "Defines the workflow for determining the access conditions for a data collection, to be outlined in the license."
+description: "Defines a workflow for determining the access conditions for a data collection, to be outlined in the license."
 image: "/resources/guides/working-with-data/determining-access-conditions/AccessConditions_Flow2.jpg"
 category: "RESOURCE"
 layout: doc

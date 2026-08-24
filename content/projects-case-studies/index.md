@@ -37,10 +37,13 @@ title: "Projects & case studies"
       },
       {
         title: 'CALL Collection Catalogue',
-        description: 'The CALL Collection is an archive from Batchelor Institute containing Australian First Nations language materials.',
-        link: 'https://callcollection.batchelor.edu.au/',
-        image: '/images/partner-logos/BatchelorInstitute_logo.svg',
-      }
+        link: '/projects-case-studies/projects/CALL-Collection-Catalogue',
+      },
+                  {
+        title: 'Community Language Workshops',
+        link: '/projects-case-studies/projects/Community-language-workshops',
+        description:'Working with communities to shape locally controlled approaches to language archiving'
+      },
     ]"/>
 
 <GuideCarousel 
@@ -51,23 +54,28 @@ title: "Projects & case studies"
   :items="[
       {
         title: 'Putting data to work',
-        link: '/resources/posts/putting-data-to-work'
+        link: '/resources/posts/putting-data-to-work',
+        image:'/images/PlainBackgrounds/Blackplain.png'
       },
       {
         title: 'Sydney Speaks',
-        link: '/projects-case-studies/case-studies/sydney-speaks'
+        link: '/projects-case-studies/case-studies/sydney-speaks',
+        image:'/images/PlainBackgrounds/Greenplain.png'
       },
       {
         title: 'A Master\'s Research Project',
-        link: '/projects-case-studies/case-studies/masters-research-project'
+        link: '/projects-case-studies/case-studies/masters-research-project',
+        image:'/images/PlainBackgrounds/Blackplain.png'
       },
       {
         title: 'Data Management in Language Technology: A Case Study of Appen',
-        link: '/projects-case-studies/case-studies/data-management-appen'
+        link: '/projects-case-studies/case-studies/data-management-appen',
+        image:'/images/PlainBackgrounds/Greenplain.png'
       },
       {
         title: 'Fieldwork in Papua New Guinea',
-        link: '/projects-case-studies/case-studies/fieldwork-png'
+        link: '/projects-case-studies/case-studies/fieldwork-png',
+        image:'/images/PlainBackgrounds/Blackplain.png'
       },
     ]"/>
 
@@ -76,18 +84,13 @@ title: "Projects & case studies"
   :items="[
       {
         title: 'Batchelor Institute of Indigenous Tertiary Education',
-        image: '/images/partner-logos/BatchelorInstitute_logo.svg',
+        image: '/images/partner-logos/BatchelorInstitute_logo.png',
         link: 'https://www.batchelor.edu.au/'
       },
       {
         title: 'First Languages Australia',
         image: '/images/partner-logos/FLA_logo.svg',
         link: 'https://www.firstlanguages.org.au'
-      },
-      {
-        title: 'ARDS Aboriginal Corporation',
-        image: '/images/partner-logos/ARDS_LOGO_2025_w_TEXT.svg',
-        link: 'https://ards.com.au/'
       },
       {
         title: 'ANU',

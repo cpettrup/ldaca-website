@@ -60,6 +60,10 @@ const normalizedItems = computed(() =>
                 pageMetadata?.frontmatter?.category ||
                 '',
 
+            actionText:
+                rawItem.actionText ||
+                'Read',
+
             description:
                 rawItem.description ||
                 pageMetadata?.description ||
@@ -82,9 +86,9 @@ const isExternal = (url) => {
     <section class="w-full py-12">
         <div class="max-w-[1184px] mx-auto px-4 sm:px-6 md:px-8 lg:px-2">
             <div class="mb-12 text-left">
-                <h2 v-if="heading" class="type-section-title">
+                <h1 v-if="heading" class="type-page-title">
                     {{ heading }}
-                </h2>
+                </h1>
             </div>
 
             <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -109,7 +113,7 @@ const isExternal = (url) => {
                             >
 
                             <!-- Dark image wash -->
-                            <div class="absolute inset-0 bg-black/30"></div>
+                            <div class="absolute inset-0 bg-black/15"></div>
 
                             <!-- Category and title -->
                             <div class="absolute inset-0 flex items-start p-8">
@@ -141,7 +145,7 @@ const isExternal = (url) => {
                             >
 
                             <!-- Dark image wash -->
-                            <div class="absolute inset-0 bg-black/30"></div>
+                            <div class="absolute inset-0 bg-black/15"></div>
 
                             <!-- Category and title -->
                             <div class="absolute inset-0 flex items-start p-8">
@@ -181,7 +185,7 @@ const isExternal = (url) => {
                             :rel="isExternal(item.link) ? 'noopener noreferrer' : null"
                             class="type-action pb-2 inline-flex items-center gap-2 text-[#79a38d] hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8"
                         >
-                            <span>Read &gt;</span>
+                            <span>{{ item.actionText }} &gt;</span>
                         </a>
                     </div>
                 </article>

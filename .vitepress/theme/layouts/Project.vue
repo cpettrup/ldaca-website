@@ -109,7 +109,7 @@ const informationHtml = computed(() => renderSimpleMarkdownInline(event.value.in
                         <!-- Collaborators -->
                         <div v-if="event.collaborator" class="mb-4">
                             <p class="font-bold text-gray-600 uppercase text-xl">Collaborators</p>
-                            <p class="text-gray-700 text-lg">{{ event.collaborator }}</p>
+                            <p class="text-gray-700 text-lg whitespace-pre-line">{{ event.collaborator }}</p>
                         </div>
 
                         <!-- Project Team -->

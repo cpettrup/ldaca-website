@@ -162,6 +162,7 @@ function getLatestBlogNavColumn() {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: process.env.VITEPRESS_BASE || '/',
   sitemap: {
     hostname: 'https://www.ldaca.edu.au' // TODO update this to the actual production URL before launch!
   },
